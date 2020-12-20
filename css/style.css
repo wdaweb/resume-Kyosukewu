@@ -6,7 +6,7 @@
 }
 .experience {
   width: 100%;
-  height: 110vh;
+  height: 100%;
   margin: auto;
 }
 .timeline a:hover {
@@ -75,19 +75,69 @@
   bottom: 0;
   margin: auto;
 }
-.timeline li:nth-child(odd) h4::after,.timeline li:nth-child(even) h4::after {
+.timeline li:nth-child(odd) h4::after,
+.timeline li:nth-child(even) h4::after {
   left: -20px;
 }
-.skills{
-    width: 100%;
-    height: 100vh;
-    align-items: center;
-    background-image: linear-gradient(-45deg,#fffaf0,#f8c3c1);
+.skills {
+  width: 100vw;
+  background-image: linear-gradient(-45deg, #fffaf0, #f8c3c1);
 }
-.footer{
-    background: #333;
-    width: 100vw;
-    height: 5vh;
+.wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px;
+}
+.item {
+  border: 10px solid #f9cec2;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 10px 20px 50px #f7b6a7;
+  position: relative;
+}
+.item .icon {
+  text-align: center;
+  width: 150px;
+  height: 150px;
+  background-color: #fff;
+  margin: -75px auto;
+  font-size: 60px;
+  line-height: 130px;
+  border-radius: 50%;
+  color: #f5afac;
+  position: relative;
+}
+.item .icon::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-top: 10px solid#f9cec2;
+  border-right: 10px solid#f9cec2;
+  border-left: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  left: 0;
+  top: 0;
+  border-radius: 50%;
+  transform: rotate(-45deg);
+}
+.item .txt {
+  text-align: center;
+}
+.item ol {
+  text-align: left;
+}
+.item:hover i {
+  animation: ss 0.2s linear infinite alternate;
+}
+.item .txt {
+  padding: 80px 20px 30px;
+}
+.footer {
+  background: #333;
+  width: 100vw;
+  height: 5vh;
 }
 @media screen and (min-width: 576px) {
   .timeline li::before {
@@ -104,6 +154,9 @@
   }
 }
 @media screen and (min-width: 992px) {
+    .experience {
+        height: 130vh;
+      }
   .timeline li {
     width: 50%;
   }
@@ -123,7 +176,7 @@
     top: 0;
     height: 100%;
     background-color: #ccc;
-    left:100%;
+    left: 100%;
     z-index: -1;
   }
   .timeline li:nth-child(even)::after {
@@ -158,5 +211,18 @@
   }
   .timeline li:nth-child(even) h4::after {
     left: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+    .experience {
+        height: 110vh;
+      }
+}
+@keyframes ss {
+  0% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(10deg);
   }
 }
