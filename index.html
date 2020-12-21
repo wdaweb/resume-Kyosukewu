@@ -20,16 +20,60 @@
 </head>
 
 <body>
+    <header class="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Navbar</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="far fa-address-card mr-2"></i>About me</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#edu"><i class="fas fa-graduation-cap mr-2"></i>Education</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#exp"><i class="fas fa-school mr-2"></i>Experience</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#sk"><i class="fas fa-code-branch mr-2"></i>Skills</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-book mr-2"></i>Portfolio
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#wd">Web Design 網頁設計類</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#gd">Graphic Design 視覺設計類</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#3d">3D Design 3D設計類</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#foot"><i class="fas fa-phone-volume mr-2"></i>Contact me</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
     <div class="banner">
 
     </div>
     <div class="container">
         <div class="about" id="ab"></div>
         <div class="education" id="edu">
-            <i class="fas fa-graduation-cap"></i>
+            <h3><i class="fas fa-graduation-cap mr-2"></i>學歷</h3>
+            <hr>
         </div>
         <div class="experience" id="exp">
-            <h3>學習/工作經歷</h3>
+            <h3><i class="fas fa-school mr-2"></i>學習/工作經歷</h3>
             <hr>
             <ul class="timeline">
                 <li>
@@ -87,50 +131,122 @@
         </div>
     </div>
     <div class="skills" id="sk">
-        <div class="wrap justify-content-center">
-            <div class="col-12 col-md-6 col-lg-3 item">
-                <div class="icon"><i class="fas fa-solar-panel"></i></div>
-                <div class="txt">
-                    <p>網頁相關技術</p>
-                    <ol>
-                        <li>HTML5</li>
-                        <li>CSS3</li>
-                    </ol>
+        <div class="container">
+            <h3><i class="fas fa-code-branch mr-2"></i>工作技能/</h3>
+            <hr>
+            <div class="row justify-content-between">
+                <div class="col-12 col-md-6 col-lg-4 col-xl-3 item">
+                    <div class="icon"><i class="ani fas fa-solar-panel"></i></div>
+                    <div class="txt">
+                        <h5>網頁相關技術</h5>
+                        <hr>
+                        <div class="d-flex">
+                            <ol>
+                                <li>HTML5</li>
+                                <li>CSS3</li>
+                                <li>JavaScript</li>
+                                <li>jQuery</li>
+                                <li>Bootstrap5</li>
+                            </ol>
+                            <ol class="pl-3">
+                                <li>AJAX</li>
+                                <li>Git/GitHub</li>
+                                <li>PHP</li>
+                                <li>MariaDB/mySQL</li>
+                                <li>Xampp</li>
+                            </ol>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-3 item">
-                <div class="icon"><i class="far fa-images"></i></div>
-                <div class="txt">
-                    <p>視覺/影像處理</p>
-                    <ol>
-                        <li></li>
-                    </ol>
+                <div class="col-12 col-md-6 col-lg-4 col-xl-3 item">
+                    <div class="icon"><i class="ani far fa-images"></i></div>
+                    <div class="txt">
+                        <h5>視覺/影像處理</h5>
+                        <hr>
+                        <ol>
+                            <li>Photoshop</li>
+                            <li>Illustrator</li>
+                            <li>Coreldraw</li>
+                            <li>Premiere</li>
+                            <li>Flash</li>
+                        </ol>
+                    </div>
                 </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-3 item">
-                <div class="icon"><i class="fas fa-cubes"></i></div>
-                <div class="txt">
-                    <p>3D軟體應用</p>
-                    <ol>
-                        <li></li>
-                    </ol>
+                <div class="col-12 col-md-6 col-lg-4 col-xl-3 item">
+                    <div class="icon"><i class="ani fas fa-cubes"></i></div>
+                    <div class="txt">
+                        <h5>3D軟體應用</h5>
+                        <hr>
+                        <ol>
+                            <li>PTC Creo</li>
+                            <li>AutoCad2D/3D</li>
+                            <li>SolidWork</li>
+                            <li>CATIA</li>
+                            <li>Cinema 4D</li>
+                        </ol>
+                    </div>
                 </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-3 item">
-                <div class="icon"><i class="fa fa-gavel"></i></div>
-                <div class="txt">
-                    <p>文書軟體應用</p>
-                    <ol>
-                        <li></li>
-                    </ol>
+                <div class="col-12 col-md-6 col-lg-4 col-xl-3 item">
+                    <div class="icon"><i class="ani far fa-keyboard"></i></div>
+                    <div class="txt">
+                        <h5>文書軟體應用</h5>
+                        <hr>
+                        <ol>
+                            <li>Xmind</li>
+                            <li>Word</li>
+                            <li>Excel</li>
+                            <li>Powerpoint</li>
+                            <li>Outlook</li>
+                        </ol>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     <div class="portfolio" id="pro">
-        <div class="web"></div>
-        <div class="graphic"></div>
-        <div class="3d"></div>
+        <div class="container">
+            <h3><i class="fas fa-book mr-2"></i>作品集/</h3>
+            <hr>
+            <div id="wd" class="web row justify-content-between row-cols-1 row-cols-md-2 row-cols-xl-4 g-2 g-lg-3">
+                <div class="card" style="width: 300px;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                    </div>
+                </div>
+                <div class="card" style="width: 300px;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                    </div>
+                </div>
+                <div class="card" style="width: 300px;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="gd" class="graphic"></div>
+            <div id="3d" class="3d"></div>
+        </div>
     </div>
 
     <div class="footer"></div>
