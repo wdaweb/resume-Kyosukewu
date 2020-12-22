@@ -4,21 +4,21 @@
   list-style: none;
   font-family: "Noto Sans TC", sans-serif;
 }
-header{
-  opacity: .9;
+header {
+  opacity: 0.9;
 }
 header .nav-link {
   transition: 1500ms ease;
 }
-body{
+body {
   width: 100vw;
   height: 100vh;
   overflow: hidden auto;
-  background:#eee; 
+  background: #eee;
   background-size: auto;
   background-repeat: no-repeat;
 }
-.header{
+.header {
   position: fixed;
   z-index: 50;
 }
@@ -102,12 +102,13 @@ body{
   background-image: linear-gradient(45deg, #f0f9ff, #c1d2f8);
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 2rem 0;
+  padding: 2rem 0 5rem;
 }
-.skills+h3{
-  color:#2d7adf;
+.skills > .container > h3 {
+  color: #2d7adf;
 }
 .item {
+  width: 100%;
   box-sizing: border-box;
   border: 5px solid #397dd6;
   background-color: #fff;
@@ -120,7 +121,7 @@ body{
   text-align: center;
   width: 150px;
   height: 150px;
-  background :linear-gradient(180deg, #ffffff 50%, transparent 50%);
+  background: linear-gradient(180deg, #ffffff 50%, transparent 50%);
   margin: -75px auto -100px;
   font-size: 60px;
   line-height: 130px;
@@ -152,19 +153,26 @@ body{
   padding: 0;
   margin: auto;
 }
-.item:hover .ani{
+.item:hover .ani {
   animation: ss 0.2s linear infinite alternate;
 }
 .item .txt {
   padding: 80px 20px 30px;
 }
-.portfolio{
+.portfolio {
   padding: 2rem 0;
+}
+
+.card+img{
+  width: 100%;
+}
+.ic img{
+  width: 30px;
 }
 .footer {
   background: #333;
   width: 100vw;
-  height: 5vh;
+  height: 10vh;
 }
 @media screen and (min-width: 576px) {
   .timeline li::before {
@@ -180,10 +188,18 @@ body{
     left: -40px;
   }
 }
+@media screen and (min-width: 768px) {
+  .item {
+    width: 48%;
+  }
+}
 @media screen and (min-width: 992px) {
-    .experience {
-        height: 120vh;
-      }
+  .item,.card {
+    width: 33%;
+  }
+  .experience {
+    height: 120vh;
+  }
   .timeline li {
     width: 50%;
   }
@@ -241,9 +257,12 @@ body{
   }
 }
 @media screen and (min-width: 1200px) {
-    .experience {
-        height: 105vh;
-      }
+  .item {
+    width: 24.5%;
+  }
+  .experience {
+    height: 105vh;
+  }
 }
 @keyframes ss {
   0% {
