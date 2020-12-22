@@ -211,144 +211,173 @@
         <article class="container">
             <h3><i class="fas fa-book me-2"></i>作品集/</h3>
             <nav>
-                <div class="nav nav-tabs justify-content-evenly" id="nav-tab">
-                    <a class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" href="#wd">網頁設計類</a>
-                    <a class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" href="#gd">視覺設計類</a>
-                    <a class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" href="#threed">3D設計類</a>
+                <div class="nav nav-tabs justify-content-evenly" id="nav-tab" role="tablist">
+                    <a class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" href="#wd" role="tab"
+                        aria-controls="nav-home" aria-selected="true">網頁設計類</a>
+                    <a class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" href="#gd" role="tab"
+                        aria-controls="nav-profile" aria-selected="false">視覺設計類</a>
+                    <a class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" href="#threed" role="tab"
+                        aria-controls="nav-contact" aria-selected="false">3D設計類</a>
                 </div>
             </nav>
-            <div class="tab-content py-5">
-                <div class="tab-pane fade show active" id="wd">
+            <div class="tab-content py-5" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="wd" role="tabpanel" aria-labelledby="nav-home-tab">
                     <p class="col-12 mb-5 text-center text-secondary">
                         收錄各類網頁技術製作的作品，點選圖片連結可至成品網頁瀏覽。
                     </p>
                     <div class="row g-3">
-                        <div class="col-12">
+                        <div class="col-12 col-md-6 col-lg-4 col-xl-3">
                             <div class="card">
+                                <div class="over">
+                                    <div class="text text-center">
+                                        <div class="mb-2 pb-2 border-bottom"><strong>線上發票紀錄/對獎系統</strong></div>
+                                        ◆ 管理者、使用者、訪客三種登入模式，可查看不同權限訊息。<br>
+                                        ◆ 可進行發票的CRUD、自動對獎、提示開獎/過期與否，統計獎金、中獎發票、張數等訊息。<br>
+                                        ◆ 支援RWD響應式網站功能。
+                                        <a href="http://220.128.133.15/s1090421/invoice" target="_blink">
+                                            <div class="btn btn-success mt-2"><i class="fas fa-link me-2"></i>DEMO網站
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
                                 <img src="img/inv.jpg" class="card-img-top">
                                 <div class="card-body">
                                     <h5>線上發票紀錄/對獎系統</h5>
-                                    <p class="card-text">
-                                        具備管理者、使用者、訪客三種登入模式，可查看不同權限的訊息，<br>
-                                        可進行發票的CRUD、自動對獎、提示開獎/過期與否之資訊，並能統計累積獎金、中獎發票、張數等相關訊息。<br>
-                                        支援RWD響應式網站功能。
-                                    </p>
-                                    <div class="ic d-flex mr-auto">
-                                        <img class="mr-1" src="icon/HTML.png">
-                                        <img class="mr-1" src="icon/CSS.png">
-                                        <img class="mr-1" src="icon/bs5.png">
-                                        <img class="mr-1" src="icon/mariadb.png">
-                                        <img class="mr-1" src="icon/php.png">
-                                        <img class="mr-1" src="icon/ps.png">
+                                    <div class="ic d-flex justify-content-end">
+                                        <img class="me-1" src="icon/HTML.png">
+                                        <img class="me-1" src="icon/CSS.png">
+                                        <img class="me-1" src="icon/bs5.png">
+                                        <img class="me-1" src="icon/mariadb.png">
+                                        <img class="me-1" src="icon/php.png">
+                                        <img class="me-1" src="icon/ps.png">
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12">
+                        <div class="col-12 col-md-6 col-lg-4 col-xl-3">
                             <div class="card">
+                                <div class="over">
+                                    <div class="text text-center">
+                                        <div class="mb-2 pb-2 border-bottom"><strong>線上萬年曆</strong></div>
+                                        ◆ 具備切換月/年份，並可隨時回到當日功能，可直接輸入年份日期查詢特定年份。<br>
+                                        ◆ 標示出每月特殊日期/假日/當天日期，並以不同顏色醒目標示。<br>
+                                        ◆ 支援RWD響應式網站功能。
+                                        <a href="http://220.128.133.15/s1090421/calendar" target="_blink">
+                                            <div class="btn btn-success mt-2"><i class="fas fa-link me-2"></i>DEMO網站
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
                                 <img src="img/cal.jpg" class="card-img-top">
                                 <div class="card-body">
                                     <h5>線上萬年曆</h5>
-                                    <p class="card-text">
-                                        具備切換月/年份，並可隨時回到當日功能，可直接輸入年份日期查詢特定年份。
-                                        標示出每月特殊日期/假日/當天日期，並以不同顏色醒目標示。<br>
-                                        支援RWD響應式網站功能。
-                                    </p>
-                                    <div class="ic d-flex mr-auto">
-                                        <img class="mr-1" src="icon/HTML.png">
-                                        <img class="mr-1" src="icon/CSS.png">
-                                        <img class="mr-1" src="icon/bs5.png">
-                                        <img class="mr-1" src="icon/ps.png">
+                                    <div class="ic d-flex justify-content-end">
+                                        <img class="me-1" src="icon/HTML.png">
+                                        <img class="me-1" src="icon/CSS.png">
+                                        <img class="me-1" src="icon/bs5.png">
+                                        <img class="me-1" src="icon/ps.png">
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12">
+                        <div class="col-12 col-md-6 col-lg-4 col-xl-3">
                             <div class="card">
-                                <img src="https://picsum.photos/300/200/?random=3" class="card-img-top">
+                                <div class="over">
+                                    <div class="text text-center">
+                                        <div class="mb-2 pb-2 border-bottom"><strong>QTE小遊戲</strong></div>
+                                        ◆ 透過Sweetalert2，結合影片控制製作的小型-快速反應事件(Quick Time Events)-遊戲<br>
+                                        ◆ 支援RWD響應式網站功能。
+                                        <a href="http://220.128.133.15/s1090421/QTEgame" target="_blink">
+                                            <div class="btn btn-success mt-2"><i class="fas fa-link me-2"></i>DEMO網站
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <img src="img/QTE.jpg" class="card-img-top">
                                 <div class="card-body">
-                                    <h5>行政本館</h5>
-                                    <p class="card-text">
-                                        親子四人房<small class="text-muted float-right">2 大床 | 12 坪</small>
-                                    </p>
+                                    <h5>QTE小遊戲</h5>
+                                    <div class="ic d-flex justify-content-end">
+                                        <img class="me-1" src="icon/HTML.png">
+                                        <img class="me-1" src="icon/CSS.png">
+                                        <img class="me-1" src="icon/bs5.png">
+                                        <img class="me-1" src="icon/js.png">
+                                        <img class="me-1" src="icon/jq.png">
+                                        <img class="me-1" src="icon/ps.png">
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="tab-pane fade" id="gd">
-                    <p class="col-12 mb-5 text-center">
-                        收錄平面設計、商業海報、CG電繪...等，視覺相關作品。
-                    </p>
-                    <div class="row g-3">
+                <div class="tab-pane fade" id="gd" role="tabpanel" aria-labelledby="nav-profile-tab">
+                    <p class="col-12 mb-5 text-center text-secondary">
+                    收錄平面設計、商業海報、CG電繪...等，視覺相關作品。
+                </p>
+                <div class="row g-3">
+                    <div class="col-12 col-md-6 col-lg-4 col-xl-3">
                         <div class="card">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <p class="card-text">Some quick example text to build on the card title and make up
-                                    the
-                                    bulk
-                                    of
-                                    the card's content.</p>
+                            <div class="over">
+                                <div class="text text-center">
+                                    <div class="mb-2 pb-2 border-bottom"><strong>線上發票紀錄/對獎系統</strong></div>
+                                    ◆ 管理者、使用者、訪客三種登入模式，可查看不同權限訊息。<br>
+                                    ◆ 可進行發票的CRUD、自動對獎、提示開獎/過期與否，統計獎金、中獎發票、張數等訊息。<br>
+                                    ◆ 支援RWD響應式網站功能。
+                                    <a href="http://220.128.133.15/s1090421/invoice" target="_blink">
+                                        <div class="btn btn-success mt-2"><i class="fas fa-link me-2"></i>DEMO網站
+                                        </div>
+                                    </a>
+                                </div>
                             </div>
-                        </div>
-                        <div class="card">
-                            <img src="..." class="card-img-top" alt="...">
+                            <img src="img/inv.jpg" class="card-img-top">
                             <div class="card-body">
-                                <p class="card-text">Some quick example text to build on the card title and make up
-                                    the
-                                    bulk
-                                    of
-                                    the card's content.</p>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <p class="card-text">Some quick example text to build on the card title and make up
-                                    the
-                                    bulk
-                                    of
-                                    the card's content.</p>
+                                <h5>線上發票紀錄/對獎系統</h5>
+                                <div class="ic d-flex justify-content-end">
+                                    <img class="me-1" src="icon/HTML.png">
+                                    <img class="me-1" src="icon/CSS.png">
+                                    <img class="me-1" src="icon/bs5.png">
+                                    <img class="me-1" src="icon/mariadb.png">
+                                    <img class="me-1" src="icon/php.png">
+                                    <img class="me-1" src="icon/ps.png">
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="tab-pane fade" id="threed">
-                    <p class="col-12 mb-5 text-center">
-                        收錄3D建模、擬真渲染、3D列印機打印之作品。
-                    </p>
-                    <div class="row g-3">
+                </div>
+                <div class="tab-pane fade" id="threed" role="tabpanel" aria-labelledby="nav-contact-tab">
+                    <p class="col-12 mb-5 text-center text-secondary">
+                    收錄3D建模、擬真渲染、3D列印機打印之作品。
+                </p>
+                <div class="row g-3">
+                    <div class="col-12 col-md-6 col-lg-4 col-xl-3">
                         <div class="card">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <p class="card-text">Some quick example text to build on the card title and make up
-                                    the
-                                    bulk
-                                    of
-                                    the card's content.</p>
+                            <div class="over">
+                                <div class="text text-center">
+                                    <div class="mb-2 pb-2 border-bottom"><strong>線上發票紀錄/對獎系統</strong></div>
+                                    ◆ 管理者、使用者、訪客三種登入模式，可查看不同權限訊息。<br>
+                                    ◆ 可進行發票的CRUD、自動對獎、提示開獎/過期與否，統計獎金、中獎發票、張數等訊息。<br>
+                                    ◆ 支援RWD響應式網站功能。
+                                    <a href="http://220.128.133.15/s1090421/invoice" target="_blink">
+                                        <div class="btn btn-success mt-2"><i class="fas fa-link me-2"></i>DEMO網站
+                                        </div>
+                                    </a>
+                                </div>
                             </div>
-                        </div>
-                        <div class="card">
-                            <img src="..." class="card-img-top" alt="...">
+                            <img src="img/inv.jpg" class="card-img-top">
                             <div class="card-body">
-                                <p class="card-text">Some quick example text to build on the card title and make up
-                                    the
-                                    bulk
-                                    of
-                                    the card's content.</p>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <p class="card-text">Some quick example text to build on the card title and make up
-                                    the
-                                    bulk
-                                    of
-                                    the card's content.</p>
+                                <h5>線上發票紀錄/對獎系統</h5>
+                                <div class="ic d-flex justify-content-end">
+                                    <img class="me-1" src="icon/HTML.png">
+                                    <img class="me-1" src="icon/CSS.png">
+                                    <img class="me-1" src="icon/bs5.png">
+                                    <img class="me-1" src="icon/mariadb.png">
+                                    <img class="me-1" src="icon/php.png">
+                                    <img class="me-1" src="icon/ps.png">
+                                </div>
                             </div>
                         </div>
                     </div>
+                </div>
                 </div>
             </div>
         </article>
