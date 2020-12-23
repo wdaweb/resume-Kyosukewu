@@ -4,8 +4,53 @@
   list-style: none;
   font-family: "Noto Sans TC", sans-serif;
 }
-header {
+header{
   opacity: 0.9;
+  box-shadow: 0 0 10px #ccc;
+  /* width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 999; */
+}
+.banner{
+  width: 100%;
+  height: 100vh;
+  background-color: #ccc;
+  background: 
+  linear-gradient(115deg,rgba(73, 148, 247, .8) 50%,transparent 50%) center center /100% 100%,
+  url("https://picsum.photos/1024/768/?random=1") right center / auto 100%; 
+  background-size: cover;
+  background-attachment: fixed;
+}
+.contant{
+  width: 70%;
+  height: 100%;
+  margin: auto;
+}
+.banner-txt{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.banner-txt h2 {
+  font-size: 60px;
+  border-bottom: 1px solid #333;
+  font-weight: 900;
+  padding-bottom: .3em;
+  margin-bottom: .3em;
+}
+.banner-txt h2 small{
+  display: block;
+  font-size: 33px;
+  font-weight: 700;
+}
+.banner-txt h3 {
+  font-size: 30px;
+}
+.banner-txt p {
+  font-size: 20px;
 }
 header .nav-link {
   transition: 1500ms ease;
@@ -149,19 +194,36 @@ body {
   margin: auto;
 }
 .item ol {
+  width: 50%;
   text-align: left;
   padding: 0;
-  margin: auto;
 }
 .item:hover .ani {
   animation: ss 0.2s linear infinite alternate;
 }
+ol>li:hover{
+  color: #eee;
+  background: #5a94e0;
+}
 .item .txt {
   padding: 80px 20px 30px;
+}
+.overlay{
+  position: absolute;
+  top: 7rem;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0 20px;
+  background: rgba(255, 255, 255, .6);
+}
+.pic img{
+  width: 100%;
 }
 .portfolio {
   padding: 2rem 0;
 }
+
 .card{
   position: relative;
 }

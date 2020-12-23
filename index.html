@@ -20,8 +20,20 @@
 </head>
 
 <body>
-    <header class="fixed-top">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="banner">
+        <div class="contant">
+            <div class="banner-txt">
+                <h2>金魚都能懂得
+                    <small>這個網頁畫面怎麼切</small>
+                </h2>
+                <h3>圖文滿版區塊</h3>
+                <p>做好圖文天氣帶來<br>農村一下子知道剛剛走到臺中到底</p>
+            </div>
+        </div>
+    </div>
+    <header id="stick" class="bg-light">
+        <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">Navbar</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -29,12 +41,9 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <ul class="navbar-nav ms-auto me-5 mb-2 mb-lg-0">
                         <li class="nav-item">
                             <a class="nav-link" href="#"><i class="far fa-address-card me-2"></i>About me</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#edu"><i class="fas fa-graduation-cap me-2"></i>Education</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#exp"><i class="fas fa-school me-2"></i>Experience</a>
@@ -47,7 +56,7 @@
                                 data-bs-toggle="dropdown">
                                 <i class="fas fa-book mr-2 me-2"></i>Portfolio
                             </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="#wd">Web Design 網頁設計類</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
@@ -66,18 +75,12 @@
                 </div>
             </div>
         </nav>
-    </header>
-    <div class="banner">
-
     </div>
+    </header>
     <section class="container">
         <div class="about" id="ab"></div>
-        <div class="education" id="edu">
-            <h3><i class="fas fa-graduation-cap mr-2"></i>學歷/</h3>
-            <hr>
-        </div>
         <div class="experience" id="exp">
-            <h3><i class="fas fa-school mr-2"></i>學習/工作經歷/</h3>
+            <h3><i class="fas fa-school mt-5 me-2"></i>學習/工作經歷/</h3>
             <hr>
             <ul class="timeline">
                 <li>
@@ -136,7 +139,7 @@
     </section>
     <section class="skills" id="sk">
         <article class="container">
-            <h3><i class="fas fa-code-branch mr-2"></i>工作技能/</h3>
+            <h3><i class="fas fa-code-branch me-2"></i>工作技能/</h3>
             <hr>
             <div class="row justify-content-between">
                 <div class="item">
@@ -144,21 +147,26 @@
                     <div class="txt">
                         <h5>網頁相關技術</h5>
                         <hr>
-                        <div class="d-flex">
-                            <ol>
-                                <li>HTML5</li>
-                                <li>CSS3</li>
-                                <li>JavaScript</li>
-                                <li>jQuery</li>
-                                <li>Bootstrap5</li>
-                            </ol>
-                            <ol class="pl-3">
-                                <li>AJAX</li>
-                                <li>Git/GitHub</li>
-                                <li>PHP</li>
-                                <li>MariaDB/mySQL</li>
-                                <li>Xampp</li>
-                            </ol>
+                        <div class="pic w-50 mx-auto">
+                            <img id="wimg" src="icon/HTML.png">
+                        </div>
+                        <div class="overlay">
+                            <div class="d-flex">
+                                <ol>
+                                    <li>HTML5</li>
+                                    <li>CSS3</li>
+                                    <li>JavaScript</li>
+                                    <li>jQuery</li>
+                                    <li>Bootstrap5</li>
+                                </ol>
+                                <ol>
+                                    <li>AJAX</li>
+                                    <li>Git/GitHub</li>
+                                    <li>PHP</li>
+                                    <li>MariaDB/mySQL</li>
+                                    <li>Xampp</li>
+                                </ol>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -167,13 +175,18 @@
                     <div class="txt">
                         <h5>視覺/影像處理</h5>
                         <hr>
-                        <ol>
-                            <li>Photoshop</li>
-                            <li>Illustrator</li>
-                            <li>Coreldraw</li>
-                            <li>Premiere</li>
-                            <li>Flash</li>
-                        </ol>
+                        <div class="d-flex">
+                            <ol>
+                                <li>Photoshop</li>
+                                <li>Illustrator</li>
+                                <li>Coreldraw</li>
+                                <li>Premiere</li>
+                                <li>Flash</li>
+                            </ol>
+                            <div class="pic w-50 text-center">
+                                <img id="gimg" src="icon/ps.png">
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="item">
@@ -181,13 +194,18 @@
                     <div class="txt">
                         <h5>3D軟體應用</h5>
                         <hr>
-                        <ol>
-                            <li>PTC Creo</li>
-                            <li>AutoCad2D/3D</li>
-                            <li>SolidWork</li>
-                            <li>CATIA</li>
-                            <li>Cinema 4D</li>
-                        </ol>
+                        <div class="d-flex">
+                            <ol>
+                                <li>PTC Creo</li>
+                                <li>AutoCad2D/3D</li>
+                                <li>SolidWork</li>
+                                <li>CATIA</li>
+                                <li>Cinema 4D</li>
+                            </ol>
+                            <div class="pic w-50 text-center">
+                                <img id="timg" src="icon/creo.png">
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="item">
@@ -195,13 +213,18 @@
                     <div class="txt">
                         <h5>文書軟體應用</h5>
                         <hr>
-                        <ol>
-                            <li>Xmind</li>
-                            <li>Word</li>
-                            <li>Excel</li>
-                            <li>Powerpoint</li>
-                            <li>Outlook</li>
-                        </ol>
+                        <div class="d-flex">
+                            <ol>
+                                <li>Xmind</li>
+                                <li>Word</li>
+                                <li>Excel</li>
+                                <li>Powerpoint</li>
+                                <li>Outlook</li>
+                            </ol>
+                            <div class="pic w-50 text-center">
+                                <img src="icon/xm.png">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -211,13 +234,10 @@
         <article class="container">
             <h3><i class="fas fa-book me-2"></i>作品集/</h3>
             <nav>
-                <div class="nav nav-tabs justify-content-evenly" id="nav-tab" role="tablist">
-                    <a class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" href="#wd" role="tab"
-                        aria-controls="nav-home" aria-selected="true">網頁設計類</a>
-                    <a class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" href="#gd" role="tab"
-                        aria-controls="nav-profile" aria-selected="false">視覺設計類</a>
-                    <a class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" href="#threed" role="tab"
-                        aria-controls="nav-contact" aria-selected="false">3D設計類</a>
+                <div class="nav nav-tabs justify-content-evenly">
+                    <a class="nav-link active" data-bs-toggle="tab" href="#wd">網頁設計類</a>
+                    <a class="nav-link" data-bs-toggle="tab" href="#gd">視覺設計類</a>
+                    <a class="nav-link" data-bs-toggle="tab" href="#threed">3D設計類</a>
                 </div>
             </nav>
             <div class="tab-content py-5" id="nav-tabContent">
@@ -311,79 +331,88 @@
                 </div>
                 <div class="tab-pane fade" id="gd" role="tabpanel" aria-labelledby="nav-profile-tab">
                     <p class="col-12 mb-5 text-center text-secondary">
-                    收錄平面設計、商業海報、CG電繪...等，視覺相關作品。
-                </p>
-                <div class="row g-3">
-                    <div class="col-12 col-md-6 col-lg-4 col-xl-3">
-                        <div class="card">
-                            <div class="over">
-                                <div class="text text-center">
-                                    <div class="mb-2 pb-2 border-bottom"><strong>線上發票紀錄/對獎系統</strong></div>
-                                    ◆ 管理者、使用者、訪客三種登入模式，可查看不同權限訊息。<br>
-                                    ◆ 可進行發票的CRUD、自動對獎、提示開獎/過期與否，統計獎金、中獎發票、張數等訊息。<br>
-                                    ◆ 支援RWD響應式網站功能。
-                                    <a href="http://220.128.133.15/s1090421/invoice" target="_blink">
-                                        <div class="btn btn-success mt-2"><i class="fas fa-link me-2"></i>DEMO網站
-                                        </div>
-                                    </a>
+                        收錄平面設計、商業海報、CG電繪...等，視覺相關作品。
+                    </p>
+                    <div class="row g-3">
+                        <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                            <div class="card">
+                                <div class="over">
+                                    <div class="text text-center">
+                                        <div class="mb-2 pb-2 border-bottom"><strong>線上發票紀錄/對獎系統</strong></div>
+                                        ◆ 管理者、使用者、訪客三種登入模式，可查看不同權限訊息。<br>
+                                        ◆ 可進行發票的CRUD、自動對獎、提示開獎/過期與否，統計獎金、中獎發票、張數等訊息。<br>
+                                        ◆ 支援RWD響應式網站功能。
+                                        <a href="http://220.128.133.15/s1090421/invoice" target="_blink">
+                                            <div class="btn btn-success mt-2"><i class="fas fa-link me-2"></i>DEMO網站
+                                            </div>
+                                        </a>
+                                    </div>
                                 </div>
-                            </div>
-                            <img src="img/inv.jpg" class="card-img-top">
-                            <div class="card-body">
-                                <h5>線上發票紀錄/對獎系統</h5>
-                                <div class="ic d-flex justify-content-end">
-                                    <img class="me-1" src="icon/HTML.png">
-                                    <img class="me-1" src="icon/CSS.png">
-                                    <img class="me-1" src="icon/bs5.png">
-                                    <img class="me-1" src="icon/mariadb.png">
-                                    <img class="me-1" src="icon/php.png">
-                                    <img class="me-1" src="icon/ps.png">
+                                <img src="img/inv.jpg" class="card-img-top">
+                                <div class="card-body">
+                                    <h5>123</h5>
+                                    <div class="ic d-flex justify-content-end">
+                                        <img class="me-1" src="icon/HTML.png">
+                                        <img class="me-1" src="icon/CSS.png">
+                                        <img class="me-1" src="icon/bs5.png">
+                                        <img class="me-1" src="icon/mariadb.png">
+                                        <img class="me-1" src="icon/php.png">
+                                        <img class="me-1" src="icon/ps.png">
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
                 </div>
                 <div class="tab-pane fade" id="threed" role="tabpanel" aria-labelledby="nav-contact-tab">
                     <p class="col-12 mb-5 text-center text-secondary">
-                    收錄3D建模、擬真渲染、3D列印機打印之作品。
-                </p>
-                <div class="row g-3">
-                    <div class="col-12 col-md-6 col-lg-4 col-xl-3">
-                        <div class="card">
-                            <div class="over">
-                                <div class="text text-center">
-                                    <div class="mb-2 pb-2 border-bottom"><strong>線上發票紀錄/對獎系統</strong></div>
-                                    ◆ 管理者、使用者、訪客三種登入模式，可查看不同權限訊息。<br>
-                                    ◆ 可進行發票的CRUD、自動對獎、提示開獎/過期與否，統計獎金、中獎發票、張數等訊息。<br>
-                                    ◆ 支援RWD響應式網站功能。
-                                    <a href="http://220.128.133.15/s1090421/invoice" target="_blink">
-                                        <div class="btn btn-success mt-2"><i class="fas fa-link me-2"></i>DEMO網站
-                                        </div>
-                                    </a>
+                        收錄3D建模、擬真渲染、3D列印機打印之作品。
+                    </p>
+                    <div class="row g-3">
+                        <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                            <div class="card">
+                                <div class="over">
+                                    <div class="text text-center">
+                                        <div class="mb-2 pb-2 border-bottom"><strong>線上發票紀錄/對獎系統</strong></div>
+                                        ◆ 管理者、使用者、訪客三種登入模式，可查看不同權限訊息。<br>
+                                        ◆ 可進行發票的CRUD、自動對獎、提示開獎/過期與否，統計獎金、中獎發票、張數等訊息。<br>
+                                        ◆ 支援RWD響應式網站功能。
+                                        <a href="http://220.128.133.15/s1090421/invoice" target="_blink">
+                                            <div class="btn btn-success mt-2"><i class="fas fa-link me-2"></i>DEMO網站
+                                            </div>
+                                        </a>
+                                    </div>
                                 </div>
-                            </div>
-                            <img src="img/inv.jpg" class="card-img-top">
-                            <div class="card-body">
-                                <h5>線上發票紀錄/對獎系統</h5>
-                                <div class="ic d-flex justify-content-end">
-                                    <img class="me-1" src="icon/HTML.png">
-                                    <img class="me-1" src="icon/CSS.png">
-                                    <img class="me-1" src="icon/bs5.png">
-                                    <img class="me-1" src="icon/mariadb.png">
-                                    <img class="me-1" src="icon/php.png">
-                                    <img class="me-1" src="icon/ps.png">
+                                <img src="img/inv.jpg" class="card-img-top">
+                                <div class="card-body">
+                                    <h5>456</h5>
+                                    <div class="ic d-flex justify-content-end">
+                                        <img class="me-1" src="icon/HTML.png">
+                                        <img class="me-1" src="icon/CSS.png">
+                                        <img class="me-1" src="icon/bs5.png">
+                                        <img class="me-1" src="icon/mariadb.png">
+                                        <img class="me-1" src="icon/php.png">
+                                        <img class="me-1" src="icon/ps.png">
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
                 </div>
             </div>
         </article>
     </section>
 
-    <div class="footer"></div>
+    <section id="foot" class="footer">
+        <article class="container">
+            <h3 class="text-light"><i class="fas fa-phone-volume me-2 "></i>聯絡我</h3>
+            <hr>
+            <div>
+                <a class="text-light" href="tel:02-2901-8274">電話：0933-917-387</a>　
+                <a class="text-light" href="mainto:service@toyugi.com.tw">信箱：srx0w0010@hotmail.com</a>
+            </div>
+        </article>
+    </section>
 
 
 </body>
