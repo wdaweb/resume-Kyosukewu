@@ -17,8 +17,8 @@ header{
   height: 100vh;
   background-color: #ccc;
   background: 
-  linear-gradient(115deg,rgba(73, 148, 247, .8) 50%,transparent 50%) center center /100% 100%,
-  url("https://picsum.photos/1024/768/?random=1") right center / auto 100%; 
+  linear-gradient(115deg,rgba(73, 148, 247, .9) 50%,transparent 50%) center center /100% 100%,
+  url("../img/tbg2.jpg") center center / auto 100%; 
   background-size: cover;
   background-attachment: fixed;
 }
@@ -67,17 +67,40 @@ body {
   position: fixed;
   z-index: 50;
 }
+.self img{
+  width: 200px;
+  border-radius: 50%;
+}
+.me{
+  font-size: 1.2rem;
+  align-self: center;
+  color: #666;
+}
+.edu{
+  font-size: 1rem;
+  color: #333;
+}
+.exp img{
+  width: 25px;
+}
+.exp a{
+  text-decoration: none;
+  color: #333;
+}
 .experience {
   width: 100%;
   height: 100%;
   margin: auto;
 }
 .timeline a:hover {
-  background-color: #6fa5f6;
+  background-color: #67B4DB;
 }
 .timeline a:hover h4,
-.timeline a:hover p {
+.timeline a:hover p{
   color: #fff;
+}
+.timeline a:hover hr{
+  background: #ffa;
 }
 .timeline h4 {
   color: #333;
@@ -203,10 +226,11 @@ body {
 }
 ol>li:hover{
   color: #eee;
-  background: #5a94e0;
+  background: rgba(58, 153, 230, 0.7);
+  cursor: grab;
 }
 .item .txt {
-  padding: 80px 20px 30px;
+  padding: 80px 20px 20px;
 }
 .overlay{
   position: absolute;
@@ -216,6 +240,7 @@ ol>li:hover{
   right: 0;
   padding: 0 20px;
   background: rgba(255, 255, 255, .6);
+  border-radius: 20px;
 }
 .pic img{
   width: 100%;
@@ -223,7 +248,9 @@ ol>li:hover{
 .portfolio {
   padding: 2rem 0;
 }
-
+.nav>.nav-link{
+  color:#2d7adf;
+}
 .card{
   position: relative;
 }
@@ -258,7 +285,10 @@ strong{
 .footer {
   background: #333;
   width: 100vw;
-  height: 10vh;
+  margin: 2rem 0;
+}
+.footer a{
+  text-decoration: none;
 }
 @media screen and (min-width: 576px) {
   .timeline li::before {
@@ -283,8 +313,10 @@ strong{
   .item {
     width: 33%;
   }
-  .experience {
-    height: 120vh;
+  .experience:after {
+    content: "";
+    display: block;
+    clear: both;
   }
   .timeline li {
     width: 50%;
@@ -346,10 +378,8 @@ strong{
   .item {
     width: 24.5%;
   }
-  .experience {
-    height: 105vh;
-  }
 }
+
 @keyframes ss {
   0% {
     transform: rotate(-10deg);
