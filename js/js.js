@@ -1,23 +1,23 @@
-$('.bg0').addClass('wow animate__bounceInRight');
-$('.bg1').addClass('wow animate__bounceInDown');
-$('.bg2').addClass('wow animate__backInRight');
-$('.bg3').addClass('wow animate__fadeInLeft');
-$('.banner-txt').addClass('wow animate__fadeIn');
-$('.tit').addClass('wow animate__slideInLeft');
-$('.tit2').addClass('wow animate__lightSpeedInLeft');
-$('.tit3').addClass('wow animate__slideInLeft');
-$('.tit4').addClass('wow animate__lightSpeedInLeft');
-$('.tit5').addClass('wow animate__slideInLeft');
-$('.tit6').addClass('wow animate__lightSpeedInLeft');
-$('.tit7').addClass('wow animate__slideInLeft');
-$('.tit8').addClass('wow animate__lightSpeedInLeft');
-$('.tit9').addClass('wow animate__slideInLeft');
-$('.tit10').addClass('wow animate__lightSpeedInLeft');
-$('.self').addClass('wow animate__rotateIn');
-$('#sk1').addClass('wow animate__backInRight');
-$('#sk2').addClass('wow animate__backInRight');
-$('#sk3').addClass('wow animate__backInRight');
-$('#sk4').addClass('wow animate__backInRight');
+$(".bg0").addClass("wow animate__bounceInRight");
+$(".bg1").addClass("wow animate__bounceInDown");
+$(".bg2").addClass("wow animate__backInRight");
+$(".bg3").addClass("wow animate__fadeInLeft");
+$(".banner-txt").addClass("wow animate__fadeIn");
+$(".tit").addClass("wow animate__slideInLeft");
+$(".tit2").addClass("wow animate__lightSpeedInLeft");
+$(".tit3").addClass("wow animate__slideInLeft");
+$(".tit4").addClass("wow animate__lightSpeedInLeft");
+$(".tit5").addClass("wow animate__slideInLeft");
+$(".tit6").addClass("wow animate__lightSpeedInLeft");
+$(".tit7").addClass("wow animate__slideInLeft");
+$(".tit8").addClass("wow animate__lightSpeedInLeft");
+$(".tit9").addClass("wow animate__slideInLeft");
+$(".tit10").addClass("wow animate__lightSpeedInLeft");
+$(".self").addClass("wow animate__rotateIn");
+$("#sk1").addClass("wow animate__backInRight");
+$("#sk2").addClass("wow animate__backInRight");
+$("#sk3").addClass("wow animate__backInRight");
+$("#sk4").addClass("wow animate__backInRight");
 new WOW().init();
 
 function h(cl, num, pl) {
@@ -30,3 +30,18 @@ function h(cl, num, pl) {
     }
   );
 }
+
+$(window).scroll(function () {
+  var wheight = $( window ).height();
+  var scroll = $(window).scrollTop();
+  var bheight = $("#banner").height();
+  console.log(scroll);
+  // console.log(wheight);
+  // console.log(bheight);
+
+  if(wheight + scroll == bheight){
+    $("#scrolltop").attr("style","display:none")
+  }else{
+    $("#scrolltop").attr("style","")
+  }
+});
