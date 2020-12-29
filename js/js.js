@@ -1,9 +1,32 @@
+$('.bg0').addClass('wow animate__bounceInRight');
+$('.bg1').addClass('wow animate__bounceInDown');
+$('.bg2').addClass('wow animate__backInRight');
+$('.bg3').addClass('wow animate__fadeInLeft');
+$('.banner-txt').addClass('wow animate__fadeIn');
+$('.tit').addClass('wow animate__slideInLeft');
+$('.tit2').addClass('wow animate__lightSpeedInLeft');
+$('.tit3').addClass('wow animate__slideInLeft');
+$('.tit4').addClass('wow animate__lightSpeedInLeft');
+$('.tit5').addClass('wow animate__slideInLeft');
+$('.tit6').addClass('wow animate__lightSpeedInLeft');
+$('.tit7').addClass('wow animate__slideInLeft');
+$('.tit8').addClass('wow animate__lightSpeedInLeft');
+$('.tit9').addClass('wow animate__slideInLeft');
+$('.tit10').addClass('wow animate__lightSpeedInLeft');
+$('.self').addClass('wow animate__rotateIn');
+$('#sk1').addClass('wow animate__backInRight');
+$('#sk2').addClass('wow animate__backInRight');
+$('#sk3').addClass('wow animate__backInRight');
+$('#sk4').addClass('wow animate__backInRight');
 new WOW().init();
 
-function h(cl,num,pl){
-    $(`.${cl}${num}`).hover(function(){
-        $(`#${pl}`).attr("src",`icon/${cl}${num}.png`);
-    },function(){
-        $(`#${pl}`).attr("src",`icon/${cl}0.png`);
-    });
+function h(cl, num, pl) {
+  $(`.${cl}${num}`).hover(
+    function () {
+      $(`#${pl}`).attr("src", `icon/${cl}${num}.png`);
+    },
+    function () {
+      $(`#${pl}`).attr("src", `icon/${cl}0.png`);
+    }
+  );
 }

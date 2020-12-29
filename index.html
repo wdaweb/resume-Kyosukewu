@@ -15,27 +15,29 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"
         integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.compat.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <title>Kyosuke's Resume</title>
 </head>
 
 <body>
     <div class="banner" id="banner">
-        <div class="bg2"></div>
+        <div class="bg0 animate__animated" data-wow-delay="0.5s"></div>
+        <div class="bg1 animate__animated" data-wow-delay="0.7s"></div>
+        <div class="bg2 animate__animated" data-wow-delay="0.3s"></div>
+        <div class="bg3 animate__animated"></div>
         <div class="contant">
-            <div class="banner-txt">
-                <h2>金魚都能懂得
-                    <small>這個網頁畫面怎麼切</small>
-                </h2>
-                <h3>圖文滿版區塊</h3>
-                <p>做好圖文天氣帶來<br>農村一下子知道剛剛走到臺中到底</p>
+            <div class="banner-txt" data-wow-delay="0.1s">
+                <object id="mysvg" type="image/svg+xml" data="img/title_animated.svg"></object>
             </div>
         </div>
+        <div class="tobanner">
+            <a href="#stick"><i class="ar fas fa-chevron-down text-light"></i></a>
+        </div>
     </div>
-    <header id="stick" class="bg-light">
+    <header id="stick">
         <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <nav class="navbar navbar-expand-lg navbar-dark">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="#">MaruDesign</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -44,16 +46,16 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ms-auto me-5 mb-2 mb-lg-0">
-                            <li class="nav-item">
+                            <li class="nav-item px-3 px-lg-0">
                                 <a class="nav-link" href="#ab"><i class="far fa-address-card me-2"></i>About me</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item px-3 px-lg-0">
                                 <a class="nav-link" href="#exp"><i class="fas fa-school me-2"></i>Experience</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item px-3  px-lg-0">
                                 <a class="nav-link" href="#sk"><i class="fas fa-code-branch me-2"></i>Skills</a>
                             </li>
-                            <li class="nav-item dropdown">
+                            <li class="nav-item dropdown px-3 px-lg-0">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                     data-bs-toggle="dropdown">
                                     <i class="fas fa-book mr-2 me-2"></i>Portfolio
@@ -70,8 +72,11 @@
                                     <li><a class="dropdown-item" href="#threed">3D Design 3D設計類</a></li>
                                 </ul>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item px-3 px-lg-0">
                                 <a class="nav-link" href="#foot"><i class="fas fa-phone-volume me-2"></i>Contact me</a>
+                            </li>
+                            <li class="nav-item px-3 px-lg-0">
+                                <a class="nav-link" href="login.html"><i class="fas fa-sign-in-alt me-2"></i>LOGIN</a>
                             </li>
                         </ul>
                     </div>
@@ -81,10 +86,11 @@
     </header>
     <section>
         <article class="container mt-5">
-            <div class="about" id="ab">
-                <h3 class="w-100 pb-3 border-bottom"><i class="far fa-address-card me-2"></i>關於我/</h3>
+            <div class="about">
+                <h3 class="tit w-100 pb-3 border-bottom animate__animated"><i class="far fa-address-card me-2"></i>關於我 / <span class="tit2 animate__animated" data-wow-delay ="0.5s" > About me</span>
+                </h3>
                 <div class="d-flex justify-content-between mt-5">
-                    <div class="self w-50  text-center">
+                    <div class="self w-50  text-center animate__animated">
                         <img src="img/me.jpg" alt="">
                     </div>
                     <div class="me w-50">
@@ -113,7 +119,7 @@
     </section>
     <section class="container">
         <div class="experience mb-5" id="exp">
-            <h3 class="w-100 pb-3 border-bottom"><i class="fas fa-school mt-5 me-2"></i>學習/工作經歷/</h3>
+            <h3 class="tit3 w-100 pb-3 border-bottom animate__animated"><i class="fas fa-school mt-5 me-2"></i>學習/工作經歷 / <span class="tit4 animate__animated" data-wow-delay ="0.5s" >Experience</span></h3>
             <ul class="timeline">
                 <li>
                     <a href="https://wdaweb.github.io/" target="_blink">
@@ -171,9 +177,9 @@
     </section>
     <section class="skills" id="sk">
         <article class="container">
-            <h3 class="w-100 pb-3 border-bottom"><i class="fas fa-code-branch me-2"></i>工作技能/</h3>
+            <h3 class="tit5 w-100 pb-3 border-bottom animate__animated"><i class="fas fa-code-branch me-2"></i>工作技能 / <span class="tit6 animate__animated" data-wow-delay ="0.5s" > Skills</span></h3>
             <div class="row justify-content-between">
-                <div class="item">
+                <div id="sk1" class="item animate__animated">
                     <div class="icon"><i class="ani fas fa-solar-panel"></i></div>
                     <div class="txt">
                         <h5>網頁相關技術</h5>
@@ -201,7 +207,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="item">
+                <div id="sk2" class="item animate__animated" data-wow-delay="0.2s">
                     <div class="icon"><i class="ani far fa-images"></i></div>
                     <div class="txt">
                         <h5>視覺/影像處理</h5>
@@ -220,7 +226,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="item">
+                <div id="sk3" class="item animate__animated" data-wow-delay="0.3s" >
                     <div class="icon"><i class="ani fas fa-cubes"></i></div>
                     <div class="txt">
                         <h5>3D軟體應用</h5>
@@ -239,7 +245,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="item">
+                <div id="sk4" class="item animate__animated" data-wow-delay="0.4s">
                     <div class="icon"><i class="ani far fa-keyboard"></i></div>
                     <div class="txt">
                         <h5>文書軟體應用</h5>
@@ -263,7 +269,7 @@
     </section>
     <section class="portfolio" id="pro">
         <article class="container">
-            <h3><i class="fas fa-book me-2"></i>作品集/</h3>
+            <h3 class="tit7 animate__animated"><i class="fas fa-book me-2"></i>作品集 / <span class="tit8 animate__animated" data-wow-delay ="0.5s" > Portfolio</span></h3>
             <nav>
                 <div class="nav nav-tabs justify-content-evenly">
                     <a class="nav-link active" data-bs-toggle="tab" href="#wd">網頁設計類</a>
@@ -323,7 +329,7 @@
                                 <img src="img/cal.jpg" class="card-img-top">
                                 <div class="card-body">
                                     <h5 class="w-100 pb-3 border-bottom">線上萬年曆</h5>
-                                    
+
                                     <div class="ic d-flex justify-content-end">
                                         <img class="me-1" src="icon/w1.png">
                                         <img class="me-1" src="icon/w2.png">
@@ -349,7 +355,7 @@
                                 <img src="img/QTE.jpg" class="card-img-top">
                                 <div class="card-body">
                                     <h5 class="w-100 pb-3 border-bottom">QTE小遊戲</h5>
-                                    
+
                                     <div class="ic d-flex justify-content-end">
                                         <img class="me-1" src="icon/w1.png">
                                         <img class="me-1" src="icon/w2.png">
@@ -384,7 +390,7 @@
                                 <img src="img/g1.jpg" class="card-img-top">
                                 <div class="card-body">
                                     <h5 class="w-100 pb-3 border-bottom">動漫人物仿繪</h5>
-                                    
+
                                     <div class="ic d-flex justify-content-end">
                                         <img class="me-1" src="icon/g1.png">
                                     </div>
@@ -408,7 +414,7 @@
                                 <img src="img/g2.jpg" class="card-img-top">
                                 <div class="card-body">
                                     <h5 class="w-100 pb-3 border-bottom">聖誕節賀圖</h5>
-                                    
+
                                     <div class="ic d-flex justify-content-end">
                                         <img class="me-1" src="icon/g1.png">
                                         <img class="me-1" src="icon/g2.png">
@@ -432,7 +438,7 @@
                                 <img src="img/g3.jpg" class="card-img-top">
                                 <div class="card-body">
                                     <h5 class="w-100 pb-3 border-bottom">放空小孩-真人動漫化</h5>
-                                    
+
                                     <div class="ic d-flex justify-content-end">
                                         <img class="me-1" src="icon/g1.png">
                                     </div>
@@ -455,7 +461,7 @@
                                 <img src="img/g4.jpg" class="card-img-top">
                                 <div class="card-body">
                                     <h5 class="w-100 pb-3 border-bottom">桌布設計01</h5>
-                                    
+
                                     <div class="ic d-flex justify-content-end">
                                         <img class="me-1" src="icon/g1.png">
                                     </div>
@@ -478,7 +484,7 @@
                                 <img src="img/g5.jpg" class="card-img-top">
                                 <div class="card-body">
                                     <h5 class="w-100 pb-3 border-bottom">月夜下的貓頭鷹</h5>
-                                    
+
                                     <div class="ic d-flex justify-content-end">
                                         <img class="me-1" src="icon/g1.png">
                                     </div>
@@ -488,7 +494,8 @@
                         <div class="col-12 col-md-6 col-lg-4 col-xl-3">
                             <div class="card">
                                 <div class="over">
-                                    <div class="mb-2 text-center pb-2 w-100 border-bottom"><strong>GEARBEAR!-角色設計</strong>
+                                    <div class="mb-2 text-center pb-2 w-100 border-bottom">
+                                        <strong>GEARBEAR!-角色設計</strong>
                                     </div>
                                     <div class="text">
                                         ◆ 原創作品，以充滿"機械感"的概念為發想，設計生機結合的角色<br>
@@ -501,7 +508,7 @@
                                 <img src="img/g6.jpg" class="card-img-top">
                                 <div class="card-body">
                                     <h5 class="w-100 pb-3 border-bottom">GEARBEAR!-角色設計</h5>
-                                    
+
                                     <div class="ic d-flex justify-content-end">
                                         <img class="me-1" src="icon/g1.png">
                                     </div>
@@ -525,7 +532,7 @@
                                 <img src="img/g7.jpg" class="card-img-top">
                                 <div class="card-body">
                                     <h5 class="w-100 pb-3 border-bottom">雙葉茶茶丸-角色設計</h5>
-                                    
+
                                     <div class="ic d-flex justify-content-end">
                                         <img class="me-1" src="icon/g1.png">
                                     </div>
@@ -549,7 +556,7 @@
                                 <img src="img/g8.jpg" class="card-img-top">
                                 <div class="card-body">
                                     <h5 class="w-100 pb-3 border-bottom">ZEUS-LOGO設計</h5>
-                                    
+
                                     <div class="ic d-flex justify-content-end">
                                         <img class="me-1" src="icon/g1.png">
                                         <img class="me-1" src="icon/g2.png">
@@ -574,7 +581,7 @@
                                 <img src="img/g9.jpg" class="card-img-top">
                                 <div class="card-body">
                                     <h5 class="w-100 pb-3 border-bottom">活動短漫+角色設計</h5>
-                                    
+
                                     <div class="ic d-flex justify-content-end">
                                         <img class="me-1" src="icon/g1.png">
                                         <img class="me-1" src="icon/g2.png">
@@ -600,7 +607,7 @@
                                 <img src="img/g10.jpg" class="card-img-top">
                                 <div class="card-body">
                                     <h5 class="w-100 pb-3 border-bottom">招牌+菜單設計</h5>
-                                    
+
                                     <div class="ic d-flex justify-content-end">
                                         <img class="me-1" src="icon/g1.png">
                                         <img class="me-1" src="icon/g2.png">
@@ -625,7 +632,7 @@
                                 <img src="img/g11.jpg" class="card-img-top">
                                 <div class="card-body">
                                     <h5 class="w-100 pb-3 border-bottom">網拍產品介紹設計</h5>
-                                    
+
                                     <div class="ic d-flex justify-content-end">
                                         <img class="me-1" src="icon/g1.png">
                                         <img class="me-1" src="icon/g2.png">
@@ -649,7 +656,7 @@
                                 <img src="img/g12.jpg" class="card-img-top">
                                 <div class="card-body">
                                     <h5 class="w-100 pb-3 border-bottom">2021年曆設計</h5>
-                                    
+
                                     <div class="ic d-flex justify-content-end">
                                         <img class="me-1" src="icon/g1.png">
                                     </div>
@@ -672,7 +679,7 @@
                                 <img src="img/g13.jpg" class="card-img-top">
                                 <div class="card-body">
                                     <h5 class="w-100 pb-3 border-bottom">旅遊DM設計</h5>
-                                    
+
                                     <div class="ic d-flex justify-content-end">
                                         <img class="me-1" src="icon/g1.png">
                                     </div>
@@ -695,7 +702,7 @@
                                 <img src="img/g14.jpg" class="card-img-top">
                                 <div class="card-body">
                                     <h5 class="w-100 pb-3 border-bottom">30日動物挑戰</h5>
-                                    
+
                                     <div class="ic d-flex justify-content-end">
                                         <img class="me-1" src="icon/g2.png">
                                     </div>
@@ -725,7 +732,7 @@
                                 <img src="img/d1.jpg" class="card-img-top">
                                 <div class="card-body">
                                     <h5 class="w-100 pb-3 border-bottom">創意馬克杯蓋</h5>
-                                    
+
                                     <div class="ic d-flex justify-content-end">
                                         <img class="me-1" src="icon/d1.png">
                                         <img class="me-1" src="icon/dd.png">
@@ -750,7 +757,7 @@
                                 <img src="img/d2.jpg" class="card-img-top">
                                 <div class="card-body">
                                     <h5 class="w-100 pb-3 border-bottom">可動組裝骨架</h5>
-                                    
+
                                     <div class="ic d-flex justify-content-end">
                                         <img class="me-1" src="icon/d1.png">
                                         <img class="me-1" src="icon/dd.png">
@@ -775,7 +782,7 @@
                                 <img src="img/d3.jpg" class="card-img-top">
                                 <div class="card-body">
                                     <h5 class="w-100 pb-3 border-bottom">升降機擬真示意圖</h5>
-                                    
+
                                     <div class="ic d-flex justify-content-end">
                                         <img class="me-1" src="icon/d1.png">
                                         <img class="me-1" src="icon/d5.png">
@@ -800,7 +807,7 @@
                                 <img src="img/d4.jpg" class="card-img-top">
                                 <div class="card-body">
                                     <h5 class="w-100 pb-3 border-bottom">造型手機架</h5>
-                                    
+
                                     <div class="ic d-flex justify-content-end">
                                         <img class="me-1" src="icon/d1.png">
                                         <img class="me-1" src="icon/dd.png">
@@ -825,7 +832,7 @@
                                 <img src="img/d5.jpg" class="card-img-top">
                                 <div class="card-body">
                                     <h5 class="w-100 pb-3 border-bottom">茶茶丸公仔</h5>
-                                    
+
                                     <div class="ic d-flex justify-content-end">
                                         <img class="me-1" src="icon/d1.png">
                                         <img class="me-1" src="icon/dd.png">
@@ -851,7 +858,7 @@
                                 <img src="img/d6.jpg" class="card-img-top">
                                 <div class="card-body">
                                     <h5 class="w-100 pb-3 border-bottom">彎腰郵筒造型擺飾</h5>
-                                    
+
                                     <div class="ic d-flex justify-content-end">
                                         <img class="me-1" src="icon/d1.png">
                                         <img class="me-1" src="icon/dd.png">
@@ -877,7 +884,7 @@
                                 <img src="img/d7.jpg" class="card-img-top">
                                 <div class="card-body">
                                     <h5 class="w-100 pb-3 border-bottom">多功能茶壺名片座</h5>
-                                    
+
                                     <div class="ic d-flex justify-content-end">
                                         <img class="me-1" src="icon/d1.png">
                                         <img class="me-1" src="icon/dd.png">
@@ -893,7 +900,7 @@
 
     <section id="foot" class="footer py-3">
         <article class="container text-center">
-            <h3 class="text-light mb-4"><i class="fas fa-phone-volume me-2 "></i>聯絡我</h3>
+            <h3 class="tit9 text-light mb-4 animate__animated"><i class="fas fa-phone-volume me-2 "></i>聯絡我 / <span class="tit10 animate__animated" data-wow-delay ="0.5s" > Contact me</span></h3>
             <div class="text-light">
                 <p>感謝您撥冗閱讀這份履歷，如果您對我的能力有興趣的話，歡迎透過以下方式聯繫我，謝謝。</p>
                 <p><a class="text-light" href="tel:+886-933917387">電話：0933-917-387</a> ||
@@ -901,7 +908,7 @@
                 </p>
             </div>
         </article>
-        <div class="bg-secondary text-center">
+        <div class="bar text-center">
             <p>-Designed by MaruDesign-</p>
         </div>
     </section>
