@@ -20,6 +20,26 @@ $("#sk3").addClass("wow animate__backInRight");
 $("#sk4").addClass("wow animate__backInRight");
 new WOW().init();
 
+
+$(window).scroll(() => {
+  gotop()
+});
+
+gotop()
+
+function gotop() {
+  let
+    nowat = $(window).scrollTop(),
+    height = $("#banner").height();
+  if (nowat <= height) {
+    $("#scrolltop").removeClass("shown");
+  }
+  else {
+    $("#scrolltop").addClass("shown");
+  }
+}
+
+
 function h(cl, num, pl) {
   $(`.${cl}${num}`).hover(
     function () {
