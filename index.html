@@ -55,7 +55,10 @@
                             <li class="nav-item px-3  px-lg-0">
                                 <a class="nav-link" href="#sk"><i class="fas fa-code-branch me-2"></i>Skills</a>
                             </li>
-                            <li class="nav-item dropdown px-3 px-lg-0">
+                            <li class="nav-item px-3  px-lg-0">
+                                <a class="nav-link" href="#pro"><i class="fas fa-book mr-2 me-2"></i>Portfolio</a>
+                            </li>
+                            <!-- <li class="nav-item dropdown px-3 px-lg-0">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                     data-bs-toggle="dropdown">
                                     <i class="fas fa-book mr-2 me-2"></i>Portfolio
@@ -71,7 +74,7 @@
                                     </li>
                                     <li><a class="dropdown-item" href="#threed">3D Design 3D設計類</a></li>
                                 </ul>
-                            </li>
+                            </li> -->
                             <li class="nav-item px-3 px-lg-0">
                                 <a class="nav-link" href="#foot"><i class="fas fa-phone-volume me-2"></i>Contact me</a>
                             </li>
@@ -87,7 +90,8 @@
     <section>
         <article class="container mt-5">
             <div class="about">
-                <h3 class="tit w-100 pb-3 border-bottom animate__animated"><i class="far fa-address-card me-2"></i>關於我 / <span class="tit2 animate__animated" data-wow-delay ="0.5s" > About me</span>
+                <h3 class="tit w-100 pb-3 border-bottom animate__animated"><i class="far fa-address-card me-2"></i>關於我 /
+                    <span class="tit2 animate__animated" data-wow-delay="0.5s"> About me</span>
                 </h3>
                 <div class="d-flex justify-content-between mt-5">
                     <div class="self w-50  text-center animate__animated">
@@ -119,7 +123,9 @@
     </section>
     <section class="container">
         <div class="experience mb-5" id="exp">
-            <h3 class="tit3 w-100 pb-3 border-bottom animate__animated"><i class="fas fa-school mt-5 me-2"></i>學習/工作經歷 / <span class="tit4 animate__animated" data-wow-delay ="0.5s" >Experience</span></h3>
+            <h3 class="tit3 w-100 pb-3 border-bottom animate__animated"><i class="fas fa-school mt-5 me-2"></i>學習/工作經歷 /
+                <span class="tit4 animate__animated" data-wow-delay="0.5s">Experience</span>
+            </h3>
             <ul class="timeline">
                 <li>
                     <a href="https://wdaweb.github.io/" target="_blink">
@@ -177,7 +183,9 @@
     </section>
     <section class="skills" id="sk">
         <article class="container">
-            <h3 class="tit5 w-100 pb-3 border-bottom animate__animated"><i class="fas fa-code-branch me-2"></i>工作技能 / <span class="tit6 animate__animated" data-wow-delay ="0.5s" > Skills</span></h3>
+            <h3 class="tit5 w-100 pb-3 border-bottom animate__animated"><i class="fas fa-code-branch me-2"></i>工作技能 /
+                <span class="tit6 animate__animated" data-wow-delay="0.5s"> Skills</span>
+            </h3>
             <div class="row justify-content-between">
                 <div id="sk1" class="item animate__animated">
                     <div class="icon"><i class="ani fas fa-solar-panel"></i></div>
@@ -226,7 +234,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="sk3" class="item animate__animated" data-wow-delay="0.3s" >
+                <div id="sk3" class="item animate__animated" data-wow-delay="0.3s">
                     <div class="icon"><i class="ani fas fa-cubes"></i></div>
                     <div class="txt">
                         <h5>3D軟體應用</h5>
@@ -268,8 +276,17 @@
         </article>
     </section>
     <section class="portfolio" id="pro">
+        <!-- --------------------- -->
+        <div id="cover">
+            <div class="imgc">
+                <a onclick="cl('#cover')"><i class="fas fa-times"></i></a>
+                <img id="bimg" src="bimg/gb1.png">
+            </div>
+        </div>
+        <!-- --------------------- -->
         <article class="container">
-            <h3 class="tit7 animate__animated"><i class="fas fa-book me-2"></i>作品集 / <span class="tit8 animate__animated" data-wow-delay ="0.5s" > Portfolio</span></h3>
+            <h3 class="tit7 animate__animated"><i class="fas fa-book me-2"></i>作品集 / <span
+                    class="tit8 animate__animated" data-wow-delay="0.5s"> Portfolio</span></h3>
             <nav>
                 <div class="nav nav-tabs justify-content-evenly">
                     <a class="nav-link active" data-bs-toggle="tab" href="#wd">網頁設計類</a>
@@ -382,7 +399,7 @@
                                     <div class="text">
                                         ◆ 繪圖板練習，透過PS營造光影效果仿繪動漫人物<br>
                                     </div>
-                                    <a href="" target="_blink">
+                                    <a onclick="op('#cover','#content','gb1')">
                                         <div class="btn btn-success mt-2"><i class="fas fa-link me-2"></i>點看全圖
                                         </div>
                                     </a>
@@ -406,7 +423,7 @@
                                         ◆ 以聖誕老人及麋鹿發想，結合動漫風格人物設計的聖誕賀圖<br>
                                         ◆ 可應用於輸出馬克杯圖案<br>
                                     </div>
-                                    <a href="" target="_blink">
+                                    <a onclick="op('#cover','#content','gb2')">
                                         <div class="btn btn-success mt-2"><i class="fas fa-link me-2"></i>點看全圖
                                         </div>
                                     </a>
@@ -430,7 +447,7 @@
                                     <div class="text">
                                         ◆ 以實際真人為原型發想，詮釋漫畫造型的人物<br>
                                     </div>
-                                    <a href="" target="_blink">
+                                    <a onclick="op('#cover','#content','gb3')">
                                         <div class="btn btn-success mt-2"><i class="fas fa-link me-2"></i>點看全圖
                                         </div>
                                     </a>
@@ -453,7 +470,7 @@
                                     <div class="text">
                                         ◆ Q版角色繪圖，結合情境製作桌布背景<br>
                                     </div>
-                                    <a href="" target="_blink">
+                                    <a onclick="op('#cover','#content','gb4')">
                                         <div class="btn btn-success mt-2"><i class="fas fa-link me-2"></i>點看全圖
                                         </div>
                                     </a>
@@ -476,7 +493,7 @@
                                     <div class="text">
                                         ◆ 原創作品，表現月夜下佇立於樹梢的貓頭鷹<br>
                                     </div>
-                                    <a href="" target="_blink">
+                                    <a onclick="op('#cover','#content','gb5')">
                                         <div class="btn btn-success mt-2"><i class="fas fa-link me-2"></i>點看全圖
                                         </div>
                                     </a>
@@ -500,7 +517,7 @@
                                     <div class="text">
                                         ◆ 原創作品，以充滿"機械感"的概念為發想，設計生機結合的角色<br>
                                     </div>
-                                    <a href="" target="_blink">
+                                    <a onclick="op('#cover','#content','gb6')">
                                         <div class="btn btn-success mt-2"><i class="fas fa-link me-2"></i>點看全圖
                                         </div>
                                     </a>
@@ -524,7 +541,7 @@
                                         ◆ 原創作品，以"茶葉"為概念發想，並設定角色個性作為企業吉祥物<br>
                                         ◆ 透過3D建模，並以3DPrinter技術輸出製作成品<br>
                                     </div>
-                                    <a href="" target="_blink">
+                                    <a onclick="op('#cover','#content','gb7')">
                                         <div class="btn btn-success mt-2"><i class="fas fa-link me-2"></i>點看全圖
                                         </div>
                                     </a>
@@ -548,7 +565,7 @@
                                         ◆ 新創戶外用品品牌ZEUS的LOGO設計<br>
                                         ◆ 以宙斯之鷹為概念基礎，展現品牌果敢、勇猛的企業精神<br>
                                     </div>
-                                    <a href="" target="_blink">
+                                    <a onclick="op('#cover','#content','gb8')">
                                         <div class="btn btn-success mt-2"><i class="fas fa-link me-2"></i>點看全圖
                                         </div>
                                     </a>
@@ -573,7 +590,7 @@
                                         ◆ 招募新人用網路文宣設計，以剛畢業的新鮮資工人族群為主，故設定女主角為充滿活力剛畢業的資工少女<br>
                                         ◆ 以"短漫問答互動"形式讓網友票選女主角的理想未來，並以多年後的自己的角度，闡述當年選擇的結果，強調該行業美好願景<br>
                                     </div>
-                                    <a href="" target="_blink">
+                                    <a onclick="op('#cover','#content','gb9')">
                                         <div class="btn btn-success mt-2"><i class="fas fa-link me-2"></i>點看全圖
                                         </div>
                                     </a>
@@ -599,7 +616,7 @@
                                         ◆ 菜單一改傳統手寫紙板，以圖像化為主，令客人對於產品一目了然，並能增進食慾<br>
                                         ◆ 菜單標示特色菜，引導新的客人一眼了解本店招牌菜色<br>
                                     </div>
-                                    <a href="" target="_blink">
+                                    <a onclick="op('#cover','#content','gb10')">
                                         <div class="btn btn-success"><i class="fas fa-link me-2"></i>點看全圖
                                         </div>
                                     </a>
@@ -624,7 +641,7 @@
                                         ◆ 為網拍產品設計一系列產品介紹圖文<br>
                                         ◆ 透過冷色調、波浪線條、冰塊、六角形為主視覺要素，強調產品"涼感"的特性<br>
                                     </div>
-                                    <a href="" target="_blink">
+                                    <a onclick="op('#cover','#content','gb11')">
                                         <div class="btn btn-success mt-2"><i class="fas fa-link me-2"></i>點看全圖
                                         </div>
                                     </a>
@@ -648,7 +665,7 @@
                                     <div class="text">
                                         ◆ 以2021年代表生肖-牛為發想基礎，結合牛隻部位解說圖的概念，設計出充滿趣味又可口的年曆<br>
                                     </div>
-                                    <a href="" target="_blink">
+                                    <a onclick="op('#cover','#content','gb12')">
                                         <div class="btn btn-success mt-2"><i class="fas fa-link me-2"></i>點看全圖
                                         </div>
                                     </a>
@@ -671,7 +688,7 @@
                                     <div class="text">
                                         ◆ 以日本賞櫻旅遊為主題，介紹日本四個著名賞櫻景點的相關資訊<br>
                                     </div>
-                                    <a href="" target="_blink">
+                                    <a onclick="op('#cover','#content','gb13')">
                                         <div class="btn btn-success mt-2"><i class="fas fa-link me-2"></i>點看全圖
                                         </div>
                                     </a>
@@ -694,7 +711,7 @@
                                     <div class="text">
                                         ◆ 以黃金比例的圓形，勾勒出各式各樣動物的30日挑戰!<br>
                                     </div>
-                                    <a href="" target="_blink">
+                                    <a onclick="op('#cover','#content','gb14')">
                                         <div class="btn btn-success mt-2"><i class="fas fa-link me-2"></i>點看全圖
                                         </div>
                                     </a>
@@ -725,7 +742,7 @@
                                         ◆ 透過分件設計實現砲管可動<br>
                                         ◆ 3D列印輸出成品<br>
                                     </div>
-                                    <a href="" target="_blink">
+                                    <a onclick="op('#cover','#content','db1')">
                                         <div class="btn btn-success mt-2"><i class="fas fa-link me-2"></i>點看全圖</div>
                                     </a>
                                 </div>
@@ -749,7 +766,7 @@
                                         ◆ 透過分件設計實現全關節可動<br>
                                         ◆ 3D列印輸出成品<br>
                                     </div>
-                                    <a href="" target="_blink">
+                                    <a onclick="op('#cover','#content','db2')">
                                         <div class="btn btn-success mt-2"><i class="fas fa-link me-2"></i>點看全圖
                                         </div>
                                     </a>
@@ -774,7 +791,7 @@
                                         ◆ 3D建模組裝<br>
                                         ◆ C4D渲染+材質模擬真實場景<br>
                                     </div>
-                                    <a href="" target="_blink">
+                                    <a onclick="op('#cover','#content','db3')">
                                         <div class="btn btn-success mt-2"><i class="fas fa-link me-2"></i>點看全圖
                                         </div>
                                     </a>
@@ -799,7 +816,7 @@
                                         ◆ 與遊戲公司合作推出之小贈品<br>
                                         ◆ 3D列印輸出成品<br>
                                     </div>
-                                    <a href="" target="_blink">
+                                    <a onclick="op('#cover','#content','db4')">
                                         <div class="btn btn-success mt-2"><i class="fas fa-link me-2"></i>點看全圖
                                         </div>
                                     </a>
@@ -824,7 +841,7 @@
                                         ◆ 結合市售關節零件實現關節可動<br>
                                         ◆ 3D列印輸出成品<br>
                                     </div>
-                                    <a href="" target="_blink">
+                                    <a onclick="op('#cover','#content','db5')">
                                         <div class="btn btn-success mt-2"><i class="fas fa-link me-2"></i>點看全圖
                                         </div>
                                     </a>
@@ -850,7 +867,7 @@
                                         ◆ 結合時事話題設計的小擺件<br>
                                         ◆ 3D列印輸出成品<br>
                                     </div>
-                                    <a href="" target="_blink">
+                                    <a onclick="op('#cover','#content','db6')">
                                         <div class="btn btn-success mt-2"><i class="fas fa-link me-2"></i>點看全圖
                                         </div>
                                     </a>
@@ -876,7 +893,7 @@
                                         ◆ 透過簡易拆卸可變成造型名片座<br>
                                         ◆ 3D列印輸出成品<br>
                                     </div>
-                                    <a href="" target="_blink">
+                                    <a onclick="op('#cover','#content','db7')">
                                         <div class="btn btn-success mt-2"><i class="fas fa-link me-2"></i>點看全圖
                                         </div>
                                     </a>
@@ -900,7 +917,8 @@
 
     <section id="foot" class="footer py-3">
         <article class="container text-center">
-            <h3 class="tit9 text-light mb-4 animate__animated"><i class="fas fa-phone-volume me-2 "></i>聯絡我 / <span class="tit10 animate__animated" data-wow-delay ="0.5s" > Contact me</span></h3>
+            <h3 class="tit9 text-light mb-4 animate__animated"><i class="fas fa-phone-volume me-2 "></i>聯絡我 / <span
+                    class="tit10 animate__animated" data-wow-delay="0.5s"> Contact me</span></h3>
             <div class="text-light">
                 <p>感謝您撥冗閱讀這份履歷，如果您對我的能力有興趣的話，歡迎透過以下方式聯繫我，謝謝。</p>
                 <p><a class="text-light" href="tel:+886-933917387">電話：0933-917-387</a> ||

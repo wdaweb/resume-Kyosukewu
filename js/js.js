@@ -31,17 +31,15 @@ function h(cl, num, pl) {
   );
 }
 
-$(window).scroll(function () {
-  var wheight = $( window ).height();
-  var scroll = $(window).scrollTop();
-  var bheight = $("#banner").height();
-  console.log(scroll);
-  // console.log(wheight);
-  // console.log(bheight);
+function op(x,y,img)
+{
+	$(x).fadeIn()
+  $(y).fadeIn()
+  console.log(img)
+	$("#bimg").attr("src",`bimg/${img}.png`)
+}
 
-  if(wheight + scroll == bheight){
-    $("#scrolltop").attr("style","display:none")
-  }else{
-    $("#scrolltop").attr("style","")
-  }
-});
+function cl(x)
+{
+	$(x).fadeOut();
+}
