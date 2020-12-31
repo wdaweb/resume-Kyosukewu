@@ -62,7 +62,9 @@ body {
 #side-menu-switch:checked + .side-menu label #fa{
   transform: scaleX(-1);
 }
-
+.se{
+  text-indent:2rem;
+}
 .banner {
   width: 100%;
   height: 100vh;

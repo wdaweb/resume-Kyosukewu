@@ -91,48 +91,81 @@
         <div class="leftside">
             <input type="checkbox" name="" id="side-menu-switch">
             <div class="side-menu">
-                <div class="aboutjob">
-                    <h5>求職條件</h5>
-                    <hr>
-                    <table class="col-12 col-lg-8 col-xl-6 mx-auto">
-                        <tr>
-                            <td style="text-align-last: justify;">期望職務</td>
-                            <td>：</td>
-                            <td class="ps-3 text-center">前端/後端網頁設計人員</td>
-                        </tr>
-                        <tr>
-                            <td style="text-align-last: justify;">可上班時間</td>
-                            <td>：</td>
-                            <td class="ps-3 text-center">3月後</td>
-                        </tr>
-                        <tr>
-                            <td style="text-align-last: justify;">期望工作地點</td>
-                            <td>：</td>
-                            <td class="ps-3 text-center">雙北地區</td>
-                        </tr>
-                        <tr>
-                            <td style="text-align-last: justify;">期望工作性質</td>
-                            <td>：</td>
-                            <td class="ps-3 text-center">全職/周休二日/正常班</td>
-                        </tr>
-                        <tr>
-                            <td style="text-align-last: justify;">期望薪資</td>
-                            <td>：</td>
-                            <td class="ps-3 text-center">39,000</td>
-                        </tr>
-                    </table>
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                求職條件
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <div class="aboutjob">
+                                    <table class="col-12 col-lg-8 col-xl-6 mx-auto">
+                                        <tr>
+                                            <td style="text-align-last: justify;">期望職務</td>
+                                            <td>：</td>
+                                            <td class="ps-3 text-center">前端/後端網頁設計人員</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align-last: justify;">可上班時間</td>
+                                            <td>：</td>
+                                            <td class="ps-3 text-center">2021年3月初</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align-last: justify;">期望工作地點</td>
+                                            <td>：</td>
+                                            <td class="ps-3 text-center">雙北地區</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align-last: justify;">期望工作性質</td>
+                                            <td>：</td>
+                                            <td class="ps-3 text-center">全職/周休二日/正常班</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align-last: justify;">期望薪資</td>
+                                            <td>：</td>
+                                            <td class="ps-3 text-center">39,000</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                自傳/自我評價
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <div class="se col-12 mx-auto">
+                                    對各種事物時時保持好奇，樂於探索各種不同的可能性。<br>
+                                    在視覺設計相關領域工作數年的我，因想要有著更寬廣的發展，<br>
+                                    在一次契機下接觸到了網頁設計相關的技術，在這個領域中，<br>
+                                    我可以發揮先前所學，並結合新的程式語言技術，創作出更多元的作品。<br><br>
+                                    期望在這全新的領域中，能不斷的突破自我，享受於工作之中。
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <label for="side-menu-switch">
                     <div class="arr">
-                    <i id="fa" class="fa fa-angle-right"></i>
-                </div>
+                        <i id="fa" class="fa fa-angle-right"></i>
+                    </div>
                 </label>
             </div>
         </div>
         <article class="container mt-5">
             <div class="about">
                 <h3 class="tit w-100 pb-3 border-bottom animate__animated"><i class="far fa-address-card me-2"></i>關於我 /
-                    <span class="tit2 animate__animated" data-wow-delay="0.5s"> About me</span>
+                    About me
                 </h3>
                 <div class="row mt-5">
                     <div class="self col-12 col-md-6 text-center animate__animated">
