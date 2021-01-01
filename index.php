@@ -79,7 +79,7 @@
                                 <a class="nav-link" href="#foot"><i class="fas fa-phone-volume me-2"></i>Contact me</a>
                             </li>
                             <li class="nav-item px-3 px-lg-0">
-                                <a class="nav-link" href="login.html"><i class="fas fa-sign-in-alt me-2"></i>LOGIN</a>
+                                <a class="nav-link" href="login.php"><i class="fas fa-sign-in-alt me-2"></i>LOGIN</a>
                             </li>
                         </ul>
                     </div>

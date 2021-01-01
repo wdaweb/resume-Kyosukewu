@@ -1,3 +1,6 @@
+<?php
+include_once "base.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,8 +12,24 @@
 <title>履歷表後臺管理</title>
 </head>
 <body>
-    
-    
+    <div class="header"></div>
+    <div class="content">
+    <div class="menu">
+
+    </div>
+    <div class="edit">
+        <?php
+            $do=isset($_GET['do'])?$_GET['do']:'main';
+            $file="backend/".$do.".php";
+
+            if(file_exists($file)){
+                include $file;
+            }else{
+                include "backend/main.php";
+            }
+        ?>
+    </div>
+    </div>
     
 </body>
 </html>
