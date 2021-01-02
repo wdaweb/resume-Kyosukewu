@@ -9,9 +9,12 @@ $Log = new DB('re_login');
 class DB
 {
     private $table;
+    private $pdo;
     private $dsn = "mysql:host=localhost;dbname=s1090421;charset=utf8";
-    private $user="s1090421";
-    private $pw="s1090421";
+    private $user="root";
+    private $pw="";
+    // private $user="s1090421";
+    // private $pw="s1090421";
 
 
     function __construct($table)
