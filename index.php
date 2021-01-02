@@ -1,3 +1,6 @@
+<?php
+include_once "base.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,12 +25,16 @@
 
 <body>
     <div class="banner" id="banner">
-        <div class="bg0 animate__animated" data-wow-delay="0.5s"></div>
-        <div class="bg1 animate__animated" data-wow-delay="0.7s"></div>
-        <div class="bg2 animate__animated" data-wow-delay="0.3s"></div>
-        <div class="bg3 animate__animated"></div>
+        <?php
+            $img=$Img->find(['sh'=>1]);
+        ?>
+        <div class="mainbg"><img src="titimg/<?=$img['img'];?>"></div>
+        <div class="bg0 animate__animated" data-wow-delay="0.3s"></div>
+        <div class="bg1 animate__animated"></div>
+        <div class="bg2 animate__animated"></div>
+        <div class="bg3 animate__animated" data-wow-delay="0.5s"></div>
         <div class="contant">
-            <div class="banner-txt" data-wow-delay="0.1s">
+            <div class="banner-txt">
                 <object id="mysvg" type="image/svg+xml" data="img/title_animated.svg"></object>
             </div>
         </div>

@@ -17,10 +17,14 @@ include_once "base.php";
 </head>
 
 <body>
-    <div class="header bg-dark text-light text-center h2 py-3">Resume backend system</div>
+    <div class="header bg-dark text-light text-center h2 py-3">Resume backend system
+        <span class="float-end me-5">
+            <a class="btn btn-outline-light" onclick="logout()">管理登出</a>
+        </span>
+    </div>
     <div class="content d-flex">
         <div class="menu text-center">
-            <a href="?do=title">
+            <a href="?do=main">
                 <div class="select">頁首圖片</div>
             </a>
             <a href="?do=ab">
@@ -35,11 +39,8 @@ include_once "base.php";
             <a href="?do=pro">
                 <div class="select">作品集</div>
             </a>
-            <a href="?do=con">
+            <a href="?do=cont">
                 <div class="select">聯絡我</div>
-            </a>
-            <a onclick="logout()">
-                <div class="select">管理登出</div>
             </a>
         </div>
         <div class="edit">

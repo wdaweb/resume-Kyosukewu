@@ -41,3 +41,25 @@ body{
     height: 100%;
     /* border:1px solid #f00; */
 }
+.main{
+    background: #fff;
+    padding: 1rem;
+}
+.form,.showimg{
+    width: 100%;
+    border:3px double #333;
+}
+.showimg{
+    height: 30vh;
+    overflow-y: auto;
+}
+.form{
+    height: 6vh;
+}
+.img{
+    padding: .5rem 2rem;
+    /* border:1px solid #000; */
+}
+td>img{
+    height: 200px;
+}

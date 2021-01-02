@@ -5,6 +5,8 @@ date_default_timezone_set("Asia/Taipei");
 session_start();
 
 $Log = new DB('re_login');
+$Img = new DB('re_titimg');
+$Timg = new DB('re_tittext');
 
 class DB
 {
@@ -94,8 +96,9 @@ class DB
             }
             $sql = "update $this->table set " . implode(" , ", $tmp) . " where `id`='{$arg['id']}'";
         } else {
-            $sql = "insert into $this->table (`" . implode("`,`", array_keys($arg)) . "`) values('" . implode(" , ", $arg) . "')";
+            $sql = "insert into $this->table (`" . implode("`,`", array_keys($arg)) . "`) values('" . implode("','", $arg) . "')";
         }
+        // echo $sql;
         return $this->pdo->exec($sql);
     }
 
@@ -109,3 +112,12 @@ function to($url)
 {
     header("location:" . $url);
 }
+
+$tstr=[
+    'main'=>["編輯頁首圖片","編輯頁首動畫文字"],
+    'ab'=>['編輯關於我'],
+    'exp'=>['編輯經歷'],
+    'sk'=>['編輯技能'],
+    'pro'=>['編輯作品集'],
+    'cont'=>['編輯聯絡資訊']
+];
