@@ -41,24 +41,51 @@ body{
     height: 100%;
     /* border:1px solid #f00; */
 }
+.mainbox{
+    height: 100vh;
+    overflow-y: auto;
+}
 .main{
     background: #fff;
     padding: 1rem;
+    /* height: 50vh; */
 }
-.form,.showimg{
+.sub{
+    height: 50vh;
+}
+.full{
+    height: 100vh;
+}
+.form,.showimg,.showtext{
     width: 100%;
     border:3px double #333;
+    height: 10vh;
+    overflow-y: auto;
+    display: flex;
+    justify-content: center;
 }
 .showimg{
     height: 30vh;
     overflow-y: auto;
 }
-.form{
-    height: 6vh;
+.showtext{
+    height: 60vh;
+    overflow-y: auto;
+}
+.input{
+    height: 30vh;
 }
 .img{
     padding: .5rem 2rem;
     /* border:1px solid #000; */
+}
+.btn{
+    margin:.3rem;
+}
+textarea{
+    /* display: inline; */
+    width: 80%;
+    height: 100%;
 }
 td>img{
     height: 200px;

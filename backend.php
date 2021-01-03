@@ -17,13 +17,9 @@ include_once "base.php";
 </head>
 
 <body>
-    <div class="header bg-dark text-light text-center h2 py-3">Resume backend system
-        <span class="float-end me-5">
-            <a class="btn btn-outline-light" onclick="logout()">管理登出</a>
-        </span>
-    </div>
     <div class="content d-flex">
         <div class="menu text-center">
+            <div class="header bg-dark mb-2 text-light">Resume Backend System</div>
             <a href="?do=main">
                 <div class="select">頁首圖片</div>
             </a>
@@ -42,6 +38,7 @@ include_once "base.php";
             <a href="?do=cont">
                 <div class="select">聯絡我</div>
             </a>
+            <a class="btn btn-outline-light" onclick="logout()">管理登出</a>
         </div>
         <div class="edit">
             <?php
