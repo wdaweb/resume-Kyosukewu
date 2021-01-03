@@ -26,11 +26,11 @@ $go = $_GET['do'] ?? 'main';
             </table>
         </div>
         <form action="api/add.php" method="post" enctype="multipart/form-data" class="form">
-                <input class="img" type="file" name="img">
-                <input type="hidden" name="chk" value="me">
-                <input type="hidden" name="sh">
-                <!-- <input type="hidden" name="table" value="<?=$go;?>"> -->
-                <input class="btn btn-outline-warning" type="submit" value="上傳">
+            <input class="img" type="file" name="img">
+            <input type="hidden" name="chk" value="me">
+            <input type="hidden" name="sh">
+            <!-- <input type="hidden" name="table" value="<?= $go; ?>"> -->
+            <input class="btn btn-outline-warning" type="submit" value="上傳">
         </form>
     </div>
     <div class="main sub text-center col-6">
@@ -38,9 +38,10 @@ $go = $_GET['do'] ?? 'main';
         <div class="showimg">
             <table class="w-100">
                 <tr class="border-bottom">
-                    <td class="w-50">關於我內文</td>
-                    <td class="w-25">顯示/隱藏</td>
-                    <td class="w-25">刪除內容</td>
+                    <td style="width: 50%;">關於我內文</td>
+                    <td style="width: 20%;">顯示/隱藏</td>
+                    <td style="width: 15%;">編輯</td>
+                    <td style="width: 15%;">刪除</td>
                 </tr>
                 <?php
                 $img = $Img->all();
@@ -57,9 +58,9 @@ $go = $_GET['do'] ?? 'main';
             </table>
         </div>
         <form action="api/add.php" method="post" enctype="multipart/form-data" class="form">
-                <textarea name=""></textarea>
-                <input type="hidden" name="sh">
-                <input class="btn btn-outline-warning" type="submit" value="上傳">
+            <textarea name=""></textarea>
+            <input type="hidden" name="sh">
+            <input class="btn btn-outline-warning" type="submit" value="上傳">
         </form>
     </div>
     <div class="main sub text-center col-6">
@@ -67,9 +68,10 @@ $go = $_GET['do'] ?? 'main';
         <div class="showimg">
             <table class="w-100">
                 <tr class="border-bottom">
-                    <td class="w-50">學歷</td>
-                    <td class="w-25">顯示/隱藏</td>
-                    <td class="w-25">刪除</td>
+                    <td style="width: 50%;">學歷</td>
+                    <td style="width: 20%;">顯示/隱藏</td>
+                    <td style="width: 15%;">編輯</td>
+                    <td style="width: 15%;">刪除</td>
                 </tr>
                 <?php
                 $img = $Img->all();
@@ -86,10 +88,10 @@ $go = $_GET['do'] ?? 'main';
             </table>
         </div>
         <form action="api/add.php" method="post" enctype="multipart/form-data" class="form">
-                <input class="img" type="file" name="img">
-                <input type="hidden" name="sh">
-                <input type="hidden" name="table" value="<?=$go;?>">
-                <input class="btn btn-outline-warning" type="submit" value="上傳">
+            <input class="img" type="file" name="img">
+            <input type="hidden" name="sh">
+            <input type="hidden" name="table" value="<?= $go; ?>">
+            <input class="btn btn-outline-warning" type="submit" value="上傳">
         </form>
     </div>
     <div class="main sub text-center col-6">
@@ -97,9 +99,10 @@ $go = $_GET['do'] ?? 'main';
         <div class="showimg">
             <table class="w-100">
                 <tr class="border-bottom">
-                    <td class="w-50">聯絡資訊</td>
-                    <td class="w-25">顯示/隱藏</td>
-                    <td class="w-25">刪除圖片</td>
+                    <td style="width: 50%;">聯絡資訊</td>
+                    <td style="width: 20%;">顯示/隱藏</td>
+                    <td style="width: 15%;">編輯</td>
+                    <td style="width: 15%;">刪除</td>
                 </tr>
                 <?php
                 $img = $Img->all();
@@ -116,9 +119,9 @@ $go = $_GET['do'] ?? 'main';
             </table>
         </div>
         <form action="api/add.php" method="post" enctype="multipart/form-data" class="form">
-                <input class="img" type="file" name="img">
-                <input type="hidden" name="sh">
-                <input class="btn btn-outline-warning" type="submit" value="上傳">
+            <input class="img" type="file" name="img">
+            <input type="hidden" name="sh">
+            <input class="btn btn-outline-warning" type="submit" value="上傳">
         </form>
     </div>
     <div class="main sub text-center col-6">
@@ -126,9 +129,10 @@ $go = $_GET['do'] ?? 'main';
         <div class="showimg">
             <table class="w-100">
                 <tr class="border-bottom">
-                    <td class="w-50">求職條件</td>
-                    <td class="w-25">顯示/隱藏</td>
-                    <td class="w-25">刪除</td>
+                    <td style="width: 50%;">求職條件</td>
+                    <td style="width: 20%;">顯示/隱藏</td>
+                    <td style="width: 15%;">編輯</td>
+                    <td style="width: 15%;">刪除</td>
                 </tr>
                 <?php
                 $img = $Img->all();
@@ -145,9 +149,9 @@ $go = $_GET['do'] ?? 'main';
             </table>
         </div>
         <form action="api/add.php" method="post" enctype="multipart/form-data" class="form">
-                <input class="img" type="file" name="img">
-                <input type="hidden" name="sh">
-                <input class="btn btn-outline-warning" type="submit" value="上傳">
+            <input class="img" type="file" name="img">
+            <input type="hidden" name="sh">
+            <input class="btn btn-outline-warning" type="submit" value="上傳">
         </form>
     </div>
     <div class="main sub text-center col-6">
@@ -155,9 +159,10 @@ $go = $_GET['do'] ?? 'main';
         <div class="showimg">
             <table class="w-100">
                 <tr class="border-bottom">
-                    <td class="w-50">自傳內容</td>
-                    <td class="w-25">顯示/隱藏</td>
-                    <td class="w-25">刪除</td>
+                    <td style="width: 50%;">自傳內容</td>
+                    <td style="width: 20%;">顯示/隱藏</td>
+                    <td style="width: 15%;">編輯</td>
+                    <td style="width: 15%;">刪除</td>
                 </tr>
                 <?php
                 $img = $Img->all();
@@ -174,9 +179,9 @@ $go = $_GET['do'] ?? 'main';
             </table>
         </div>
         <form action="api/add.php" method="post" enctype="multipart/form-data" class="form">
-                <input class="img" type="file" name="img">
-                <input type="hidden" name="sh">
-                <input class="btn btn-outline-warning" type="submit" value="上傳">
+            <input class="img" type="file" name="img">
+            <input type="hidden" name="sh">
+            <input class="btn btn-outline-warning" type="submit" value="上傳">
         </form>
     </div>
 </div>
