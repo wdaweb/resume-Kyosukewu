@@ -31,7 +31,10 @@ include_once "base.php";
         <div class="bg3 animate__animated" data-wow-delay="0.5s"></div>
         <div class="contant">
             <div class="banner-txt">
-                <object id="mysvg" type="image/svg+xml" data="img/title_animated.svg"></object>
+            <?php
+                $mvtext=$Timg->find(['sh'=>1]);
+            ?>
+                <object id="mysvg" type="image/svg+xml" data="titimg/<?=$mvtext['img'];?>"></object>
             </div>
         </div>
         <div class="tobanner">
