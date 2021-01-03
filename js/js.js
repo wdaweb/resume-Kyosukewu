@@ -1,3 +1,4 @@
+// $(".mainbg").addClass("wow animate__fadeIn");
 $(".bg0").addClass("wow animate__bounceInDown");
 $(".bg1").addClass("wow animate__bounceInDown");
 $(".bg2").addClass("wow animate__backInRight");

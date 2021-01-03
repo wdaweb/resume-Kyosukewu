@@ -1,6 +1,7 @@
 <?php
 include_once "../base.php";
 
+$table=$_POST['table'];
 
 if(!empty($_FILES['img']['tmp_name'])){
     $_POST['img']=$_FILES['img']['name'];
@@ -9,15 +10,39 @@ if(!empty($_FILES['img']['tmp_name'])){
 
 
 $_POST['sh']=1;
-// print_r($_POST);
+print_r($_POST);
 
-if(isset($_POST['chk'])){
-    $_POST['chk']="";
-    $Img->save($_POST);
-}else{
-    $_POST['chk']="";
-    $Timg->save($_POST);
+switch($_POST['chk']){
+    case "cover":
+        if (($key = array_search("cover", $_POST)) !== false) {
+            unset($_POST[$key]);
+        }
+        $Img->save($_POST);
+    break;
+    case "mvtext":
+        if (($key = array_search("mvtext", $_POST)) !== false) {
+            unset($_POST[$key]);
+        }
+        $Timg->save($_POST);
+    break;
+    case "me":
+        if (($key = array_search("me", $_POST)) !== false) {
+            unset($_POST[$key]);
+        }
+        $Ab->save($_POST);
+    break;
 }
+
+
+// if(isset($_POST['chk'])){
+//     if (($key = array_search("chk", $_POST)) !== false) {
+//         unset($_POST[$key]);
+//     }
+//     // print_r($_POST);
+//     $Img->save($_POST);
+// }else{
+//     $Timg->save($_POST);
+// }
 
 to('../backend.php?do=main');
 

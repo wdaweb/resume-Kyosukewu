@@ -23,9 +23,10 @@
                 ?>
             </table>
         </div>
-        <form action="api/add.php" method="post" enctype="multipart/form-data" class="form flex-column input">
+        <form action="api/add.php" method="post" enctype="multipart/form-data" class="form justify-content-evenly py-2">
                 <div>標題：<input class="img mb-2" type="text" name="title"></div>
-                <div>內容：<input class="img mb-2" type="text" name="text"></div>
+                <!-- <div>內容：<input class="img mb-2" type="text" name="text"></div> -->
+                <div>內容：<textarea name="text"></textarea></div>
                 <input type="hidden" name="sh">
                 <div><input class="btn btn-outline-warning" type="submit" value="上傳"></div>
         </form>

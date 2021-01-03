@@ -7,16 +7,12 @@ include_once "base.php";
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="shortcut icon" href="img/favicon.jpg">
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/a1381bb91e.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
-        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
@@ -26,9 +22,9 @@ include_once "base.php";
 <body>
     <div class="banner" id="banner">
         <?php
-            $img=$Img->find(['sh'=>1]);
+        $img = $Img->find(['sh' => 1]);
         ?>
-        <div class="mainbg"><img src="titimg/<?=$img['img'];?>"></div>
+        <div class="mainbg"><img src="titimg/<?= $img['img']; ?>"></div>
         <div class="bg0 animate__animated" data-wow-delay="0.3s"></div>
         <div class="bg1 animate__animated"></div>
         <div class="bg2 animate__animated"></div>
@@ -47,8 +43,7 @@ include_once "base.php";
             <nav class="navbar navbar-expand-lg navbar-dark">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="#">MaruDesign</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -86,7 +81,17 @@ include_once "base.php";
                                 <a class="nav-link" href="#foot"><i class="fas fa-phone-volume me-2"></i>Contact me</a>
                             </li>
                             <li class="nav-item px-3 px-lg-0">
-                                <a class="nav-link" href="login.php"><i class="fas fa-sign-in-alt me-2"></i>LOGIN</a>
+                                <?php
+                                if (isset($_SESSION['login'])) {
+                                ?>
+                                <a class="nav-link" href="backend.php"><i class="fas fa-sign-in-alt me-2"></i>GoBackend</a>
+                                <?php
+                                } else {
+                                ?>
+                                    <a class="nav-link" href="login.php"><i class="fas fa-sign-in-alt me-2"></i>LOGIN</a>
+                                <?php
+                                }
+                                ?>
                             </li>
                         </ul>
                     </div>
@@ -101,13 +106,11 @@ include_once "base.php";
                 <div class="accordion" id="accordionExample">
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingOne">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                 求職條件
                             </button>
                         </h2>
-                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-                            data-bs-parent="#accordionExample">
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                                 <div class="aboutjob">
                                     <table class="col-12 col-lg-8 col-xl-6 mx-auto">
@@ -143,13 +146,11 @@ include_once "base.php";
                     </div>
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingTwo">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                                 自傳/自我評價
                             </button>
                         </h2>
-                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                            data-bs-parent="#accordionExample">
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                                 <div class="se col-12 mx-auto">
                                     對各種事物時時保持好奇，樂於探索各種不同的可能性。<br>
@@ -176,7 +177,10 @@ include_once "base.php";
                 </h3>
                 <div class="row mt-5">
                     <div class="self col-12 col-md-6 text-center animate__animated">
-                        <img src="img/me.jpg" alt="">
+                        <?php
+                            $ab=$Ab->find(['sh'=>1]);
+                        ?>
+                        <img src="titimg/<?=$ab['img'];?>" alt="">
                     </div>
                     <div class="me col-12 col-md-6 mt-5 mt-md-0">
                         <div class="txt">
@@ -192,8 +196,7 @@ include_once "base.php";
                         <div class="exp text-center">
                             <a class="me-3" href="https://github.com/Kyosukewu">
                                 <i class="fab fa-github me-2"></i>GitHub</a>|
-                            <a class="mx-3" href="mainto:srx0w0010@hotmail.com"><i
-                                    class="far fa-envelope me-2"></i>E-mail</a>|
+                            <a class="mx-3" href="mainto:srx0w0010@hotmail.com"><i class="far fa-envelope me-2"></i>E-mail</a>|
                             <a class="mx-3" href="tel:+886-933917387"><i class="fas fa-phone-volume me-2"></i>mobile
                                 phone</a>
                         </div>
@@ -366,8 +369,7 @@ include_once "base.php";
         </div>
         <!-- --------------------- -->
         <article class="container">
-            <h3 class="tit7 animate__animated"><i class="fas fa-book me-2"></i>作品集 / <span
-                    class="tit8 animate__animated" data-wow-delay="0.5s"> Portfolio</span></h3>
+            <h3 class="tit7 animate__animated"><i class="fas fa-book me-2"></i>作品集 / <span class="tit8 animate__animated" data-wow-delay="0.5s"> Portfolio</span></h3>
             <nav>
                 <div class="nav nav-tabs justify-content-evenly">
                     <a class="nav-link active" data-bs-toggle="tab" href="#wd">網頁設計類</a>
@@ -998,8 +1000,7 @@ include_once "base.php";
 
     <section id="foot" class="footer py-3">
         <article class="container text-center">
-            <h3 class="tit9 text-light mb-4 animate__animated"><i class="fas fa-phone-volume me-2 "></i>聯絡我 / <span
-                    class="tit10 animate__animated" data-wow-delay="0.5s"> Contact me</span></h3>
+            <h3 class="tit9 text-light mb-4 animate__animated"><i class="fas fa-phone-volume me-2 "></i>聯絡我 / <span class="tit10 animate__animated" data-wow-delay="0.5s"> Contact me</span></h3>
             <div class="text-light">
                 <p>感謝您撥冗閱讀這份履歷，如果您對我的能力有興趣的話，歡迎透過以下方式聯繫我，謝謝。</p>
                 <p><a class="text-light" href="tel:+886-933917387">電話：0933-917-387</a> ||

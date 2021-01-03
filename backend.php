@@ -38,6 +38,7 @@ include_once "base.php";
             <a href="?do=cont">
                 <div class="select">聯絡我</div>
             </a>
+            <a href="index.php" class="btn btn-outline-light">檢視首頁</a>
             <a class="btn btn-outline-light" onclick="logout()">管理登出</a>
         </div>
         <div class="edit">
