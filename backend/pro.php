@@ -5,7 +5,7 @@
             <table class="w-100">
                 <tr class="border-bottom">
                     <td class="w-50">圖片</td>
-                    <td class="w-25">顯示/隱藏</td>
+                    <td class="w-25">顯示</td>
                     <td class="w-25">刪除圖片</td>
                 </tr>
                 <?php
@@ -34,7 +34,7 @@
             <table class="w-100">
                 <tr class="border-bottom">
                     <td class="w-50">關於我內文</td>
-                    <td class="w-25">顯示/隱藏</td>
+                    <td class="w-25">顯示</td>
                     <td class="w-25">刪除內容</td>
                 </tr>
                 <?php
@@ -63,7 +63,7 @@
             <table class="w-100">
                 <tr class="border-bottom">
                     <td class="w-50">學歷</td>
-                    <td class="w-25">顯示/隱藏</td>
+                    <td class="w-25">顯示</td>
                     <td class="w-25">刪除</td>
                 </tr>
                 <?php

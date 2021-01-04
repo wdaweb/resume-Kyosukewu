@@ -7,7 +7,7 @@ $go = $_GET['do'] ?? 'main';
         <table class="w-100">
             <tr class="border-bottom">
                 <td class="w-50">封面圖</td>
-                <td class="w-25">顯示/隱藏</td>
+                <td class="w-25">顯示</td>
                 <td class="w-25">刪除圖片</td>
             </tr>
             <?php
@@ -36,7 +36,7 @@ $go = $_GET['do'] ?? 'main';
         <table class="w-100">
             <tr class="border-bottom">
                 <td class="w-50">動畫文字圖片</td>
-                <td class="w-25">顯示/隱藏</td>
+                <td class="w-25">顯示</td>
                 <td class="w-25">刪除圖片</td>
             </tr>
             <?php

@@ -6,10 +6,10 @@ $row=$db->find($_POST['id']);
 
 
 switch($_POST['table']){
-    case 're_cont,re_job':
+    case 're_cont':
         $row['icon']=$_POST['icon'];
         $row['method']=$_POST['method'];
-        $row['cont']=$_POST['cont'];
+        $row['icon']=$_POST['icon'];
     break;
     default:
     $row['text']=$_POST['text'];

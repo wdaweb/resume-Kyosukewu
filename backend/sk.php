@@ -8,7 +8,7 @@ $go = $_GET['do'] ?? 'main';
             <table class="w-100">
                 <tr class="border-bottom">
                     <td class="w-50">自拍照</td>
-                    <td class="w-25">顯示/隱藏</td>
+                    <td class="w-25">顯示</td>
                     <td class="w-25">刪除圖片</td>
                 </tr>
                 <?php
@@ -39,7 +39,7 @@ $go = $_GET['do'] ?? 'main';
             <table class="w-100">
                 <tr class="border-bottom">
                     <td style="width: 50%;">關於我內文</td>
-                    <td style="width: 20%;">顯示/隱藏</td>
+                    <td style="width: 20%;">顯示</td>
                     <td style="width: 15%;">編輯</td>
                     <td style="width: 15%;">刪除</td>
                 </tr>
@@ -72,7 +72,7 @@ $go = $_GET['do'] ?? 'main';
             <table class="w-100">
                 <tr class="border-bottom">
                     <td style="width: 50%;">學歷</td>
-                    <td style="width: 20%;">顯示/隱藏</td>
+                    <td style="width: 20%;">顯示</td>
                     <td style="width: 15%;">編輯</td>
                     <td style="width: 15%;">刪除</td>
                 </tr>

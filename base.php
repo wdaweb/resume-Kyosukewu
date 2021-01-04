@@ -13,6 +13,7 @@ $Edu = new DB('re_edu');
 $Cont = new DB('re_cont');
 $Job = new DB('re_job');
 $Self = new DB('re_self');
+$Exp = new DB('re_exp');
 
 class DB
 {
