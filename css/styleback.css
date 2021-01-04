@@ -1,0 +1,89 @@
+*{
+    margin:0;
+    padding:0;
+    list-style: none;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background: rgba(147, 149, 151);
+    overflow: hidden;
+}
+.menu{
+    width: 15%;
+    height: 100vh;
+    margin-right: 1rem;
+    background: linear-gradient(45deg, rgb(187, 187, 187) 40% ,#eee 100%);
+}
+.menu a{
+    text-decoration: none;
+    color: rgb(114, 114, 114);
+}
+.select{
+    padding: 10px 0;
+    margin-bottom: .5rem;
+    background: linear-gradient(45deg, rgba(245, 223, 77) 50% ,#eee 50%);
+    transition: .5s;
+    /* border: 1px solid #fff; */
+}
+.select:hover{
+    box-shadow: 0 0 10px #333;
+    background: linear-gradient(45deg, rgba(245, 223, 77) 100% ,#eee 100%);
+    color: rgb(90, 90, 90);
+    cursor: pointer;
+}
+.edit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 85%;
+    height: 100%;
+    /* border:1px solid #f00; */
+}
+.mainbox{
+    height: 100vh;
+    overflow-y: auto;
+}
+.main{
+    background: rgb(223, 223, 223);
+    padding: 1rem;
+    /* height: 50vh; */
+}
+.sub{
+    height: 50vh;
+}
+.full{
+    height: 100vh;
+}
+.form,.showimg,.showtext{
+    width: 100%;
+    border:3px double #333;
+    /* height: 10vh; */
+    overflow-y: auto;
+    display: flex;
+    justify-content: center;
+}
+.showimg{
+    height: 35vh;
+    overflow-y: auto;
+}
+.showtext{
+    height: 60vh;
+    overflow-y: auto;
+}
+.img{
+    padding: .5rem 2rem;
+    /* border:1px solid #000; */
+}
+.btn{
+    margin:.3rem;
+}
+textarea{
+    /* display: inline; */
+    width: 80%;
+    height: 100%;
+}
+td>img{
+    height: 150px;
+}
