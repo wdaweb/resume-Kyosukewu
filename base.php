@@ -8,6 +8,11 @@ $Log = new DB('re_login');
 $Img = new DB('re_titimg');
 $Timg = new DB('re_tittext');
 $Ab = new DB('re_about');
+$Abtext = new DB('re_abouttext');
+$Edu = new DB('re_edu');
+$Cont = new DB('re_cont');
+$Job = new DB('re_job');
+$Self = new DB('re_self');
 
 class DB
 {
@@ -117,9 +122,8 @@ function to($url)
 $tstr=[
     'main'=>["編輯封面圖片","編輯動畫文字"],
     'ab'=>['編輯照片','編輯自我簡介','編輯學歷','編輯聯絡資訊','編輯求職條件','編輯自傳'],
-    // 'ab'=>['編輯關於我'],
     'exp'=>['編輯經歷'],
-    'sk'=>['編輯技能'],
+    'sk'=>['編輯網頁技能','編輯視覺技能','編輯3D技能'],
     'pro'=>['網頁設計類','視覺設計類','3D設計類'],
     'cont'=>['編輯聯絡資訊','編輯聯絡資訊文字']
 ];

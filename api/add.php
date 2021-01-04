@@ -1,49 +1,56 @@
 <?php
 include_once "../base.php";
 
-$table=$_POST['table'];
+$db=new DB($_POST['table']);
 
 if(!empty($_FILES['img']['tmp_name'])){
     $_POST['img']=$_FILES['img']['name'];
     move_uploaded_file($_FILES['img']['tmp_name'],'../titimg/'.$_FILES['img']['name']);
 }
+$chk=$db->count(['id']);
 
-
-$_POST['sh']=1;
-print_r($_POST);
-
-switch($_POST['chk']){
-    case "cover":
-        if (($key = array_search("cover", $_POST)) !== false) {
-            unset($_POST[$key]);
-        }
-        $Img->save($_POST);
-    break;
-    case "mvtext":
-        if (($key = array_search("mvtext", $_POST)) !== false) {
-            unset($_POST[$key]);
-        }
-        $Timg->save($_POST);
-    break;
-    case "me":
-        if (($key = array_search("me", $_POST)) !== false) {
-            unset($_POST[$key]);
-        }
-        $Ab->save($_POST);
-    break;
+if(empty($chk)){
+    $_POST['sh']=1;
+}else{
+    $_POST['sh']=0;
 }
 
+$db->save($_POST);
 
-// if(isset($_POST['chk'])){
-//     if (($key = array_search("chk", $_POST)) !== false) {
-//         unset($_POST[$key]);
-//     }
-//     // print_r($_POST);
-//     $Img->save($_POST);
-// }else{
-//     $Timg->save($_POST);
+to('../backend.php?do='.$table);
+
+// switch($_POST['chk']){
+//     case "cover":
+//         if (($key = array_search("cover", $_POST)) !== false) {
+//             unset($_POST[$key]);
+//         }
+//         unset($_POST['table']);
+//         $Img->save($_POST);
+//         to('../backend.php?do=main');
+//     break;
+//     case "mvtext":
+//         if (($key = array_search("mvtext", $_POST)) !== false) {
+//             unset($_POST[$key]);
+//         }
+//         unset($_POST['table']);
+//         $Timg->save($_POST);
+//         to('../backend.php?do=main');
+//     break;
+//     case "me":
+//         if (($key = array_search("me", $_POST)) !== false) {
+//             unset($_POST[$key]);
+//         }
+//         unset($_POST['table']);
+//         $Ab->save($_POST);
+//         to('../backend.php?do=ab');
+//     break;
+//     case "abtext":
+//         if (($key = array_search("abtext", $_POST)) !== false) {
+//             unset($_POST[$key]);
+//         }
+//         unset($_POST['table']);
+//         $Ab->save($_POST);
+//         to('../backend.php?do=ab');
+//     break;
 // }
-
-to('../backend.php?do=main');
-
 ?>
