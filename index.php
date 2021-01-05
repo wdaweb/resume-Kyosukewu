@@ -210,11 +210,9 @@ include_once "base.php";
     </section>
     <section class="container">
         <div class="experience mb-5" id="exp">
-            <h3 class="tit3 w-100 pb-3 border-bottom animate__animated"><i class="fas fa-school mt-5 me-2"></i>學習/工作經歷 /
-                <span class="tit4 animate__animated" data-wow-delay="0.5s">Experience</span>
-            </h3>
+            <h3 class="tit3 w-100 pb-3 border-bottom animate__animated"><i class="fas fa-school mt-5 me-2"></i>學習/工作經歷 / Experience</h3>
             <ul class="timeline">
-                <li>
+                <li class="li1 animate__animated">
                     <a href="https://wdaweb.github.io/" target="_blink">
                         <h4><small>2020 - now：</small>新銳網頁技術工程師培訓</h4>
                         <hr>
@@ -224,7 +222,7 @@ include_once "base.php";
                         </p>
                     </a>
                 </li>
-                <li>
+                <li class="li2 animate__animated" data-wow-dely="0.5s">
                     <a>
                         <h4><small>2020 - now：</small>餐飲事業負責人</h4>
                         <hr>
@@ -234,7 +232,7 @@ include_once "base.php";
                         </p>
                     </a>
                 </li>
-                <li>
+                <li class="li3 animate__animated" data-wow-dely="1.5s">
                     <a>
                         <h4><small>2017 - 2020：</small>茶葉門市儲備店長/社群平台管理</h4>
                         <hr>
@@ -245,7 +243,7 @@ include_once "base.php";
                         </p>
                     </a>
                 </li>
-                <li>
+                <li class="li4 animate__animated" data-wow-dely="2.5s">
                     <a>
                         <h4><small>2014 - 2017：</small>美術編輯/切線設計</h4>
                         <hr>
@@ -255,7 +253,7 @@ include_once "base.php";
                         </p>
                     </a>
                 </li>
-                <li>
+                <li class="li5 animate__animated" data-wow-dely="3.5s">
                     <a>
                         <h4><small>2013 - 2014：</small>3D建模/美術編輯設計</h4>
                         <hr>
@@ -270,9 +268,7 @@ include_once "base.php";
     </section>
     <section class="skills" id="sk">
         <article class="container">
-            <h3 class="tit5 w-100 pb-3 border-bottom animate__animated"><i class="fas fa-code-branch me-2"></i>工作技能 /
-                <span class="tit6 animate__animated" data-wow-delay="0.5s"> Skills</span>
-            </h3>
+            <h3 class="tit5 w-100 pb-3 border-bottom animate__animated"><i class="fas fa-code-branch me-2"></i>工作技能 / Skills</h3>
             <div class="row justify-content-between">
                 <div id="sk1" class="item animate__animated">
                     <div class="icon"><i class="ani fas fa-solar-panel"></i></div>
@@ -372,7 +368,7 @@ include_once "base.php";
         </div>
         <!-- --------------------- -->
         <article class="container">
-            <h3 class="tit7 animate__animated"><i class="fas fa-book me-2"></i>作品集 / <span class="tit8 animate__animated" data-wow-delay="0.5s"> Portfolio</span></h3>
+            <h3 class="tit7 animate__animated"><i class="fas fa-book me-2"></i>作品集 / Portfolio</h3>
             <nav>
                 <div class="nav nav-tabs justify-content-evenly">
                     <a class="nav-link active" data-bs-toggle="tab" href="#wd">網頁設計類</a>
@@ -386,7 +382,7 @@ include_once "base.php";
                         收錄各類網頁技術製作的作品，點選圖片連結可至成品網頁瀏覽。
                     </p>
                     <div class="row g-3">
-                        <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                        <div class="proe col-12 col-md-6 col-lg-4 col-xl-3 animate__animated">
                             <div class="card">
                                 <div class="over">
                                     <div class="mb-2 text-center pb-2 w-100 border-bottom"><strong>線上發票紀錄/對獎系統</strong>
@@ -415,7 +411,7 @@ include_once "base.php";
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                        <div class="proe col-12 col-md-6 col-lg-4 col-xl-3 animate__animated">
                             <div class="card">
                                 <div class="over">
                                     <div class="mb-2 text-center pb-2 w-100 border-bottom"><strong>線上萬年曆</strong></div>
@@ -442,7 +438,7 @@ include_once "base.php";
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                        <div class="proe col-12 col-md-6 col-lg-4 col-xl-3 animate__animated">
                             <div class="card">
                                 <div class="over">
                                     <div class="mb-2 text-center pb-2 w-100 border-bottom"><strong>QTE小遊戲</strong></div>
@@ -477,7 +473,7 @@ include_once "base.php";
                         收錄平面設計、商業海報、CG電繪...等，視覺相關作品。
                     </p>
                     <div class="row g-3">
-                        <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                        <div class="proe col-12 col-md-6 col-lg-4 col-xl-3 animate__animated">
                             <div class="card">
                                 <div class="over">
                                     <div class="mb-2 text-center pb-2 w-100 border-bottom"><strong>動漫人物仿繪</strong>
@@ -500,7 +496,7 @@ include_once "base.php";
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                        <div class="proe col-12 col-md-6 col-lg-4 col-xl-3 animate__animated">
                             <div class="card">
                                 <div class="over">
                                     <div class="mb-2 text-center pb-2 w-100 border-bottom"><strong>聖誕節賀圖</strong>
@@ -525,7 +521,7 @@ include_once "base.php";
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                        <div class="proe col-12 col-md-6 col-lg-4 col-xl-3 animate__animated">
                             <div class="card">
                                 <div class="over">
                                     <div class="mb-2 text-center pb-2 w-100 border-bottom"><strong>放空小孩-真人動漫化</strong>
@@ -548,7 +544,7 @@ include_once "base.php";
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                        <div class="proe col-12 col-md-6 col-lg-4 col-xl-3 animate__animated">
                             <div class="card">
                                 <div class="over">
                                     <div class="mb-2 text-center pb-2 w-100 border-bottom"><strong>桌布設計01</strong>
@@ -571,7 +567,7 @@ include_once "base.php";
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                        <div class="proe col-12 col-md-6 col-lg-4 col-xl-3 animate__animated">
                             <div class="card">
                                 <div class="over">
                                     <div class="mb-2 text-center pb-2 w-100 border-bottom"><strong>月夜下的貓頭鷹</strong>
@@ -594,7 +590,7 @@ include_once "base.php";
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                        <div class="proe col-12 col-md-6 col-lg-4 col-xl-3 animate__animated">
                             <div class="card">
                                 <div class="over">
                                     <div class="mb-2 text-center pb-2 w-100 border-bottom">
@@ -618,7 +614,7 @@ include_once "base.php";
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                        <div class="proe col-12 col-md-6 col-lg-4 col-xl-3 animate__animated">
                             <div class="card">
                                 <div class="over">
                                     <div class="mb-2 text-center pb-2 w-100 border-bottom"><strong>雙葉茶茶丸-角色設計</strong>
@@ -642,7 +638,7 @@ include_once "base.php";
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                        <div class="proe col-12 col-md-6 col-lg-4 col-xl-3 animate__animated">
                             <div class="card">
                                 <div class="over">
                                     <div class="mb-2 text-center pb-2 w-100 border-bottom"><strong>ZEUS-LOGO設計</strong>
@@ -667,7 +663,7 @@ include_once "base.php";
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                        <div class="proe col-12 col-md-6 col-lg-4 col-xl-3 animate__animated">
                             <div class="card">
                                 <div class="over">
                                     <div class="mb-2 text-center pb-2 w-100 border-bottom"><strong>活動短漫+角色設計</strong>
@@ -692,7 +688,7 @@ include_once "base.php";
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                        <div class="proe col-12 col-md-6 col-lg-4 col-xl-3 animate__animated">
                             <div class="card">
                                 <div class="over">
                                     <div class="mb-2 text-center w-100 border-bottom"><strong>招牌+菜單設計</strong>
@@ -718,7 +714,7 @@ include_once "base.php";
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                        <div class="proe col-12 col-md-6 col-lg-4 col-xl-3 animate__animated">
                             <div class="card">
                                 <div class="over">
                                     <div class="mb-2 text-center pb-2 w-100 border-bottom"><strong>網拍產品介紹設計</strong>
@@ -743,7 +739,7 @@ include_once "base.php";
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                        <div class="proe col-12 col-md-6 col-lg-4 col-xl-3 animate__animated">
                             <div class="card">
                                 <div class="over">
                                     <div class="mb-2 text-center pb-2 w-100 border-bottom"><strong>2021年曆設計</strong>
@@ -766,7 +762,7 @@ include_once "base.php";
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                        <div class="proe col-12 col-md-6 col-lg-4 col-xl-3 animate__animated">
                             <div class="card">
                                 <div class="over">
                                     <div class="mb-2 text-center pb-2 w-100 border-bottom"><strong>旅遊DM設計</strong>
@@ -789,7 +785,7 @@ include_once "base.php";
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                        <div class="proe col-12 col-md-6 col-lg-4 col-xl-3 animate__animated">
                             <div class="card">
                                 <div class="over">
                                     <div class="mb-2 text-center pb-2 w-100 border-bottom"><strong>30日動物挑戰</strong>
@@ -819,7 +815,7 @@ include_once "base.php";
                         收錄3D建模、擬真渲染、3D列印機打印之作品。
                     </p>
                     <div class="row g-3">
-                        <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                        <div class="proe col-12 col-md-6 col-lg-4 col-xl-3 animate__animated">
                             <div class="card">
                                 <div class="over">
                                     <div class="mb-2 text-center pb-2 w-100 border-bottom"><strong>創意馬克杯蓋</strong></div>
@@ -843,7 +839,7 @@ include_once "base.php";
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                        <div class="proe col-12 col-md-6 col-lg-4 col-xl-3 animate__animated">
                             <div class="card">
                                 <div class="over">
                                     <div class="mb-2 text-center pb-2 w-100 border-bottom"><strong>可動模型骨架</strong></div>
@@ -868,7 +864,7 @@ include_once "base.php";
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                        <div class="proe col-12 col-md-6 col-lg-4 col-xl-3 animate__animated">
                             <div class="card">
                                 <div class="over">
                                     <div class="mb-2 text-center pb-2 w-100 border-bottom"><strong>升降機擬真示意圖</strong>
@@ -893,7 +889,7 @@ include_once "base.php";
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                        <div class="proe col-12 col-md-6 col-lg-4 col-xl-3 animate__animated">
                             <div class="card">
                                 <div class="over">
                                     <div class="mb-2 text-center pb-2 w-100 border-bottom"><strong>造型手機架</strong></div>
@@ -918,7 +914,7 @@ include_once "base.php";
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                        <div class="proe col-12 col-md-6 col-lg-4 col-xl-3 animate__animated">
                             <div class="card">
                                 <div class="over">
                                     <div class="mb-2 text-center pb-2 w-100 border-bottom"><strong>茶茶丸公仔</strong></div>
@@ -943,7 +939,7 @@ include_once "base.php";
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                        <div class="proe col-12 col-md-6 col-lg-4 col-xl-3 animate__animated">
                             <div class="card">
                                 <div class="over">
                                     <div class="mb-2 text-center pb-2 w-100 border-bottom"><strong>彎腰郵筒造型擺飾</strong>
@@ -969,7 +965,7 @@ include_once "base.php";
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                        <div class="proe col-12 col-md-6 col-lg-4 col-xl-3 animate__animated">
                             <div class="card">
                                 <div class="over">
                                     <div class="mb-2 text-center pb-2 w-100 border-bottom"><strong>多功能茶壺名片座</strong>
@@ -1003,7 +999,7 @@ include_once "base.php";
 
     <section id="foot" class="footer py-3">
         <article class="container text-center">
-            <h3 class="tit9 text-light mb-4 animate__animated"><i class="fas fa-phone-volume me-2 "></i>聯絡我 / <span class="tit10 animate__animated" data-wow-delay="0.5s"> Contact me</span></h3>
+            <h3 class="tit9 text-light mb-4 animate__animated"><i class="fas fa-phone-volume me-2 "></i>聯絡我 / Contact me</h3>
             <div class="text-light">
                 <p>感謝您撥冗閱讀這份履歷，如果您對我的能力有興趣的話，歡迎透過以下方式聯繫我，謝謝。</p>
                 <p><a class="text-light" href="tel:+886-933917387">電話：0933-917-387</a> ||

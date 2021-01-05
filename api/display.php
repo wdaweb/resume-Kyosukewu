@@ -15,8 +15,4 @@ foreach($others as $key=>$value){
     }
 }
 
-
-
-
-
 ?>

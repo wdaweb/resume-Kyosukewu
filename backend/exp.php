@@ -4,14 +4,16 @@
         <div class="showtext">
             <table class="w-100">
                 <tr class="border-bottom">
-                    <td style="width:15%;">標題</td>
-                    <td style="width:65%;">內文</td>
-                    <td style="width:10%;">顯示/隱藏</td>
+                    <td style="width:10%;">年份</td>
+                    <td style="width:20%;">職務描述</td>
+                    <td style="width:30%;">職務內容</td>
+                    <td style="width:10%;">編輯</td>
+                    <td style="width:20%;">顯示</td>
                     <td style="width:10%;">刪除</td>
                 </tr>
                 <?php
-                $img = $Img->all();
-                foreach ($img as $key => $value) {
+                $exp = $Exp->all();
+                foreach ($exp as $key => $value) {
                 ?>
                     <tr>
                         <td><img src="titimg/<?= $value['img']; ?>"></td>
@@ -33,17 +35,8 @@
     </div>
 </div>
 <script>
-    function del(table, id) {
-        $.post("api/del.php", {
-            table,
-            id
-        }, function() {
-            location.reload()
-        })
-    }
-
-    function display(table, id) {
-        $.post('api/display.php', {
+    function api(action, table, id) {
+        $.post(`api/${action}.php`, {
             table,
             id
         }, function() {

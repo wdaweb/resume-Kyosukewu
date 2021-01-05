@@ -5,7 +5,7 @@
             <table class="w-100">
                 <tr class="border-bottom">
                     <td class="w-50">圖片</td>
-                    <td class="w-25">顯示/隱藏</td>
+                    <td class="w-25">顯示</td>
                     <td class="w-25">刪除圖片</td>
                 </tr>
                 <?php
@@ -34,7 +34,7 @@
             <table class="w-100">
                 <tr class="border-bottom">
                     <td class="w-50">關於我內文</td>
-                    <td class="w-25">顯示/隱藏</td>
+                    <td class="w-25">顯示</td>
                     <td class="w-25">刪除內容</td>
                 </tr>
                 <?php
@@ -59,17 +59,8 @@
     </div>
 </div>
 <script>
-    function del(table, id) {
-        $.post("api/del.php", {
-            table,
-            id
-        }, function() {
-            location.reload()
-        })
-    }
-
-    function display(table, id) {
-        $.post('api/display.php', {
+    function api(action, table, id) {
+        $.post(`api/${action}.php`, {
             table,
             id
         }, function() {
