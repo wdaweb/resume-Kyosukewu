@@ -2,12 +2,17 @@
 include_once "../base.php";
 
 $db=new DB($_POST['table']);
+$table=$_POST['do'];
 
 if(!empty($_FILES['img']['tmp_name'])){
     $_POST['img']=$_FILES['img']['name'];
     move_uploaded_file($_FILES['img']['tmp_name'],'../titimg/'.$_FILES['img']['name']);
 }
-$chk=$db->count(['id']);
+
+unset($_POST['table']);
+unset($_POST['do']);
+
+$chk=$db->count();
 
 if(empty($chk)){
     $_POST['sh']=1;
@@ -15,9 +20,12 @@ if(empty($chk)){
     $_POST['sh']=0;
 }
 
+
 $db->save($_POST);
 
 to('../backend.php?do='.$table);
+
+
 
 // switch($_POST['chk']){
 //     case "cover":

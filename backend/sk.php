@@ -17,8 +17,8 @@ $go = $_GET['do'] ?? 'main';
                 ?>
                     <tr>
                         <td><img src="titimg/<?= $value['img']; ?>"></td>
-                        <td><input type="radio" name="show" onclick="api(display,'re_about',<?= $value['id']; ?>)" <?= ($value['sh'] == 1) ? "checked" : ""; ?>><?= ($value['sh'] == 1) ? "顯示" : "隱藏"; ?></td>
-                        <td><button class="btn btn-outline-danger" onclick="api(del,'re_about',<?= $value['id']; ?>)">刪除</button></td>
+                        <td><button class="btn btn-outline-warning" onclick="api('display',re_titimg',<?= $value['id']; ?>)"><?= ($value['sh'] == 1) ? "顯示" : "隱藏"; ?></button></td>
+                        <td><button class="btn btn-outline-danger" onclick="api('del','re_titimg',<?= $value['id']; ?>)">刪除</button></td>
                     </tr>
                 <?php
                 }
@@ -49,9 +49,8 @@ $go = $_GET['do'] ?? 'main';
                 ?>
                     <tr>
                         <td><img src="titimg/<?= $value['img']; ?>"></td>
-                        <td><input type="radio" name="show" onclick="api(display,'re_abouttext',<?= $value['id']; ?>)" <?= ($value['sh'] == 1) ? "checked" : ""; ?>><?= ($value['sh'] == 1) ? "顯示" : "隱藏"; ?></td>
-                        <td><button class="btn btn-outline-warning" onclick="api(edit,'re_abouttext',<?= $value['id']; ?>)">編輯</button></td>
-                        <td><button class="btn btn-outline-danger" onclick="api(del,'re_abouttext',<?= $value['id']; ?>)">刪除</button></td>
+                        <td><button class="btn btn-outline-warning" onclick="api('display',re_titimg',<?= $value['id']; ?>)"><?= ($value['sh'] == 1) ? "顯示" : "隱藏"; ?></button></td>
+                        <td><button class="btn btn-outline-danger" onclick="api('del','re_titimg',<?= $value['id']; ?>)">刪除</button></td>
                     </tr>
                 <?php
                 }
@@ -82,9 +81,8 @@ $go = $_GET['do'] ?? 'main';
                 ?>
                     <tr>
                         <td><img src="titimg/<?= $value['img']; ?>"></td>
-                        <td><button class="btn btn-outline-warning" onclick="api(display,'re_titimg',<?= $value['id']; ?>)"><?= ($value['sh'] == 1) ? "顯示" : "隱藏"; ?></button></td>
-                        <td><button class="btn btn-outline-danger" onclick="api(del,'re_titimg',<?= $value['id']; ?>)">刪除</button></td>
-                    </tr>
+                        <td><button class="btn btn-outline-warning" onclick="api('display',re_titimg',<?= $value['id']; ?>)"><?= ($value['sh'] == 1) ? "顯示" : "隱藏"; ?></button></td>
+                        <td><button class="btn btn-outline-danger" onclick="api('del','re_titimg',<?= $value['id']; ?>)">刪除</button></td>
                 <?php
                 }
                 ?>

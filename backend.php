@@ -42,6 +42,12 @@ include_once "base.php";
             <a class="btn btn-outline-light" onclick="logout()">管理登出</a>
         </div>
         <div class="edit">
+            <div id="cover">
+                <div class="imgc">
+                    <a onclick="cl('#cover')"><i class="fas fa-times text-light"></i></a>
+                    <img id="bimg" src="bimg/gb1.png">
+                </div>
+            </div>
             <?php
             $do = isset($_GET['do']) ? $_GET['do'] : 'main';
             $file = "backend/" . $do . ".php";

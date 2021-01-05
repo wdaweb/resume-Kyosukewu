@@ -16,8 +16,8 @@ $go = $_GET['do'] ?? 'main';
             ?>
                 <tr>
                     <td><img src="titimg/<?= $value['img']; ?>"></td>
-                    <td><input type="radio" name="show" onclick="api(display,'re_titimg',<?= $value['id']; ?>)" <?= ($value['sh'] == 1) ? "checked" : ""; ?>><?= ($value['sh'] == 1) ? "顯示" : "隱藏"; ?></td>
-                    <td><button class="btn btn-outline-danger" onclick="api(del,'re_titimg',<?= $value['id']; ?>)">刪除</button></td>
+                    <td><input type="checkbox" name="show" onclick="api('display','re_titimg',<?= $value['id']; ?>)" <?= ($value['sh'] == 1) ? "checked" : ""; ?>><?= ($value['sh'] == 1) ? "顯示" : "隱藏"; ?></td>
+                    <td><button class="btn btn-outline-danger" onclick="api('del','re_titimg',<?= $value['id']; ?>)">刪除</button></td>
                 </tr>
             <?php
             }
@@ -29,6 +29,7 @@ $go = $_GET['do'] ?? 'main';
         <input class="img" type="file" name="img">
         <input type="hidden" name="sh">
         <input type="hidden" name="table" value="re_titimg">
+        <input type="hidden" name="do" value="main">
         <input class="btn btn-outline-warning" type="submit" value="上傳">
     </form>
     <div class="title h3 mt-3"><?= $tstr[$do][1]; ?></div>
@@ -45,8 +46,8 @@ $go = $_GET['do'] ?? 'main';
             ?>
                 <tr>
                     <td><img src="titimg/<?= $value['img']; ?>"></td>
-                    <td><input type="radio" name="show" onclick="api(display,'re_tittext',<?= $value['id']; ?>)" <?= ($value['sh'] == 1) ? "checked" : ""; ?>><?= ($value['sh'] == 1) ? "顯示" : "隱藏"; ?></td>
-                    <td><button class="btn btn-outline-danger" onclick="api(del,'re_tittext',<?= $value['id']; ?>)">刪除</button></td>
+                    <td><input type="checkbox" name="show" onclick="api('display','re_tittext',<?= $value['id']; ?>)" <?= ($value['sh'] == 1) ? "checked" : ""; ?>><?= ($value['sh'] == 1) ? "顯示" : "隱藏"; ?></td>
+                    <td><button class="btn btn-outline-danger" onclick="api('del','re_tittext',<?= $value['id']; ?>)">刪除</button></td>
                 </tr>
             <?php
             }
@@ -57,12 +58,14 @@ $go = $_GET['do'] ?? 'main';
         <input class="img" type="file" name="img">
         <input type="hidden" name="sh">
         <input type="hidden" name="table" value="re_tittext">
+        <input type="hidden" name="do" value="main">
         <input class="btn btn-outline-warning" type="submit" value="上傳">
     </form>
 </div>
 
 <script>
     function api(action, table, id) {
+        console.log(`api/${action}.php`)
         $.post(`api/${action}.php`, {
             table,
             id
@@ -70,21 +73,4 @@ $go = $_GET['do'] ?? 'main';
             location.reload()
         })
     }
-    // function del(table, id) {
-    //     $.post("api/del.php", {
-    //         table,
-    //         id
-    //     }, function() {
-    //         location.reload()
-    //     })
-    // }
-
-    // function display(table, id) {
-    //     $.post('api/display.php', {
-    //         table,
-    //         id
-    //     }, function() {
-    //         location.reload()
-    //     })
-    // }
 </script>

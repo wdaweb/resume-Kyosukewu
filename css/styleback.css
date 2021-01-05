@@ -44,9 +44,15 @@ body{
 .mainbox{
     height: 100vh;
     overflow-y: auto;
+    position: relative;
+}
+.addbtn{
+    position: absolute;
+    top: 1%;
+    left: 0;
 }
 .main{
-    background: rgb(223, 223, 223);
+    background: rgb(238, 238, 238);
     padding: 1rem;
     /* height: 50vh; */
 }
@@ -87,3 +93,37 @@ textarea{
 td>img{
     height: 150px;
 }
+#cover {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 90vw;
+    height: 90vh;
+    margin: auto;
+    z-index: 100;
+    /* border: 1px solid; */
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+  }
+  #cover a {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    z-index: 101;
+  }
+  .imgc {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #cover img {
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+  }

@@ -17,8 +17,8 @@
                 ?>
                     <tr>
                         <td><img src="titimg/<?= $value['img']; ?>"></td>
-                        <td><button class="btn btn-outline-warning" onclick="display('re_titimg',<?= $value['id']; ?>)"><?= ($value['sh'] == 1) ? "顯示" : "隱藏"; ?></button></td>
-                        <td><button class="btn btn-outline-danger" onclick="del('re_titimg',<?= $value['id']; ?>)">刪除</button></td>
+                        <td><button class="btn btn-outline-warning" onclick="api('display',re_titimg',<?= $value['id']; ?>)"><?= ($value['sh'] == 1) ? "顯示" : "隱藏"; ?></button></td>
+                        <td><button class="btn btn-outline-danger" onclick="api('del','re_titimg',<?= $value['id']; ?>)">刪除</button></td>
                     </tr>
                 <?php
                 }

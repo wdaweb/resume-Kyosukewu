@@ -2,8 +2,9 @@
 $go = $_GET['do'] ?? 'main';
 ?>
 <div class="mainbox row col-12 g-1">
+<div class="title h3 text-center mt-3"><span class='addbtn float-start btn btn-warning' onclick="show()">新增內容</span><?= $tstr[$do][0]; ?></div>
     <div class="main sub text-center col-6">
-        <div class="title h3"><?= $tstr[$do][0]; ?></div>
+        <div class="title h3"><?= $tstr[$do][1]; ?></div>
         <div class="showimg">
             <table class="w-100">
                 <tr class="border-bottom">
@@ -17,30 +18,24 @@ $go = $_GET['do'] ?? 'main';
                 ?>
                     <tr>
                         <td><img src="titimg/<?= $value['img']; ?>"></td>
-                        <td><input type="radio" name="show" onclick="api(display,'re_about',<?= $value['id']; ?>)" <?= ($value['sh'] == 1) ? "checked" : ""; ?>><?= ($value['sh'] == 1) ? "顯示" : "隱藏"; ?></td>
-                        <td><button class="btn btn-outline-danger" onclick="api(del,'re_about',<?= $value['id']; ?>)">刪除</button></td>
+                        <td><input type="checkbox" name="show" onclick="api('display','re_about',<?= $value['id']; ?>)" <?= ($value['sh'] == 1) ? "checked" : ""; ?>><?= ($value['sh'] == 1) ? "顯示" : "隱藏"; ?></td>
+                        <td><button class="btn btn-outline-danger" onclick="api('del','re_about',<?= $value['id']; ?>)">刪除</button></td>
                     </tr>
                 <?php
                 }
                 ?>
             </table>
         </div>
-        <form action="api/add.php" method="post" enctype="multipart/form-data" class="form">
-            <input class="img" type="file" name="img">
-            <input type="hidden" name="sh">
-            <input type="hidden" name="table" value="re_about">
-            <input class="btn btn-outline-warning" type="submit" value="上傳">
-        </form>
     </div>
     <div class="main sub text-center col-6">
-        <div class="title h3"><?= $tstr[$do][1]; ?></div>
+        <div class="title h3"><?= $tstr[$do][2]; ?></div>
         <div class="showimg">
             <table class="w-100">
                 <tr class="border-bottom">
-                    <td style="width: 50%;">關於我內文</td>
-                    <td style="width: 15%;">編輯</td>
-                    <td style="width: 20%;">顯示</td>
-                    <td style="width: 15%;">刪除</td>
+                    <td style="width: 64%;">關於我內文</td>
+                    <td style="width: 12%;">編輯</td>
+                    <td style="width: 12%;">顯示</td>
+                    <td style="width: 12%;">刪除</td>
                 </tr>
                 <?php
                 $text = $Abtext->all();
@@ -50,26 +45,20 @@ $go = $_GET['do'] ?? 'main';
                         <form action="api/edit.php" method="post">
                             <input type="hidden" name="table" value="re_abouttext">
                             <input type="hidden" name="id" value="<?= $value['id']; ?>">
-                            <td><textarea name="text"><?= $text['text']; ?></textarea></td>
+                            <td><textarea class="w-100 h-100" name="text"><?= $value['text']; ?></textarea></td>
                             <td><input class="btn btn-outline-warning" type="submit" value="編輯"></td>
                         </form>
-                        <td><input type="radio" name="show" onclick="api(display,'re_abouttext',<?= $value['id']; ?>)" <?= ($value['sh'] == 1) ? "checked" : ""; ?>><?= ($value['sh'] == 1) ? "顯示" : "隱藏"; ?></td>
-                        <td><button class="btn btn-outline-danger" onclick="api(del,'re_abouttext',<?= $value['id']; ?>)">刪除</button></td>
+                        <td><input type="checkbox" name="show" onclick="api('display','re_abouttext',<?= $value['id']; ?>)" <?= ($value['sh'] == 1) ? "checked" : ""; ?>><?= ($value['sh'] == 1) ? "顯示" : "隱藏"; ?></td>
+                        <td><button class="btn btn-outline-danger" onclick="api('del','re_abouttext',<?= $value['id']; ?>)">刪除</button></td>
                     </tr>
                 <?php
                 }
                 ?>
             </table>
         </div>
-        <form action="api/add.php" method="post" enctype="multipart/form-data" class="form">
-            新增簡介：<input type="text" name="text">
-            <input type="hidden" name="sh">
-            <input type="hidden" name="table" value="re_abouttext">
-            <input class="btn btn-outline-warning" type="submit" value="上傳">
-        </form>
     </div>
     <div class="main sub text-center col-6">
-        <div class="title h3"><?= $tstr[$do][2]; ?></div>
+        <div class="title h3"><?= $tstr[$do][3]; ?></div>
         <div class="showimg">
             <table class="w-100">
                 <tr class="border-bottom">
@@ -97,15 +86,9 @@ $go = $_GET['do'] ?? 'main';
                 ?>
             </table>
         </div>
-        <form action="api/add.php" method="post" enctype="multipart/form-data" class="form">
-            新增學歷：<input type="text" name="text">
-            <input type="hidden" name="sh">
-            <input type="hidden" name="table" value="re_edu">
-            <input class="btn btn-outline-warning" type="submit" value="上傳">
-        </form>
     </div>
     <div class="main sub text-center col-6">
-        <div class="title h3"><?= $tstr[$do][3]; ?></div>
+        <div class="title h3"><?= $tstr[$do][4]; ?></div>
         <div class="showimg">
             <table class="w-100">
                 <tr class="border-bottom">
@@ -137,18 +120,9 @@ $go = $_GET['do'] ?? 'main';
                 ?>
             </table>
         </div>
-        <form action="api/add.php" method="post" enctype="multipart/form-data" class="form">
-            新增聯絡資訊：<br>
-            小圖示：<input type="text" name="icon">
-            方式：<input type="text" name="method">
-            內容：<input type="text" name="cont">
-            <input type="hidden" name="sh">
-            <input type="hidden" name="table" value="re_cont">
-            <input class="btn btn-outline-warning" type="submit" value="上傳">
-        </form>
     </div>
     <div class="main sub text-center col-6">
-        <div class="title h3"><?= $tstr[$do][4]; ?></div>
+        <div class="title h3"><?= $tstr[$do][5]; ?></div>
         <div class="showimg">
             <table class="w-100">
                 <tr class="border-bottom">
@@ -180,18 +154,9 @@ $go = $_GET['do'] ?? 'main';
                 ?>
             </table>
         </div>
-        <form action="api/add.php" method="post" enctype="multipart/form-data" class="form">
-            新增求職條件：<br>
-            小圖示：<input type="text" name="icon">
-            項目：<input type="text" name="method">
-            內容：<input type="text" name="cont">
-            <input type="hidden" name="table" value="re_job">
-            <input type="hidden" name="sh">
-            <input class="btn btn-outline-warning" type="submit" value="上傳">
-        </form>
     </div>
     <div class="main sub text-center col-6">
-        <div class="title h3"><?= $tstr[$do][5]; ?></div>
+        <div class="title h3"><?= $tstr[$do][6]; ?></div>
         <div class="showimg">
             <table class="w-100">
                 <tr class="border-bottom">
@@ -219,13 +184,6 @@ $go = $_GET['do'] ?? 'main';
                 ?>
             </table>
         </div>
-        <form action="api/add.php" method="post" enctype="multipart/form-data" class="form">
-            新增自傳：<br>
-            內容：<input type="text" name="text">
-            <input type="hidden" name="table" value="re_self">
-            <input type="hidden" name="sh">
-            <input class="btn btn-outline-warning" type="submit" value="上傳">
-        </form>
     </div>
 </div>
 <script>
