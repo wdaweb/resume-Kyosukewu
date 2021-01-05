@@ -30,7 +30,7 @@ $go = $_GET['do'] ?? 'main';
         <input type="hidden" name="sh">
         <input type="hidden" name="table" value="re_titimg">
         <input type="hidden" name="do" value="main">
-        <input class="btn btn-outline-warning" type="submit" value="上傳">
+        <input class="submit btn btn-outline-warning" type="submit" value="上傳">
     </form>
     <div class="title h3 mt-3"><?= $tstr[$do][1]; ?></div>
     <div class="showimg">
@@ -59,18 +59,6 @@ $go = $_GET['do'] ?? 'main';
         <input type="hidden" name="sh">
         <input type="hidden" name="table" value="re_tittext">
         <input type="hidden" name="do" value="main">
-        <input class="btn btn-outline-warning" type="submit" value="上傳">
+        <input class="submit btn btn-outline-warning" type="submit" value="上傳">
     </form>
 </div>
-
-<script>
-    function api(action, table, id) {
-        console.log(`api/${action}.php`)
-        $.post(`api/${action}.php`, {
-            table,
-            id
-        }, function() {
-            location.reload()
-        })
-    }
-</script>

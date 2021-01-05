@@ -58,13 +58,3 @@
         </form>
     </div>
 </div>
-<script>
-    function api(action, table, id) {
-        $.post(`api/${action}.php`, {
-            table,
-            id
-        }, function() {
-            location.reload()
-        })
-    }
-</script>

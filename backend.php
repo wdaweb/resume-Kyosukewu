@@ -45,7 +45,9 @@ include_once "base.php";
             <div id="cover">
                 <div class="imgc">
                     <a onclick="cl('#cover')"><i class="fas fa-times text-light"></i></a>
-                    <img id="bimg" src="bimg/gb1.png">
+                    <?php
+                    include "modal/add.php";
+                    ?>
                 </div>
             </div>
             <?php
@@ -65,10 +67,27 @@ include_once "base.php";
 
 </html>
 <script>
+        function api(action, table, id) {
+        $.post(`api/${action}.php`, {
+            table,
+            id
+        }, function() {
+            location.reload()
+        })
+    }
+
+    function show(x, y) {
+        $(x).fadeIn()
+        $(y).fadeIn()
+    }
     function logout() {
         let msg = "確定要登出?"
         if (confirm(msg) == true) {
             location.href = "api/logout.php";
         }
     }
+    function cl(x)
+{
+	$(x).fadeOut();
+}
 </script>

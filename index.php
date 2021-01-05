@@ -16,6 +16,7 @@ include_once "base.php";
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="js/jquery.preload.min.js"></script>
     <title>Kyosuke's Resume</title>
 </head>
 
@@ -309,7 +310,7 @@ include_once "base.php";
                                 <li class="g2" onmouseover="h('g','2','gimg')">Illustrator</li>
                                 <li class="g3" onmouseover="h('g','3','gimg')">Coreldraw</li>
                                 <li class="g4" onmouseover="h('g','4','gimg')">Premiere</li>
-                                <li class="g5" onmouseover="h('g','5','gimg')">Flash</li>
+                                <li class="g5" style="text-decoration:line-through" onmouseover="h('g','5','gimg')">Flash</li>
                             </ol>
                             <div class="pic w-50 text-center">
                                 <img id="gimg" src="icon/g0.png">
