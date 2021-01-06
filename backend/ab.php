@@ -2,9 +2,9 @@
 $go = $_GET['do'] ?? 'main';
 ?>
 <div class="mainbox row col-12 g-1">
-    <div class="title h3 text-center mt-3"><span class='addbtn float-start btn btn-warning' onclick="show('#cover','#content')">新增內容</span><?= $tstr[$do][0]; ?></div>
+    <div class="title h3 text-center mt-3"><?= $tstr[$do][0]; ?></div>
     <div class="main sub text-center col-6">
-        <div class="title h3"><?= $tstr[$do][1]; ?></div>
+        <div class="title h3"><span class='addbtn float-start btn btn-warning' onclick="op('#cover','#content','modal/add.php?do=<?=$do;?>$do&t=re_about')">新增內容</span><?= $tstr[$do][1]; ?></div>
         <div class="showimg">
             <table class="w-100">
                 <tr class="border-bottom">
@@ -18,7 +18,7 @@ $go = $_GET['do'] ?? 'main';
                 ?>
                     <tr>
                         <td><img src="titimg/<?= $value['img']; ?>"></td>
-                        <td><input type="checkbox" name="show" onclick="api('display2','re_about',<?= $value['id']; ?>)" <?= ($value['sh'] == 1) ? "checked" : ""; ?>><?= ($value['sh'] == 1) ? "顯示" : "隱藏"; ?></td>
+                        <td><input class="w-99" type="checkbox" name="show" onclick="api('display','re_about',<?= $value['id']; ?>)" <?= ($value['sh'] == 1) ? "checked" : ""; ?>><?= ($value['sh'] == 1) ? "顯示" : "隱藏"; ?></td>
                         <td><button class="btn btn-outline-danger" onclick="api('del','re_about',<?= $value['id']; ?>)">刪除</button></td>
                     </tr>
                 <?php
@@ -28,7 +28,7 @@ $go = $_GET['do'] ?? 'main';
         </div>
     </div>
     <div class="main sub text-center col-6">
-        <div class="title h3"><?= $tstr[$do][2]; ?></div>
+        <div class="title h3"><span class='addbtn float-start btn btn-warning' onclick="op('#cover','#content','modal/add.php?do=<?=$do;?>&t=re_abouttext')">新增內容</span><?= $tstr[$do][2]; ?></div>
         <div class="showimg">
             <table class="w-100">
                 <tr class="border-bottom">
@@ -46,7 +46,7 @@ $go = $_GET['do'] ?? 'main';
                             <input type="hidden" name="do" value="ab">
                             <input type="hidden" name="table" value="re_abouttext">
                             <input type="hidden" name="id" value="<?= $value['id']; ?>">
-                            <td><textarea name="text"><?= $value['text']; ?></textarea></td>
+                            <td><textarea class="w-99" name="text"><?= $value['text']; ?></textarea></td>
                             <td><input class="submit btn btn-outline-warning" type="submit" value="編輯"></td>
                         </form>
                         <td><input type="checkbox" name="show" onclick="api('display','re_abouttext',<?= $value['id']; ?>)" <?= ($value['sh'] == 1) ? "checked" : ""; ?>><?= ($value['sh'] == 1) ? "顯示" : "隱藏"; ?></td>
@@ -59,7 +59,7 @@ $go = $_GET['do'] ?? 'main';
         </div>
     </div>
     <div class="main sub text-center col-6">
-        <div class="title h3"><?= $tstr[$do][3]; ?></div>
+        <div class="title h3"><span class='addbtn float-start btn btn-warning' onclick="op('#cover','#content','modal/add.php?do=<?=$do;?>&t=re_edu')">新增內容</span><?= $tstr[$do][3]; ?></div>
         <div class="showimg">
             <table class="w-100">
                 <tr class="border-bottom">
@@ -75,13 +75,13 @@ $go = $_GET['do'] ?? 'main';
                     <tr>
                         <form action="api/edit.php" method="post">
                         <input type="hidden" name="do" value="ab">
-                            <td><input type="text" name="text" value="<?= $value['text']; ?>"></td>
+                            <td><input class="w-99" type="text" name="text" value="<?= $value['text']; ?>"></td>
                             <input type="hidden" name="table" value="re_edu">
                             <input type="hidden" name="id" value="<?= $value['id']; ?>">
                             <td><input class="submit btn btn-outline-warning" type="submit" value="編輯"></td>
                         </form>
                         <td><input type="checkbox" name="show" onclick="api('display2','re_edu',<?= $value['id']; ?>)" <?= ($value['sh'] == 1) ? "checked" : ""; ?>><?= ($value['sh'] == 1) ? "顯示" : "隱藏"; ?></td>
-                        <td><button class="btn btn-outline-danger" onclick="api(del,'re_titimg',<?= $value['id']; ?>)">刪除</button></td>
+                        <td><button class="btn btn-outline-danger" onclick="api('del','re_edu',<?= $value['id']; ?>)">刪除</button></td>
                     </tr>
                 <?php
                 }
@@ -90,7 +90,7 @@ $go = $_GET['do'] ?? 'main';
         </div>
     </div>
     <div class="main sub text-center col-6">
-        <div class="title h3"><?= $tstr[$do][4]; ?></div>
+        <div class="title h3"><span class='addbtn float-start btn btn-warning' onclick="op('#cover','#content','modal/add.php?do=<?=$do;?>&t=re_cont')">新增內容</span><?= $tstr[$do][4]; ?></div>
         <div class="showimg">
             <table class="w-100">
                 <tr class="border-bottom">
@@ -108,15 +108,15 @@ $go = $_GET['do'] ?? 'main';
                     <tr>
                         <form action="api/edit.php" method="post">
                         <input type="hidden" name="do" value="ab">
-                            <td><input type="text" name="icon" value="<?= $value['icon']; ?>"></td>
-                            <td><input type="text" name="method" value="<?= $value['method']; ?>"></td>
-                            <td><input type="text" name="cont" value="<?= $value['cont']; ?>"></td>
+                            <td><input class="w-99" type="text" name="icon" value="<?= $value['icon']; ?>"></td>
+                            <td><input class="w-99" type="text" name="method" value="<?= $value['method']; ?>"></td>
+                            <td><input class="w-99" type="text" name="cont" value="<?= $value['cont']; ?>"></td>
                             <input type="hidden" name="table" value="re_cont">
                             <input type="hidden" name="id" value="<?= $value['id']; ?>">
                             <td><input class="submit btn btn-outline-warning" type="submit" value="編輯"></td>
                         </form>
                         <td><input type="checkbox" name="show" onclick="api('display2','re_cont',<?= $value['id']; ?>)" <?= ($value['sh'] == 1) ? "checked" : ""; ?>><?= ($value['sh'] == 1) ? "顯示" : "隱藏"; ?></td>
-                        <td><button class="btn btn-outline-danger" onclick="api(del,'re_titimg',<?= $value['id']; ?>)">刪除</button></td>
+                        <td><button class="btn btn-outline-danger" onclick="api('del','re_cont',<?= $value['id']; ?>)">刪除</button></td>
                     </tr>
                 <?php
                 }
@@ -125,7 +125,7 @@ $go = $_GET['do'] ?? 'main';
         </div>
     </div>
     <div class="main sub text-center col-6">
-        <div class="title h3"><?= $tstr[$do][5]; ?></div>
+        <div class="title h3"><span class='addbtn float-start btn btn-warning' onclick="op('#cover','#content','modal/add.php?do=<?=$do;?>&t=re_job')">新增內容</span><?= $tstr[$do][5]; ?></div>
         <div class="showimg">
             <table class="w-100">
                 <tr class="border-bottom">
@@ -142,14 +142,14 @@ $go = $_GET['do'] ?? 'main';
                     <tr>
                         <form action="api/edit.php" method="post">
                         <input type="hidden" name="do" value="ab">
-                            <td><input type="text" name="text" value="<?= $value['text']; ?>"></td>
-                            <td><input type="text" name="cont" value="<?= $value['cont']; ?>"></td>
+                            <td><input class="w-99" type="text" name="text" value="<?= $value['text']; ?>"></td>
+                            <td><input class="w-99" type="text" name="cont" value="<?= $value['cont']; ?>"></td>
                             <input type="hidden" name="table" value="re_job">
                             <input type="hidden" name="id" value="<?= $value['id']; ?>">
                             <td><input class="submit btn btn-outline-warning" type="submit" value="編輯"></td>
                         </form>
                         <td><input type="checkbox" name="show" onclick="api('display2','re_job',<?= $value['id']; ?>)" <?= ($value['sh'] == 1) ? "checked" : ""; ?>><?= ($value['sh'] == 1) ? "顯示" : "隱藏"; ?></td>
-                        <td><button class="btn btn-outline-danger" onclick="api(del,'re_titimg',<?= $value['id']; ?>)">刪除</button></td>
+                        <td><button class="btn btn-outline-danger" onclick="api('del','re_job',<?= $value['id']; ?>)">刪除</button></td>
                     </tr>
                 <?php
                 }
@@ -158,7 +158,7 @@ $go = $_GET['do'] ?? 'main';
         </div>
     </div>
     <div class="main sub text-center col-6">
-        <div class="title h3"><?= $tstr[$do][6]; ?></div>
+        <div class="title h3"><span class='addbtn float-start btn btn-warning' onclick="op('#cover','#content','modal/add.php?do=<?=$do;?>&t=re_self')">新增內容</span><?= $tstr[$do][6]; ?></div>
         <div class="showimg">
             <table class="w-100">
                 <tr class="border-bottom">
@@ -174,13 +174,13 @@ $go = $_GET['do'] ?? 'main';
                     <tr>
                         <form action="api/edit.php" method="post">
                         <input type="hidden" name="do" value="ab">
-                            <td><textarea name="text"><?= $value['text']; ?></textarea></td>
+                            <td><textarea class="w-99" name="text"><?= $value['text']; ?></textarea></td>
                             <input type="hidden" name="table" value="re_self">
                             <input type="hidden" name="id" value="<?= $value['id']; ?>">
                             <td><input class="submit btn btn-outline-warning" type="submit" value="編輯"></td>
                         </form>
                         <td><input type="checkbox" name="show" onclick="api('display','re_self',<?= $value['id']; ?>)" <?= ($value['sh'] == 1) ? "checked" : ""; ?>><?= ($value['sh'] == 1) ? "顯示" : "隱藏"; ?></td>
-                        <td><button class="btn btn-outline-danger" onclick="api(del,'re_titimg',<?= $value['id']; ?>)">刪除</button></td>
+                        <td><button class="btn btn-outline-danger" onclick="api('del','re_self',<?= $value['id']; ?>)">刪除</button></td>
                     </tr>
                 <?php
                 }

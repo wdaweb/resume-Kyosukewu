@@ -4,6 +4,9 @@ include_once "../base.php";
 $db=new DB($_POST['table']);
 $table=$_POST['do'];
 
+// print_r($_POST);
+
+
 if(!empty($_FILES['img']['tmp_name'])){
     $_POST['img']=$_FILES['img']['name'];
     move_uploaded_file($_FILES['img']['tmp_name'],'../titimg/'.$_FILES['img']['name']);
@@ -19,7 +22,7 @@ if(empty($chk)){
 }else{
     $_POST['sh']=0;
 }
-
+// print_r($_POST);
 
 $db->save($_POST);
 

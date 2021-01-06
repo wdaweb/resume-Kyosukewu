@@ -46,11 +46,7 @@ body {
   overflow-y: auto;
   position: relative;
 }
-.addbtn {
-  position: absolute;
-  top: 1%;
-  left: 0;
-}
+
 .main {
   background: rgb(238, 238, 238);
   padding: 1rem;
@@ -67,7 +63,6 @@ body {
 .showtext {
   width: 100%;
   border: 3px double #333;
-  /* height: 10vh; */
   overflow-y: auto;
   display: flex;
   justify-content: center;
@@ -113,31 +108,46 @@ td > img {
 #cover a {
   position: absolute;
   font-size: 2rem;
-  top: 5%;
-  right: 5%;
+  top: -10%;
+  right: -10%;
   cursor: pointer;
   z-index: 101;
 }
-.imgc {
-  width: 100%;
-  height: 100%;
+.coverbody{
+  width: 100vw;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.imgc {
+  position: relative;
 }
 #cover img {
   margin: auto;
   max-width: 100%;
   max-height: 100%;
 }
-input:not(.submit):not(.img),
-textarea {
+#content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* width: 30vw;
+  height: 50vh; */
+  background: rgba(255, 255, 255, .9);
+  backdrop-filter: blur(10px);
+}
+.w-99 {
   width: 99%;
   margin: auto;
 }
 .addbody{
-  width: 80vw;
-  height: 60vh;
-  background: rgba(255, 255, 255, .9);
-  backdrop-filter: blur(10px);
+  padding: 2rem;
+}
+.uplfile{
+  border: 1px solid #666;
+}
+.txtar{
+  width: 50vh;
+  height: 30vh;
 }

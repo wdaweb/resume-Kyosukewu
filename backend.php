@@ -43,11 +43,11 @@ include_once "base.php";
         </div>
         <div class="edit">
             <div id="cover">
-                <div class="imgc">
-                    <a onclick="cl('#cover')"><i class="fas fa-times text-light"></i></a>
-                    <?php
-                    include "modal/add.php";
-                    ?>
+                <div class="coverbody">
+                    <div class="imgc">
+                        <a onclick="cl('#cover')"><i class="fas fa-times-circle text-light"></i></a>
+                        <div id="content"></div>
+                    </div>
                 </div>
             </div>
             <?php
@@ -68,10 +68,13 @@ include_once "base.php";
 </html>
 <script>
     function api(action, table, id) {
-        if (table == 'del') {
+        if (action == 'del') {
             let msg = "確定要刪除嗎?"
-            if (confirm(msg)==true) {
-                $.post('api/del.php', {table,id}, function() {
+            if (confirm(msg) == true) {
+                $.post('api/del.php', {
+                    table,
+                    id
+                }, function() {
                     location.reload()
                 })
             }
@@ -85,9 +88,12 @@ include_once "base.php";
         }
     }
 
-    function show(x, y) {
+    function op(x, y, url) {
         $(x).fadeIn()
-        $(y).fadeIn()
+        if (y)
+            $(y).fadeIn()
+        if (y && url)
+            $(y).load(url)
     }
 
     function logout() {
