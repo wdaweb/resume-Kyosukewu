@@ -112,8 +112,9 @@ td > img {
 }
 #cover a {
   position: absolute;
-  top: 1rem;
-  right: 1rem;
+  font-size: 2rem;
+  top: 5%;
+  right: 5%;
   cursor: pointer;
   z-index: 101;
 }
@@ -133,4 +134,10 @@ input:not(.submit):not(.img),
 textarea {
   width: 99%;
   margin: auto;
+}
+.addbody{
+  width: 80vw;
+  height: 60vh;
+  background: rgba(255, 255, 255, .9);
+  backdrop-filter: blur(10px);
 }

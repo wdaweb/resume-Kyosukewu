@@ -67,27 +67,37 @@ include_once "base.php";
 
 </html>
 <script>
-        function api(action, table, id) {
-        $.post(`api/${action}.php`, {
-            table,
-            id
-        }, function() {
-            location.reload()
-        })
+    function api(action, table, id) {
+        if (table == 'del') {
+            let msg = "確定要刪除嗎?"
+            if (confirm(msg)==true) {
+                $.post('api/del.php', {table,id}, function() {
+                    location.reload()
+                })
+            }
+        } else {
+            $.post(`api/${action}.php`, {
+                table,
+                id
+            }, function() {
+                location.reload()
+            })
+        }
     }
 
     function show(x, y) {
         $(x).fadeIn()
         $(y).fadeIn()
     }
+
     function logout() {
         let msg = "確定要登出?"
         if (confirm(msg) == true) {
             location.href = "api/logout.php";
         }
     }
-    function cl(x)
-{
-	$(x).fadeOut();
-}
+
+    function cl(x) {
+        $(x).fadeOut();
+    }
 </script>
