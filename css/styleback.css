@@ -71,6 +71,9 @@ body {
   height: 35vh;
   overflow-y: auto;
 }
+.showall{
+  height: 90vh;
+}
 .showtext {
   height: 60vh;
   overflow-y: auto;

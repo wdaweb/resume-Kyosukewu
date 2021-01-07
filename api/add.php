@@ -3,14 +3,16 @@ include_once "../base.php";
 
 $db=new DB($_POST['table']);
 $table=$_POST['do'];
-
 // print_r($_POST);
 
-
-if(!empty($_FILES['img']['tmp_name'])){
-    $_POST['img']=$_FILES['img']['name'];
-    move_uploaded_file($_FILES['img']['tmp_name'],'../titimg/'.$_FILES['img']['name']);
-}
+    if(!empty($_FILES['img']['tmp_name'])){
+        $_POST['img']=$_FILES['img']['name'];
+        if($table=='main'){
+            move_uploaded_file($_FILES['img']['tmp_name'],'../titimg/'.$_FILES['img']['name']);
+        }else{
+            move_uploaded_file($_FILES['img']['tmp_name'],'../icon/'.$_FILES['img']['name']);
+        }
+    }
 
 unset($_POST['table']);
 unset($_POST['do']);
