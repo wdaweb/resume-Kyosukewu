@@ -24,11 +24,15 @@ switch($_POST['table']){
         $row['year']=$_POST['year'];
         $row['jtitle']=$_POST['jtitle'];
         $row['cont']=$_POST['cont'];
+        $row['rank']=$_POST['rank'];
     break;
     case "re_skills":
         $row['type']=$_POST['type'];
         $row['cont']=$_POST['cont'];
-        $row['img']=$_POST['img'];
+        // $row['img']=$_POST['img'];
+        if(!empty($_POST['img'])){
+            $row['img']=$_POST['img'];
+        }
     break;
     default:
     $row['text']=$_POST['text'];
@@ -36,7 +40,7 @@ switch($_POST['table']){
 }
 unset($_POST['do']);
 unset($_POST['table']);
-// print_r($_POST);
+print_r($row);
 $db->save($row);
 
 to('../backend.php?do='.$do);

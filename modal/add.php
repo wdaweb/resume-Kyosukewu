@@ -49,6 +49,15 @@ include_once "../base.php";
                 <input type="hidden" name="do" value="ab">
             <?php
                 break;
+            case "re_conttext":
+            ?>
+                <h4>新增聯絡資訊文字</h4>
+                <hr>
+                <div class="mt-3"><input type="text" name="text"></div>
+                <input type="hidden" name="table" value="re_conttext">
+                <input type="hidden" name="do" value="cont">
+            <?php
+                break;
             case "re_job":
             ?>
                 <h4>新增求職條件</h4>
@@ -92,9 +101,9 @@ include_once "../base.php";
                     </select>
                 </div>
                 <div class="mt-3">名稱：<input type="text" name="cont"></div>
-                <div class="mt-3">圖片：<input type="file" name="img" value="re_exp"></div>
+                <div class="mt-3">圖片：<input type="file" name="img"></div>
                 <input type="hidden" name="table" value="re_skills">
-                <input type="hidden" name="do" value="skills">
+                <input type="hidden" name="do" value="sk">
         <?php
         }
         ?>

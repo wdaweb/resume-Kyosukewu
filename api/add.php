@@ -14,6 +14,15 @@ $table=$_POST['do'];
         }
     }
 
+    switch($_POST['table']){
+        case "re_exp":
+            $_POST['rank']=$Exp->q("select max(rank) from re_exp")[0][0]+1;
+        break;
+        case "re_skills":
+            $_POST['rank']=$Sk->q("select max(rank) from re_skills")[0][0]+1;
+        break;
+    }
+
 unset($_POST['table']);
 unset($_POST['do']);
 
@@ -24,46 +33,11 @@ if(empty($chk)){
 }else{
     $_POST['sh']=0;
 }
+
+
 // print_r($_POST);
 
 $db->save($_POST);
 
 to('../backend.php?do='.$table);
-
-
-
-// switch($_POST['chk']){
-//     case "cover":
-//         if (($key = array_search("cover", $_POST)) !== false) {
-//             unset($_POST[$key]);
-//         }
-//         unset($_POST['table']);
-//         $Img->save($_POST);
-//         to('../backend.php?do=main');
-//     break;
-//     case "mvtext":
-//         if (($key = array_search("mvtext", $_POST)) !== false) {
-//             unset($_POST[$key]);
-//         }
-//         unset($_POST['table']);
-//         $Timg->save($_POST);
-//         to('../backend.php?do=main');
-//     break;
-//     case "me":
-//         if (($key = array_search("me", $_POST)) !== false) {
-//             unset($_POST[$key]);
-//         }
-//         unset($_POST['table']);
-//         $Ab->save($_POST);
-//         to('../backend.php?do=ab');
-//     break;
-//     case "abtext":
-//         if (($key = array_search("abtext", $_POST)) !== false) {
-//             unset($_POST[$key]);
-//         }
-//         unset($_POST['table']);
-//         $Ab->save($_POST);
-//         to('../backend.php?do=ab');
-//     break;
-// }
 ?>

@@ -106,4 +106,15 @@ include_once "base.php";
     function cl(x) {
         $(x).fadeOut();
     }
+    function sw(idx, idy,table) {
+        $.post('api/sw.php', {
+            table,
+            idx,
+            idy
+        }, function() {
+            location.reload()
+            // console.log(idx, idy,table)
+        })
+    }
+
 </script>
