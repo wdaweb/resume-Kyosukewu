@@ -29,13 +29,26 @@ switch($_POST['table']){
     case "re_skills":
         $row['type']=$_POST['type'];
         $row['cont']=$_POST['cont'];
-        // $row['img']=$_POST['img'];
         if(!empty($_POST['img'])){
             $row['img']=$_POST['img'];
         }
     break;
+    case "re_pro":
+        $row['name']=$_POST['name'];
+        $row['cont']=$_POST['cont'];
+        $row['link']=$_POST['link'];
+        if(!empty($_POST['img'])){
+            $row['img']=$_POST['img'];
+        }
+        if(!empty($_POST['icon'])){
+            $row['icon']=$_POST['icon'];
+        }
+        if(!empty($_POST['bimg'])){
+            $row['bimg']=$_POST['bimg'];
+        }
+    break;
     default:
-    $row['text']=$_POST['text'];
+        $row['text']=$_POST['text'];
     break;
 }
 unset($_POST['do']);
@@ -44,4 +57,3 @@ print_r($row);
 $db->save($row);
 
 to('../backend.php?do='.$do);
-?>
