@@ -771,7 +771,7 @@ include_once "base.php";
                                     <div class="text">
                                         ◆ 以日本賞櫻旅遊為主題，介紹日本四個著名賞櫻景點的相關資訊<br>
                                     </div>
-                                    <a onclick="op('#cover','#content','gb13')">
+                                    <a onclick="op('#cover','#content','gb14')">
                                         <div class="btn btn-success mt-2"><i class="fas fa-link me-2"></i>點看全圖
                                         </div>
                                     </a>
@@ -794,7 +794,7 @@ include_once "base.php";
                                     <div class="text">
                                         ◆ 以黃金比例的圓形，勾勒出各式各樣動物的30日挑戰!<br>
                                     </div>
-                                    <a onclick="op('#cover','#content','gb14')">
+                                    <a onclick="op('#cover','#content','gb13')">
                                         <div class="btn btn-success mt-2"><i class="fas fa-link me-2"></i>點看全圖
                                         </div>
                                     </a>
