@@ -10,11 +10,7 @@ $(".tit").addClass("wow animate__slideInLeft");
 $(".self").addClass("wow animate__rotateIn");
 //exp
 $(".tit3").addClass("wow animate__slideInLeft");
-$(".li1").addClass("wow animate__rubberBand");
-$(".li2").addClass("wow animate__rubberBand");
-$(".li3").addClass("wow animate__rubberBand");
-$(".li4").addClass("wow animate__rubberBand");
-$(".li5").addClass("wow animate__rubberBand");
+$(".li").addClass("wow animate__rubberBand");
 //skill
 $(".tit5").addClass("wow animate__slideInLeft");
 $("#sk1").addClass("wow animate__backInRight");

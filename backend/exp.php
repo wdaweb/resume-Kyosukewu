@@ -17,8 +17,8 @@ $go = $_GET['do'] ?? 'main';
                     <td style="width: 10%;">刪除</td>
                 </tr>
                 <?php
-                $exp = $Exp->all(" order by rank DESC");
-                foreach ($exp as $key => $value) {
+                $ex = $Exp->all(" order by rank DESC");
+                foreach ($ex as $key => $value) {
                 ?>
                     <tr>
                         <form action="api/edit.php" method="post">
@@ -32,12 +32,12 @@ $go = $_GET['do'] ?? 'main';
                                 <?php
                                 if ($key != 0) {
                                 ?>
-                                    <button class="btn btn-outline-secondary" onclick="sw(<?= $value['id']; ?>,<?= $exp[$key - 1]['id']; ?>,'re_exp')">往上</button>
+                                    <button class="btn btn-outline-secondary" onclick="sw(<?= $value['id']; ?>,<?= $ex[$key - 1]['id']; ?>,'re_exp')">往上</button>
                                 <?php
                                 }
-                                if ($key != count($exp) - 1) {
+                                if ($key != count($ex) - 1) {
                                 ?>
-                                    <button class="btn btn-outline-secondary" onclick="sw(<?= $value['id']; ?>,<?= $exp[$key + 1]['id']; ?>,'re_exp')">往下</button>
+                                    <button class="btn btn-outline-secondary" onclick="sw(<?= $value['id']; ?>,<?= $ex[$key + 1]['id']; ?>,'re_exp')">往下</button>
                                 <?php
                                 }
                                 ?>

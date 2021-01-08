@@ -64,23 +64,6 @@ include_once "base.php";
                             <li class="nav-item px-3  px-lg-0">
                                 <a class="nav-link" href="#pro"><i class="fas fa-book mr-2 me-2"></i>Portfolio</a>
                             </li>
-                            <!-- <li class="nav-item dropdown px-3 px-lg-0">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                    data-bs-toggle="dropdown">
-                                    <i class="fas fa-book mr-2 me-2"></i>Portfolio
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#wd">Web Design 網頁設計類</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="#gd">Graphic Design 視覺設計類</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="#threed">3D Design 3D設計類</a></li>
-                                </ul>
-                            </li> -->
                             <li class="nav-item px-3 px-lg-0">
                                 <a class="nav-link" href="#foot"><i class="fas fa-phone-volume me-2"></i>Contact me</a>
                             </li>
@@ -118,31 +101,18 @@ include_once "base.php";
                             <div class="accordion-body">
                                 <div class="aboutjob">
                                     <table class="col-12 col-lg-8 col-xl-6 mx-auto">
+                                    <?php
+                                        $job = $Job->all(" order by rank");
+                                        foreach ($job as $key => $value) {
+                                    ?>
                                         <tr>
-                                            <td style="text-align-last: justify;">期望職務</td>
+                                            <td style="text-align-last: justify;"><?= $value['text']; ?></td>
                                             <td>：</td>
-                                            <td class="ps-3 text-center">前端/後端網頁設計人員</td>
+                                            <td class="ps-3 text-center"><?= $value['cont']; ?></td>
                                         </tr>
-                                        <tr>
-                                            <td style="text-align-last: justify;">可上班時間</td>
-                                            <td>：</td>
-                                            <td class="ps-3 text-center">2021年3月初</td>
-                                        </tr>
-                                        <tr>
-                                            <td style="text-align-last: justify;">期望工作地點</td>
-                                            <td>：</td>
-                                            <td class="ps-3 text-center">雙北地區</td>
-                                        </tr>
-                                        <tr>
-                                            <td style="text-align-last: justify;">期望工作性質</td>
-                                            <td>：</td>
-                                            <td class="ps-3 text-center">全職/周休二日/正常班</td>
-                                        </tr>
-                                        <tr>
-                                            <td style="text-align-last: justify;">期望薪資</td>
-                                            <td>：</td>
-                                            <td class="ps-3 text-center">39,000</td>
-                                        </tr>
+                                        <?php
+                                    }
+                                    ?>
                                     </table>
                                 </div>
                             </div>
@@ -156,12 +126,11 @@ include_once "base.php";
                         </h2>
                         <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
+                            <?php
+                                $self = $Self->find(['sh'=>1]);
+                                ?>
                                 <div class="se col-12 mx-auto">
-                                    對各種事物時時保持好奇，樂於探索各種不同的可能性。<br>
-                                    在視覺設計相關領域工作數年的我，因想要有著更寬廣的發展，<br>
-                                    在一次契機下接觸到了網頁設計相關的技術，在這個領域中，<br>
-                                    我可以發揮先前所學，並結合新的程式語言技術，創作出更多元的作品。<br><br>
-                                    期望在這全新的領域中，能不斷的突破自我，享受於工作之中。
+                                <?=  nl2br($self['text']); ?>
                                 </div>
                             </div>
                         </div>
@@ -187,22 +156,33 @@ include_once "base.php";
                         <img src="titimg/<?=$ab['img'];?>" alt="">
                     </div>
                     <div class="me col-12 col-md-6 mt-5 mt-md-0">
+                    <?php
+                        $text = $Abtext->find(['sh'=>1]);
+                    ?>
                         <div class="txt">
-                            Hi,我叫吳振源<br>
-                            工業設計系畢業<br>
-                            曾任3D建模師、美術編輯、社群軟體編輯、服務人員<br>
-                            正為轉職網頁工程師於職訓局學習中<br>
+                            <?= nl2br($text['text']); ?>
                         </div>
                         <div class="edu mt-5">
-                            <i class="fas fa-graduation-cap me-2"></i>最高學歷：國立聯合大學-工業設計學系 畢業
+                        <?php
+                            $edu = $Edu->all(['sh'=>1]);
+                            foreach ($edu as $key => $value) {
+                        ?>
+                            <i class="fas fa-graduation-cap me-2"></i>最高學歷：<?= $value['text']; ?> <?=$finish[$value['finish']];?>
                             <hr>
+                        <?php
+                            }
+                        ?>
                         </div>
-                        <div class="exp text-center">
-                            <a class="me-3" href="https://github.com/Kyosukewu">
-                                <i class="fab fa-github me-2"></i>GitHub</a>|
-                            <a class="mx-3" href="mainto:srx0w0010@hotmail.com"><i class="far fa-envelope me-2"></i>E-mail</a>|
-                            <a class="mx-3" href="tel:+886-933917387"><i class="fas fa-phone-volume me-2"></i>mobile
-                                phone</a>
+                        <div class="exp text-center">|
+                        <?php
+                            $cont = $Cont->all(['sh'=>1]);
+                            foreach ($cont as $key => $value) {
+                        ?>
+                            <a class="mx-3" href="<?= $value['cont']; ?>">
+                                <i class="<?= $value['icon']; ?> me-2"></i><?= $value['method']; ?></a>|
+                        <?php
+                            }
+                        ?>
                         </div>
                     </div>
                 </div>
@@ -213,57 +193,21 @@ include_once "base.php";
         <div class="experience mb-5" id="exp">
             <h3 class="tit3 w-100 pb-3 border-bottom animate__animated"><i class="fas fa-school mt-5 me-2"></i>學習/工作經歷 / Experience</h3>
             <ul class="timeline">
-                <li class="li1 animate__animated">
-                    <a href="https://wdaweb.github.io/" target="_blink">
-                        <h4><small>2020 - now：</small>新銳網頁技術工程師培訓</h4>
-                        <hr>
-                        <p>於泰山職訓中心，進行總時數900小時，為期6個月的網頁技術培訓，目標成為未來網頁設計領域的優秀人才。<br><br>
-                            主要培訓內容：<br><br>
-                            前/後端網頁技術應用、資料庫串接、版本控制 ... ...等等。
-                        </p>
-                    </a>
-                </li>
-                <li class="li2 animate__animated" data-wow-dely="0.5s">
+            <?php
+                $exp = $Exp->all(" order by rank DESC");
+                foreach ($exp as $key => $value) {
+                ?>
+                <li class="li animate__animated">
                     <a>
-                        <h4><small>2018 - 2020：</small>餐飲事業負責人</h4>
+                        <h4><small><?= $value['year']; ?>：</small><?= $value['jtitle']; ?></h4>
                         <hr>
-                        <p>2018年，進行老店新創計畫，接手30年台灣傳統小吃店的經營，並以新方法嘗試突破傳統小吃店經營成本不斷提升、商品單價很難提高之問題。<br><br>
-                            主要貢獻/習得經驗：<br><br>
-                            透過品牌經營，店面包裝，翻新老店整體形象，翻轉整體印象，並於經營期間，學習到許多成本/進補貨/商品開發/販賣流程等實作經驗。
+                        <p><?= nl2br($value['cont']); ?>
                         </p>
                     </a>
                 </li>
-                <li class="li3 animate__animated" data-wow-dely="1.5s">
-                    <a>
-                        <h4><small>2014 - 2018：</small>茶葉門市儲備店長/社群平台管理</h4>
-                        <hr>
-                        <p>於服務期間，負責現場商品銷售、庫存管理等店內事務，並負責社群平台的發文、回應、線上活動企劃。<br><br>
-                            主要貢獻/習得經驗：<br><br>
-                            台灣早期以茶飲為主要飲料，近年漸漸改變風氣，在老客人逐漸凋零、年輕人崇尚咖啡、新式飲品的狀態下，透過不定期舉辦各式活動，主動發掘，並宣傳茶飲文化。<br>
-                            從過程中習得許多溝通技巧、活動效率最佳化方法等等。
-                        </p>
-                    </a>
-                </li>
-                <li class="li4 animate__animated" data-wow-dely="2.5s">
-                    <a>
-                        <h4><small>2011 - 2013：</small>美術編輯/切線設計</h4>
-                        <hr>
-                        <p>服務公司業務內容為創新手機包膜服務，服務期間主要負責手機包膜展開設計，並協助客製化圖案的美術編輯、圖樣設計，並負責管理社群平台<br><br>
-                            主要貢獻/習得經驗：<br><br>
-                            透過自身所學及經驗，將原本尚有缺陷的包膜切線圖重新建構為更貼近台灣人喜好的樣式，並將方法流程化，使各加盟店均能簡單上手，已應變新手機發售後的新切線追加前置步驟，加速新產品的開發速度。
-                        </p>
-                    </a>
-                </li>
-                <li class="li5 animate__animated" data-wow-dely="3.5s">
-                    <a>
-                        <h4><small>2010 - 2011：</small>3D建模/美術編輯設計</h4>
-                        <hr>
-                        <p>於傳產公司負責公司歷年產品的3D化、檔案化作業，並協助設計相關商品型錄。<br><br>
-                            主要貢獻/習得經驗：<br><br>
-                            實務商品設計經驗累積。
-                        </p>
-                    </a>
-                </li>
+                <?php
+                }
+                ?>
             </ul>
         </div>
     </section>
