@@ -9,8 +9,9 @@ $go = $_GET['do'] ?? 'main';
             <table class="w-100">
                 <tr class="border-bottom">
                     <td style="width: 20%;">圖示</td>
-                    <td style="width: 15%;">聯絡方式</td>
-                    <td style="width: 35%;">內容</td>
+                    <td style="width: 10%;">聯絡方式</td>
+                    <td style="width: 20%;">連結</td>
+                    <td style="width: 20%;">內容</td>
                     <td style="width: 10%;">編輯</td>
                     <td style="width: 10%;">顯示</td>
                     <td style="width: 10%;">刪除</td>
@@ -24,6 +25,7 @@ $go = $_GET['do'] ?? 'main';
                             <input type="hidden" name="do" value="cont">
                             <td><i class="me-2 <?= $value['icon']; ?>"></i><input class="w-75" type="text" name="icon" value="<?= $value['icon']; ?>"></td>
                             <td><input class="w-99" type="text" name="method" value="<?= $value['method']; ?>"></td>
+                            <td><input class="w-99" type="text" name="cont" value="<?= $value['link']; ?>"></td>
                             <td><input class="w-99" type="text" name="cont" value="<?= $value['cont']; ?>"></td>
                             <input type="hidden" name="table" value="re_cont">
                             <input type="hidden" name="id" value="<?= $value['id']; ?>">

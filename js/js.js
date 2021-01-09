@@ -22,6 +22,7 @@ $(".tit7").addClass("wow animate__slideInLeft");
 $(".proe").addClass("wow animate__bounceIn");
 //cont
 $(".tit9").addClass("wow animate__slideInLeft");
+$(".contme").addClass("wow animate__zoomIn");
 
 
 new WOW().init();
@@ -45,18 +46,54 @@ function gotop() {
   }
 }
 
-
-function h(cl, num, pl) {
-  $(`.${cl}${num}`).hover(
+for(let i=1;i<=10;i++){
+  $(`.w${i}`).hover(
     function () {
-      $(`#${pl}`).attr("src", `icon/${cl}${num}.png`);
-    },
-    function () {
-      $(`#${pl}`).attr("src", `icon/${cl}0.png`);
-    }
-  );
+          let img=$(`.w${i}`).data('pic')
+          console.log()
+            $(`#wimg`).attr("src", `icon/${img}`);
+          },
+          function () {
+            $(`#wimg`).attr("src", `icon/w0.png`);
+          }
+  )
 }
-
+for(let i=1;i<=5;i++){
+  $(`.g${i}`).hover(
+    function () {
+          let img=$(`.g${i}`).data('pic')
+          console.log()
+            $(`#gimg`).attr("src", `icon/${img}`);
+          },
+          function () {
+            $(`#gimg`).attr("src", `icon/g0.png`);
+          }
+  )
+}
+for(let i=1;i<=5;i++){
+  $(`.d${i}`).hover(
+    function () {
+          let img=$(`.d${i}`).data('pic')
+          console.log()
+            $(`#dimg`).attr("src", `icon/${img}`);
+          },
+          function () {
+            $(`#dimg`).attr("src", `icon/d0.png`);
+          }
+  )
+}
+for(let i=1;i<=5;i++){
+  $(`.t${i}`).hover(
+    function () {
+          let img=$(`.t${i}`).data('pic')
+          console.log()
+            $(`#timg`).attr("src", `icon/${img}`);
+          },
+          function () {
+            $(`#timg`).attr("src", `icon/t0.png`);
+          }
+  )
+}
 function op(x,y,img)
 {
 	$(x).fadeIn()

@@ -27,11 +27,11 @@ $go = $_GET['do'] ?? 'main';
                             </tr>
                             <?php
                             $pro = $Pro->all(['type' => 1], ' order by rank ');
-                            foreach ($sk as $key => $value) {
+                            foreach ($pro as $key => $value) {
                             ?>
                                 <tr>
                                     <form action="api/edit.php" method="post">
-                                        <input type="hidden" name="do" value="sk">
+                                        <input type="hidden" name="do" value="pro">
                                         <input type="hidden" name="table" value="re_pro">
                                         <input type="hidden" name="id" value="<?= $value['id']; ?>">
                                         <td><select name="type">
@@ -90,7 +90,7 @@ $go = $_GET['do'] ?? 'main';
                             ?>
                                 <tr>
                                     <form action="api/edit.php" method="post">
-                                        <input type="hidden" name="do" value="sk">
+                                        <input type="hidden" name="do" value="pro">
                                         <input type="hidden" name="table" value="re_pro">
                                         <input type="hidden" name="id" value="<?= $value['id']; ?>">
                                         <td><select name="type">
@@ -149,7 +149,7 @@ $go = $_GET['do'] ?? 'main';
                             ?>
                                 <tr>
                                     <form action="api/edit.php" method="post">
-                                        <input type="hidden" name="do" value="sk">
+                                        <input type="hidden" name="do" value="pro">
                                         <input type="hidden" name="table" value="re_pro">
                                         <input type="hidden" name="id" value="<?= $value['id']; ?>">
                                         <td><select name="type">

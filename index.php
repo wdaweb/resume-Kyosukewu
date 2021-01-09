@@ -32,10 +32,10 @@ include_once "base.php";
         <div class="bg3 animate__animated" data-wow-delay="0.5s"></div>
         <div class="contant">
             <div class="banner-txt">
-            <?php
-                $mvtext=$Timg->find(['sh'=>1]);
-            ?>
-                <object id="mysvg" type="image/svg+xml" data="titimg/<?=$mvtext['img'];?>"></object>
+                <?php
+                $mvtext = $Timg->find(['sh' => 1]);
+                ?>
+                <object id="mysvg" type="image/svg+xml" data="titimg/<?= $mvtext['img']; ?>"></object>
             </div>
         </div>
         <div class="tobanner">
@@ -71,7 +71,7 @@ include_once "base.php";
                                 <?php
                                 if (isset($_SESSION['login'])) {
                                 ?>
-                                <a class="nav-link" href="backend.php"><i class="fas fa-sign-in-alt me-2"></i>GoBackend</a>
+                                    <a class="nav-link" href="backend.php"><i class="fas fa-sign-in-alt me-2"></i>GoBackend</a>
                                 <?php
                                 } else {
                                 ?>
@@ -101,18 +101,18 @@ include_once "base.php";
                             <div class="accordion-body">
                                 <div class="aboutjob">
                                     <table class="col-12 col-lg-8 col-xl-6 mx-auto">
-                                    <?php
+                                        <?php
                                         $job = $Job->all(" order by rank");
                                         foreach ($job as $key => $value) {
-                                    ?>
-                                        <tr>
-                                            <td style="text-align-last: justify;"><?= $value['text']; ?></td>
-                                            <td>：</td>
-                                            <td class="ps-3 text-center"><?= $value['cont']; ?></td>
-                                        </tr>
+                                        ?>
+                                            <tr>
+                                                <td style="text-align-last: justify;"><?= $value['text']; ?></td>
+                                                <td>：</td>
+                                                <td class="ps-3 text-center"><?= $value['cont']; ?></td>
+                                            </tr>
                                         <?php
-                                    }
-                                    ?>
+                                        }
+                                        ?>
                                     </table>
                                 </div>
                             </div>
@@ -126,11 +126,11 @@ include_once "base.php";
                         </h2>
                         <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
-                            <?php
-                                $self = $Self->find(['sh'=>1]);
+                                <?php
+                                $self = $Self->find(['sh' => 1]);
                                 ?>
                                 <div class="se col-12 mx-auto">
-                                <?=  nl2br($self['text']); ?>
+                                    <?= nl2br($self['text']); ?>
                                 </div>
                             </div>
                         </div>
@@ -151,38 +151,38 @@ include_once "base.php";
                 <div class="row mt-5">
                     <div class="self col-12 col-md-6 text-center animate__animated">
                         <?php
-                            $ab=$Ab->find(['sh'=>1]);
+                        $ab = $Ab->find(['sh' => 1]);
                         ?>
-                        <img src="titimg/<?=$ab['img'];?>" alt="">
+                        <img src="titimg/<?= $ab['img']; ?>" alt="">
                     </div>
                     <div class="me col-12 col-md-6 mt-5 mt-md-0">
-                    <?php
-                        $text = $Abtext->find(['sh'=>1]);
-                    ?>
+                        <?php
+                        $text = $Abtext->find(['sh' => 1]);
+                        ?>
                         <div class="txt">
                             <?= nl2br($text['text']); ?>
                         </div>
                         <div class="edu mt-5">
-                        <?php
-                            $edu = $Edu->all(['sh'=>1]);
+                            <?php
+                            $edu = $Edu->all(['sh' => 1]);
                             foreach ($edu as $key => $value) {
-                        ?>
-                            <i class="fas fa-graduation-cap me-2"></i>最高學歷：<?= $value['text']; ?> <?=$finish[$value['finish']];?>
-                            <hr>
-                        <?php
+                            ?>
+                                <i class="fas fa-graduation-cap me-2"></i>最高學歷：<?= $value['text']; ?> <?= $finish[$value['finish']]; ?>
+                                <hr>
+                            <?php
                             }
-                        ?>
+                            ?>
                         </div>
                         <div class="exp text-center">|
-                        <?php
-                            $cont = $Cont->all(['sh'=>1]);
+                            <?php
+                            $cont = $Cont->all(['sh' => 1]);
                             foreach ($cont as $key => $value) {
-                        ?>
-                            <a class="mx-3" href="<?= $value['cont']; ?>">
-                                <i class="<?= $value['icon']; ?> me-2"></i><?= $value['method']; ?></a>|
-                        <?php
+                            ?>
+                                <a class="mx-3" href="<?= $value['cont']; ?>">
+                                    <i class="<?= $value['icon']; ?> me-2"></i><?= $value['method']; ?></a>|
+                            <?php
                             }
-                        ?>
+                            ?>
                         </div>
                     </div>
                 </div>
@@ -193,18 +193,18 @@ include_once "base.php";
         <div class="experience mb-5" id="exp">
             <h3 class="tit3 w-100 pb-3 border-bottom animate__animated"><i class="fas fa-school mt-5 me-2"></i>學習/工作經歷 / Experience</h3>
             <ul class="timeline">
-            <?php
+                <?php
                 $exp = $Exp->all(" order by rank DESC");
                 foreach ($exp as $key => $value) {
                 ?>
-                <li class="li animate__animated">
-                    <a>
-                        <h4><small><?= $value['year']; ?>：</small><?= $value['jtitle']; ?></h4>
-                        <hr>
-                        <p><?= nl2br($value['cont']); ?>
-                        </p>
-                    </a>
-                </li>
+                    <li class="li animate__animated">
+                        <a>
+                            <h4><small><?= $value['year']; ?>：</small><?= $value['jtitle']; ?></h4>
+                            <hr>
+                            <p><?= nl2br($value['cont']); ?>
+                            </p>
+                        </a>
+                    </li>
                 <?php
                 }
                 ?>
@@ -226,18 +226,24 @@ include_once "base.php";
                         <div class="overlay">
                             <div class="d-flex">
                                 <ol id="wm1">
-                                    <li class="w1" onmouseover="h('w','1','wimg')">HTML5</li>
-                                    <li class="w2" onmouseover="h('w','2','wimg')">CSS3</li>
-                                    <li class="w3" onmouseover="h('w','3','wimg')">JavaScript</li>
-                                    <li class="w4" onmouseover="h('w','4','wimg')">jQuery</li>
-                                    <li class="w5" onmouseover="h('w','5','wimg')">Bootstrap5</li>
+                                    <?php
+                                    $sk = $Sk->all(['type' => 1], ' order by rank limit 0,5');
+                                    foreach ($sk as $key => $value) {
+                                    ?>
+                                        <li class="w<?= $key+1; ?>" data-pic="<?= $value['img']; ?>"><?= $value['cont']; ?></li>
+                                    <?php
+                                    }
+                                    ?>
                                 </ol>
                                 <ol id="wm2">
-                                    <li class="w6" onmouseover="h('w','6','wimg')">AJAX</li>
-                                    <li class="w7" onmouseover="h('w','7','wimg')">Git/GitHub</li>
-                                    <li class="w8" onmouseover="h('w','8','wimg')">PHP</li>
-                                    <li class="w9" onmouseover="h('w','9','wimg')">MariaDB/mySQL</li>
-                                    <li class="w10" onmouseover="h('w','10','wimg')">Xampp</li>
+                                    <?php
+                                    $sk = $Sk->all(['type' => 1], ' order by rank limit 5,5');
+                                    foreach ($sk as $key => $value) {
+                                    ?>
+                                        <li class="w<?= $key+5; ?>" data-pic="<?= $value['img']; ?>"><?= $value['cont']; ?></li>
+                                    <?php
+                                    }
+                                    ?>
                                 </ol>
                             </div>
                         </div>
@@ -250,11 +256,14 @@ include_once "base.php";
                         <hr>
                         <div class="d-flex">
                             <ol>
-                                <li class="g1" onmouseover="h('g','1','gimg')">Photoshop</li>
-                                <li class="g2" onmouseover="h('g','2','gimg')">Illustrator</li>
-                                <li class="g3" onmouseover="h('g','3','gimg')">Coreldraw</li>
-                                <li class="g4" onmouseover="h('g','4','gimg')">Premiere</li>
-                                <li class="g5" style="text-decoration:line-through" onmouseover="h('g','5','gimg')">Flash</li>
+                                <?php
+                                $sk = $Sk->all(['type' => 2], ' order by rank');
+                                foreach ($sk as $key => $value) {
+                                ?>
+                                    <li class="g<?= $key+1; ?>" data-pic="<?= $value['img']; ?>"><?= $value['cont']; ?></li>
+                                <?php
+                                }
+                                ?>
                             </ol>
                             <div class="pic w-50 text-center">
                                 <img id="gimg" src="icon/g0.png">
@@ -269,11 +278,14 @@ include_once "base.php";
                         <hr>
                         <div class="d-flex">
                             <ol>
-                                <li class="d1" onmouseover="h('d','1','dimg')">PTC Creo</li>
-                                <li class="d2" onmouseover="h('d','2','dimg')">AutoCad</li>
-                                <li class="d3" onmouseover="h('d','3','dimg')">SolidWork</li>
-                                <li class="d4" onmouseover="h('d','4','dimg')">CATIA</li>
-                                <li class="d5" onmouseover="h('d','5','dimg')">Cinema4D</li>
+                                <?php
+                                $sk = $Sk->all(['type' => 3], ' order by rank');
+                                foreach ($sk as $key => $value) {
+                                ?>
+                                    <li class="d<?= $key+1; ?>" data-pic="<?= $value['img']; ?>"><?= $value['cont']; ?></li>
+                                <?php
+                                }
+                                ?>
                             </ol>
                             <div class="pic w-50 text-center">
                                 <img id="dimg" src="icon/d0.png">
@@ -288,11 +300,14 @@ include_once "base.php";
                         <hr>
                         <div class="d-flex">
                             <ol>
-                                <li class="t1" onmouseover="h('t','1','timg')">Xmind</li>
-                                <li class="t2" onmouseover="h('t','2','timg')">Word</li>
-                                <li class="t3" onmouseover="h('t','3','timg')">Excel</li>
-                                <li class="t4" onmouseover="h('t','4','timg')">Powerpoint</li>
-                                <li class="t5" onmouseover="h('t','5','timg')">Outlook</li>
+                            <?php
+                                $sk = $Sk->all(['type' => 4], ' order by rank');
+                                foreach ($sk as $key => $value) {
+                                ?>
+                                <li class="t<?= $key+1; ?>" data-pic="<?= $value['img']; ?>"><?= $value['cont']; ?></li>
+                                <?php
+                                }
+                                ?>
                             </ol>
                             <div class="pic w-50 text-center">
                                 <img id="timg" src="icon/t0.png">
@@ -945,10 +960,24 @@ include_once "base.php";
     <section id="foot" class="footer py-3">
         <article class="container text-center">
             <h3 class="tit9 text-light mb-4 animate__animated"><i class="fas fa-phone-volume me-2 "></i>聯絡我 / Contact me</h3>
-            <div class="text-light">
-                <p>感謝您撥冗閱讀這份履歷，如果您對我的能力有興趣的話，歡迎透過以下方式聯繫我，謝謝。</p>
-                <p><a class="text-light" href="tel:+886-933917387">電話：0933-917-387</a> ||
-                    <a class="text-light" href="mainto:srx0w0010@hotmail.com">信箱：srx0w0010@hotmail.com</a>
+            <div class="contme text-light animate__animated">
+            <?php
+                $contt = $Conttext->all(['sh'=>1]);
+                foreach ($contt as $key => $value) {
+                ?>
+                <p><?=$value['text'];?></p>
+                <?php
+                }
+                ?>
+                <p> |
+                <?php
+                $cont = $Cont->all();
+                foreach ($cont as $key => $value) {
+                ?>
+                <a class="text-light" href="<?= $value['link']; ?>"><?= $value['method']; ?>：<?= $value['cont']; ?></a> |
+                    <?php
+                }
+                ?>
                 </p>
             </div>
         </article>

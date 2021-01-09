@@ -44,9 +44,10 @@ include_once "../base.php";
                 <hr>
                 <div class="mt-3">圖示：<input type="text" name="icon"></div>
                 <div class="mt-3">方式：<input type="text" name="method"></div>
+                <div class="mt-3">連結：<input type="text" name="link"></div>
                 <div class="mt-3">內容：<input type="text" name="cont"></div>
                 <input type="hidden" name="table" value="re_cont">
-                <input type="hidden" name="do" value="ab">
+                <input type="hidden" name="do" value="cont">
             <?php
                 break;
             case "re_conttext":
