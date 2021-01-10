@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主機： 127.0.0.1:3306
--- 產生時間： 2021-01-07 16:21:15
+-- 產生時間： 2021-01-10 16:55:48
 -- 伺服器版本： 10.4.14-MariaDB
 -- PHP 版本： 7.4.10
 
@@ -10787,6 +10787,7 @@ CREATE TABLE `re_cont` (
   `id` int(11) UNSIGNED NOT NULL,
   `icon` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `method` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `link` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `cont` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `sh` tinyint(1) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -10795,10 +10796,10 @@ CREATE TABLE `re_cont` (
 -- 傾印資料表的資料 `re_cont`
 --
 
-INSERT INTO `re_cont` (`id`, `icon`, `method`, `cont`, `sh`) VALUES
-(1, 'fab fa-github', 'GitHub', 'https://github.com/Kyosukewu', 1),
-(2, 'far fa-envelope', 'E-mail', 'mainto:srx0w0010@hotmail.com', 1),
-(3, 'fas fa-phone-volume', 'Mobile phone', 'tel:+886-933917387', 1);
+INSERT INTO `re_cont` (`id`, `icon`, `method`, `link`, `cont`, `sh`) VALUES
+(1, 'fab fa-github', 'GitHub', 'https://github.com/Kyosukewu', 'https://github.com/Kyosukewu', 1),
+(2, 'far fa-envelope', 'E-mail', 'mainto:srx0w0010@hotmail.com', 'srx0w0010@hotmail.com', 1),
+(3, 'fas fa-phone-volume', 'Mobile phone', 'tel:+886-933917387', '0933-917387', 1);
 
 -- --------------------------------------------------------
 
@@ -10860,8 +10861,8 @@ CREATE TABLE `re_exp` (
 --
 
 INSERT INTO `re_exp` (`id`, `year`, `jtitle`, `cont`, `sh`, `rank`) VALUES
-(1, '2020 - now', '新銳網頁技術工程師培訓', '於泰山職訓中心，進行總時數900小時，為期6個月的網頁技術培訓，目標成為未來網頁設計領域的優秀人才。\r\n\r\n主要培訓內容：\r\n前/後端網頁技術應用、資料庫串接、版本控制 ... ...等等。', 1, 6),
-(2, '2019 - 2020', '餐飲事業負責人', '2017年，進行老店新創計畫，接手30年台灣傳統小吃店的經營，並以新方法嘗試突破傳統小吃店經營成本不斷提升、商品單價很難提高之問題。\r\n\r\n主要貢獻/習得經驗：\r\n透過品牌經營，店面包裝，翻新老店整體形象，翻轉整體印象，並於經營期間，學習到許多成本/進補貨/商品開發/販賣流程等實作經驗。', 1, 5),
+(1, '2020 - now', '新銳網頁技術工程師培訓', '於泰山職訓中心，進行總時數900小時，為期6個月的網頁技術培訓，目標成為未來網頁設計領域的優秀人才。\r\n\r\n主要培訓內容：\r\n\r\n前/後端網頁技術應用、資料庫串接、版本控制 ... ...等等。', 1, 5),
+(2, '2018 - 2020', '餐飲事業負責人', '2018年，進行老店新創計畫，接手30年台灣傳統小吃店的經營，並以新方法嘗試突破傳統小吃店經營成本不斷提升、商品單價很難提高之問題。\r\n\r\n主要貢獻/習得經驗：\r\n\r\n透過品牌經營，店面包裝，翻新老店整體形象，翻轉整體印象，並於經營期間，學習到許多成本/進補貨/商品開發/販賣流程等實作經驗。', 1, 4),
 (3, '2014 - 2018', '茶葉門市儲備店長/社群平台管理', '於服務期間，負責現場商品銷售、庫存管理等店內事務，並負責社群平台的發文、回應、線上活動企劃。\r\n\r\n主要貢獻/習得經驗：\r\n\r\n台灣早期以茶飲為主要飲料，近年漸漸改變風氣，在老客人逐漸凋零、年輕人崇尚咖啡、新式飲品的狀態下，透過不定期舉辦各式活動，主動發掘，並宣傳茶飲文化。\r\n從過程中習得許多溝通技巧、活動效率最佳化方法等等。', 1, 3),
 (4, '2011 - 2013', '美術編輯/切線設計', '服務公司業務內容為創新手機包膜服務，服務期間主要負責手機包膜展開設計，並協助客製化圖案的美術編輯、圖樣設計，並負責管理社群平台\r\n\r\n主要貢獻/習得經驗：\r\n\r\n透過自身所學及經驗，將原本尚有缺陷的包膜切線圖重新建構為更貼近台灣人喜好的樣式，並將方法流程化，使各加盟店均能簡單上手，已應變新手機發售後的新切線追加前置步驟，加速新產品的開發速度。', 1, 2),
 (5, '2010 - 2011', '3D建模/美術編輯設計', '於傳產公司負責公司歷年產品的3D化、檔案化作業，並協助設計相關商品型錄。\r\n\r\n主要貢獻/習得經驗：\r\n\r\n實務商品設計經驗累積。', 1, 1);
@@ -10876,19 +10877,20 @@ CREATE TABLE `re_job` (
   `id` int(10) UNSIGNED NOT NULL,
   `text` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `cont` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `sh` tinyint(1) NOT NULL
+  `sh` tinyint(1) NOT NULL,
+  `rank` tinyint(2) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- 傾印資料表的資料 `re_job`
 --
 
-INSERT INTO `re_job` (`id`, `text`, `cont`, `sh`) VALUES
-(1, '期望職務', '前端/後端網頁設計人員', 1),
-(2, '可上班時間', '2021年3月初', 1),
-(3, '期望工作地點', '雙北地區', 1),
-(4, '期望工作性質', '全職/周休二日/正常班', 1),
-(5, '期望薪資', '39,000', 1);
+INSERT INTO `re_job` (`id`, `text`, `cont`, `sh`, `rank`) VALUES
+(1, '期望職務', '前端/後端網頁設計人員', 1, 1),
+(2, '可上班時間', '2021年3月初', 1, 2),
+(3, '期望工作地點', '雙北地區', 1, 3),
+(4, '期望工作性質', '全職/周休二日/正常班', 1, 4),
+(5, '期望薪資', '39,000', 1, 5);
 
 -- --------------------------------------------------------
 
@@ -10919,14 +10921,31 @@ INSERT INTO `re_login` (`id`, `acc`, `pw`, `create_time`) VALUES
 
 CREATE TABLE `re_pro` (
   `id` int(11) UNSIGNED NOT NULL,
+  `type` tinyint(1) UNSIGNED NOT NULL,
   `name` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `icon` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `img` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `bimg` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `link` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `cont` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `link` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `sh` tinyint(1) UNSIGNED NOT NULL,
-  `rank` int(2) UNSIGNED NOT NULL
+  `rank` tinyint(2) NOT NULL,
+  `sh` tinyint(2) NOT NULL,
+  `sk1` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `sk2` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `sk3` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `sk4` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `sk5` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `sk6` text COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- 傾印資料表的資料 `re_pro`
+--
+
+INSERT INTO `re_pro` (`id`, `type`, `name`, `img`, `bimg`, `link`, `cont`, `rank`, `sh`, `sk1`, `sk2`, `sk3`, `sk4`, `sk5`, `sk6`) VALUES
+(1, 1, '線上發票紀錄/對獎系統', 'inv.jpg', '', 'http://220.128.133.15/s1090421/invoice/', '◆ 管理者、使用者、訪客三種登入模式，可查看不同權限訊息。\r\n◆ 可進行發票的CRUD、自動對獎、提示開獎/過期與否，統計獎金、中獎發票、張數等訊息。\r\n◆ 支援RWD響應式網站功能。', 1, 1, 'w1.png', 'w2.png', 'w5.png', 'w9.png', 'w8.png', 'g1.png'),
+(2, 1, '線上萬年曆', 'cal.jpg', '', 'http://220.128.133.15/s1090421/calendar/', '◆ 具備切換月/年份，並可隨時回到當日功能，可直接輸入年份日期查詢特定年份。\r\n◆ 標示出每月特殊日期/假日/當天日期，並以不同顏色醒目標示。\r\n◆ 支援RWD響應式網站功能。', 2, 1, 'w1.png', 'w2.png', 'w5.png', 'g1.png', '', ''),
+(4, 1, 'QTE小遊戲', 'QTE.jpg', NULL, 'http://220.128.133.15/s1090421/QTEgame/', '◆ 透過Sweetalert2，結合影片控制製作的小型-快速反應事件(Quick Time Events)-遊戲\r\n◆ 支援RWD響應式網站功能。', 3, 0, 'w1.png', 'w2.png', 'w3.png', 'w4.png', 'w5.png', 'g1.png'),
+(5, 2, '動漫人物仿繪', 'g1.jpg', 'gb1.png', '', '◆ 繪圖板練習，透過PS營造光影效果仿繪動漫人物', 4, 0, 'g1.png', '', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -11193,7 +11212,7 @@ ALTER TABLE `re_abouttext`
 -- 使用資料表自動遞增(AUTO_INCREMENT) `re_cont`
 --
 ALTER TABLE `re_cont`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `re_conttext`
@@ -11211,7 +11230,7 @@ ALTER TABLE `re_edu`
 -- 使用資料表自動遞增(AUTO_INCREMENT) `re_exp`
 --
 ALTER TABLE `re_exp`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `re_job`
@@ -11229,7 +11248,7 @@ ALTER TABLE `re_login`
 -- 使用資料表自動遞增(AUTO_INCREMENT) `re_pro`
 --
 ALTER TABLE `re_pro`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `re_self`
