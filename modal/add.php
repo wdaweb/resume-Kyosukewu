@@ -1,5 +1,5 @@
 <?php
-include_once "../base.php";
+    include_once "../base.php";
 ?>
 
 <div class="addbody text-center">
@@ -105,6 +105,63 @@ include_once "../base.php";
                 <div class="mt-3">圖片：<input type="file" name="img"></div>
                 <input type="hidden" name="table" value="re_skills">
                 <input type="hidden" name="do" value="sk">
+            <?php
+                break;
+            case "re_pro":
+            ?>
+                <h4>新增作品</h4>
+                <hr>
+                <div class="mt-3">分類：
+                    <select class="w-50" name="type">
+                        <option value="1"><?= $tstr['sk'][1]; ?></option>
+                        <option value="2"><?= $tstr['sk'][2]; ?></option>
+                        <option value="3"><?= $tstr['sk'][3]; ?></option>
+                        <option value="4"><?= $tstr['sk'][4]; ?></option>
+                    </select>
+                </div>
+                <div class="mt-3">名稱：<input type="text" name="name"></div>
+                <div class="mt-3">縮圖：<input type="file" name="img"></div>
+                <div class="mt-3">*連結：<input type="text" name="link"></div>
+                <div class="mt-3">*大圖：<input type="file" name="bimg"></div>
+                <div class="mt-3">作品說明：</div><textarea name="cont" rows="5"></textarea>
+                <div class="mt-3">運用技術：</div>
+                <div class="d-flex  col-12 mx-auto">
+                <div class="text-start ms-3 col-4">
+                <?php
+                $sk=$Sk->all(['type'=>1]," order by rank");
+                echo $tstr['sk'][1]."<hr>";
+                foreach($sk as $s){
+                ?>
+                <input type="checkbox" name="sks[]" value="<?=$s['img'];?>" class="ms-2"><?=$s['cont'];?><br>
+                <?php
+                }
+                ?>
+                </div>
+                <div class="text-start ms-3 col-4">
+                <?php
+                $sk=$Sk->all(['type'=>2]," order by rank");
+                echo $tstr['sk'][2]."<hr>";
+                foreach($sk as $s){
+                ?>
+                <input type="checkbox" name="sks[]" value="<?=$s['img'];?>" class="ms-2"><?=$s['cont'];?><br>
+                <?php
+                }
+                ?>
+                </div>
+                <div class="text-start ms-3 col-4">
+                <?php
+                $sk=$Sk->all(['type'=>3]," order by rank");
+                echo $tstr['sk'][3]."<hr>";
+                foreach($sk as $s){
+                ?>
+                <input type="checkbox" name="sks[]" value="<?=$s['img'];?>" class="ms-2"><?=$s['cont'];?><br>
+                <?php
+                }
+                ?>
+                </div>
+                </div>
+                <input type="hidden" name="table" value="re_pro">
+                <input type="hidden" name="do" value="pro">
         <?php
         }
         ?>

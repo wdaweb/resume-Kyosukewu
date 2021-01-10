@@ -33,17 +33,35 @@ switch($_POST['table']){
         }
     break;
     case "re_pro":
+        $row['type']=$_POST['type'];
         $row['name']=$_POST['name'];
         $row['cont']=$_POST['cont'];
-        $row['link']=$_POST['link'];
         if(!empty($_POST['img'])){
             $row['img']=$_POST['img'];
         }
-        if(!empty($_POST['icon'])){
-            $row['icon']=$_POST['icon'];
-        }
         if(!empty($_POST['bimg'])){
             $row['bimg']=$_POST['bimg'];
+        }
+        if(!empty($_POST['link'])){
+            $row['link']=$_POST['link'];
+        }
+        if(!empty($_POST['sk1'])){
+            $row['sk1']=$_POST['sk1'];
+        }
+        if(!empty($_POST['sk2'])){
+            $row['sk2']=$_POST['sk2'];
+        }
+        if(!empty($_POST['sk3'])){
+            $row['sk3']=$_POST['sk3'];
+        }
+        if(!empty($_POST['sk4'])){
+            $row['sk4']=$_POST['sk4'];
+        }
+        if(!empty($_POST['sk5'])){
+            $row['sk5']=$_POST['sk5'];
+        }
+        if(!empty($_POST['sk6'])){
+            $row['sk6']=$_POST['sk6'];
         }
     break;
     default:

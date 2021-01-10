@@ -1,10 +1,10 @@
 <?php
 $go = $_GET['do'] ?? 'main';
 ?>
-<div class="mainbox col-12 text-center">
+<div class="mainbox row col-12 g-1">
 <div class="title h3 text-center mt-3"><?= $tstr[$do][0]; ?></div>
 <div class="main">
-    <div class="title h3"><?= $tstr[$do][1]; ?></div>
+    <div class="h3"><?= $tstr[$do][1]; ?></div>
     <div class="showimg">
         <table class="w-100">
             <tr class="border-bottom">
@@ -34,7 +34,7 @@ $go = $_GET['do'] ?? 'main';
         <input type="hidden" name="do" value="main">
         <input class="submit btn btn-outline-warning" type="submit" value="上傳">
     </form>
-    <div class="title h3 mt-3"><?= $tstr[$do][2]; ?></div>
+    <div class="h3 mt-3"><?= $tstr[$do][2]; ?></div>
     <div class="showimg">
         <table class="w-100">
             <tr class="border-bottom">

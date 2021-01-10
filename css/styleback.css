@@ -43,11 +43,17 @@ body {
   height: 100vh;
   overflow-y: auto;
   position: relative;
+  background: rgb(238, 238, 238);
 }
 
 .main {
   background: rgb(238, 238, 238);
+  height: 100%;
   padding: 1rem;
+}
+.title{
+  color: #fff;
+  background: #333;
 }
 .sub {
   height: 50vh;
@@ -148,6 +154,7 @@ td > img {
   margin: auto;
 }
 .addbody{
+  width: 50vw;
   padding: 2rem;
 }
 .uplfile{

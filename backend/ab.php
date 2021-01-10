@@ -4,7 +4,7 @@ $go = $_GET['do'] ?? 'main';
 <div class="mainbox row col-12 g-1">
     <div class="title h3 text-center mt-3"><?= $tstr[$do][0]; ?></div>
     <div class="main sub text-center col-6">
-        <div class="title h3"><span class='addbtn float-start btn btn-warning' onclick="op('#cover','#content','modal/add.php?do=<?= $do; ?>$do&t=re_about')">新增內容</span><?= $tstr[$do][1]; ?></div>
+        <div class="h3"><span class='addbtn float-start btn btn-warning' onclick="op('#cover','#content','modal/add.php?do=<?= $do; ?>$do&t=re_about')">新增內容</span><?= $tstr[$do][1]; ?></div>
         <div class="showimg">
             <table class="w-100">
                 <tr class="border-bottom">
@@ -28,7 +28,7 @@ $go = $_GET['do'] ?? 'main';
         </div>
     </div>
     <div class="main sub text-center col-6">
-        <div class="title h3"><span class='addbtn float-start btn btn-warning' onclick="op('#cover','#content','modal/add.php?do=<?= $do; ?>&t=re_abouttext')">新增內容</span><?= $tstr[$do][2]; ?></div>
+        <div class="h3"><span class='addbtn float-start btn btn-warning' onclick="op('#cover','#content','modal/add.php?do=<?= $do; ?>&t=re_abouttext')">新增內容</span><?= $tstr[$do][2]; ?></div>
         <div class="showimg">
             <table class="w-100">
                 <tr class="border-bottom">
@@ -59,7 +59,7 @@ $go = $_GET['do'] ?? 'main';
         </div>
     </div>
     <div class="main sub text-center col-6">
-        <div class="title h3"><span class='addbtn float-start btn btn-warning' onclick="op('#cover','#content','modal/add.php?do=<?= $do; ?>&t=re_edu')">新增內容</span><?= $tstr[$do][3]; ?></div>
+        <div class="h3"><span class='addbtn float-start btn btn-warning' onclick="op('#cover','#content','modal/add.php?do=<?= $do; ?>&t=re_edu')">新增內容</span><?= $tstr[$do][3]; ?></div>
         <div class="showimg">
             <table class="w-100">
                 <tr class="border-bottom">
@@ -90,7 +90,7 @@ $go = $_GET['do'] ?? 'main';
         </div>
     </div>
     <!-- <div class="main sub text-center col-6">
-        <div class="title h3"><span class='addbtn float-start btn btn-warning' onclick="op('#cover','#content','modal/add.php?do=<?= $do; ?>&t=re_cont')">新增內容</span><?= $tstr[$do][4]; ?></div>
+        <div class="h3"><span class='addbtn float-start btn btn-warning' onclick="op('#cover','#content','modal/add.php?do=<?= $do; ?>&t=re_cont')">新增內容</span><?= $tstr[$do][4]; ?></div>
         <div class="showimg">
             <table class="w-100">
                 <tr class="border-bottom">
@@ -125,7 +125,7 @@ $go = $_GET['do'] ?? 'main';
         </div>
     </div> -->
     <div class="main sub text-center col-6">
-        <div class="title h3"><span class='addbtn float-start btn btn-warning' onclick="op('#cover','#content','modal/add.php?do=<?= $do; ?>&t=re_job')">新增內容</span><?= $tstr[$do][5]; ?></div>
+        <div class="h3"><span class='addbtn float-start btn btn-warning' onclick="op('#cover','#content','modal/add.php?do=<?= $do; ?>&t=re_job')">新增內容</span><?= $tstr[$do][5]; ?></div>
         <div class="showimg">
             <table class="w-100">
                 <tr class="border-bottom">
@@ -173,7 +173,7 @@ $go = $_GET['do'] ?? 'main';
         </div>
     </div>
     <div class="main sub text-center col-6">
-        <div class="title h3"><span class='addbtn float-start btn btn-warning' onclick="op('#cover','#content','modal/add.php?do=<?= $do; ?>&t=re_self')">新增內容</span><?= $tstr[$do][6]; ?></div>
+        <div class="h3"><span class='addbtn float-start btn btn-warning' onclick="op('#cover','#content','modal/add.php?do=<?= $do; ?>&t=re_self')">新增內容</span><?= $tstr[$do][6]; ?></div>
         <div class="showimg">
             <table class="w-100">
                 <tr class="border-bottom">
