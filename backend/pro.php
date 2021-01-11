@@ -3,7 +3,7 @@ $go = $_GET['do'] ?? 'main';
 ?>
 <div class="mainbox row col-12 g-1">
     <div class="title h3 text-center mt-3"><?= $tstr[$do][0]; ?></div>
-    <div class="text-center col-12">
+    <div class="main full text-center col-12">
         <div class="h3"><span class='addbtn float-start btn btn-warning' onclick="op('#cover','#content','modal/add.php?do=<?= $do; ?>&t=re_pro')">新增內容</span>
             <nav>
                 <div class="nav nav-tabs justify-content-evenly">

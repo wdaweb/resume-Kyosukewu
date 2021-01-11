@@ -19,7 +19,10 @@ if (!empty($_FILES['img']['tmp_name'])) {
             break;
     }
 }
-
+if (!empty($_FILES['bimg']['tmp_name'])) {
+    $_POST['bimg'] = $_FILES['bimg']['name'];
+    move_uploaded_file($_FILES['bimg']['tmp_name'], '../bimg/' . $_FILES['bimg']['name']);
+}
 
 switch ($_POST['table']) {
     case "re_exp":
@@ -61,8 +64,8 @@ if (empty($chk)) {
 }
 
 
-print_r($_POST);
+// print_r($_POST);
 
-// $db->save($_POST);
+$db->save($_POST);
 
-// to('../backend.php?do='.$table);
+to('../backend.php?do='.$table);

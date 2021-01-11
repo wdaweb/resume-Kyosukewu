@@ -3,7 +3,7 @@ $go = $_GET['do'] ?? 'main';
 ?>
 <div class="mainbox row col-12 g-1">
 <div class="title h3 text-center mt-3"><?= $tstr[$do][0]; ?></div>
-<div class="main">
+<div class="main text-center">
     <div class="h3"><?= $tstr[$do][1]; ?></div>
     <div class="showimg">
         <table class="w-100">
