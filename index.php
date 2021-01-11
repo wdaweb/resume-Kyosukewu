@@ -194,7 +194,7 @@ include_once "base.php";
             <h3 class="tit3 w-100 pb-3 border-bottom animate__animated"><i class="fas fa-school mt-5 me-2"></i>學習/工作經歷 / Experience</h3>
             <ul class="timeline">
                 <?php
-                $exp = $Exp->all(" order by rank DESC");
+                $exp = $Exp->all(['sh'=>1]," order by rank DESC");
                 foreach ($exp as $key => $value) {
                 ?>
                     <li class="li animate__animated">
@@ -227,7 +227,7 @@ include_once "base.php";
                             <div class="d-flex">
                                 <ol id="wm1">
                                     <?php
-                                    $sk = $Sk->all(['type' => 1], ' order by rank limit 0,5');
+                                    $sk = $Sk->all(['sh' => 1,'type' => 1], ' order by rank limit 0,5');
                                     foreach ($sk as $key => $value) {
                                     ?>
                                         <li class="w<?= $key + 1; ?>" data-pic="<?= $value['img']; ?>"><?= $value['cont']; ?></li>
@@ -237,7 +237,7 @@ include_once "base.php";
                                 </ol>
                                 <ol id="wm2">
                                     <?php
-                                    $sk = $Sk->all(['type' => 1], ' order by rank limit 5,5');
+                                    $sk = $Sk->all(['sh' => 1,'type' => 1], ' order by rank limit 5,5');
                                     foreach ($sk as $key => $value) {
                                     ?>
                                         <li class="w<?= $key + 5; ?>" data-pic="<?= $value['img']; ?>"><?= $value['cont']; ?></li>
@@ -257,7 +257,7 @@ include_once "base.php";
                         <div class="d-flex">
                             <ol>
                                 <?php
-                                $sk = $Sk->all(['type' => 2], ' order by rank');
+                                $sk = $Sk->all(['sh' => 1,'type' => 2], ' order by rank');
                                 foreach ($sk as $key => $value) {
                                 ?>
                                     <li class="g<?= $key + 1; ?>" data-pic="<?= $value['img']; ?>"><?= $value['cont']; ?></li>
@@ -279,7 +279,7 @@ include_once "base.php";
                         <div class="d-flex">
                             <ol>
                                 <?php
-                                $sk = $Sk->all(['type' => 3], ' order by rank');
+                                $sk = $Sk->all(['sh' => 1,'type' => 3], ' order by rank');
                                 foreach ($sk as $key => $value) {
                                 ?>
                                     <li class="d<?= $key + 1; ?>" data-pic="<?= $value['img']; ?>"><?= $value['cont']; ?></li>
@@ -301,7 +301,7 @@ include_once "base.php";
                         <div class="d-flex">
                             <ol>
                                 <?php
-                                $sk = $Sk->all(['type' => 4], ' order by rank');
+                                $sk = $Sk->all(['sh' => 1,'type' => 4], ' order by rank');
                                 foreach ($sk as $key => $value) {
                                 ?>
                                     <li class="t<?= $key + 1; ?>" data-pic="<?= $value['img']; ?>"><?= $value['cont']; ?></li>
@@ -343,7 +343,7 @@ include_once "base.php";
                     </p>
                     <div class="row g-3">
                         <?php
-                        $pro = $Pro->all(['type' => 1], ' order by rank ');
+                        $pro = $Pro->all(['sh' => 1,'type' => 1], ' order by rank ');
                         foreach ($pro as $key => $value) {
                         ?>
                             <div class="proe col-12 col-md-6 col-lg-4 col-xl-3 animate__animated">
@@ -386,7 +386,7 @@ include_once "base.php";
                     </p>
                     <div class="row g-3">
                         <?php
-                        $pro = $Pro->all(['type' => 2], ' order by rank ');
+                        $pro = $Pro->all(['sh' => 1,'type' => 2], ' order by rank ');
                         foreach ($pro as $key => $value) {
                         ?>
                             <div class="proe col-12 col-md-6 col-lg-4 col-xl-3 animate__animated">
@@ -430,7 +430,7 @@ include_once "base.php";
                     </p>
                     <div class="row g-3">
                     <?php
-                        $pro = $Pro->all(['type' => 3], ' order by rank ');
+                        $pro = $Pro->all(['sh' => 1,'type' => 3], ' order by rank ');
                         foreach ($pro as $key => $value) {
                         ?>
                             <div class="proe col-12 col-md-6 col-lg-4 col-xl-3 animate__animated">
@@ -486,7 +486,7 @@ include_once "base.php";
                 ?>
                 <p> |
                     <?php
-                    $cont = $Cont->all();
+                    $cont = $Cont->all(['sh' => 1]);
                     foreach ($cont as $key => $value) {
                     ?>
                         <a class="text-light" href="<?= $value['link']; ?>"><?= $value['method']; ?>：<?= $value['cont']; ?></a> |

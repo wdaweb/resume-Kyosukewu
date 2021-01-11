@@ -70,7 +70,7 @@ $go = $_GET['do'] ?? 'main';
                                             <?php
                                                 }
                                             ?>
-                                            <i class="addsk fas fa-plus-square h2" onclick="addsk('<?= $value['id']; ?>'"></i>
+                                            <i id="addsk" class="addsk fas fa-plus-square h2" onclick="addsk('<?= $value['id']; ?>')"></i>
                                         </td>
                                         <td><input class="submit btn btn-outline-warning" type="submit" value="編輯"></td>
                                     </form>
@@ -161,7 +161,7 @@ $go = $_GET['do'] ?? 'main';
                                             <?php
                                                 }
                                             ?>
-                                            <i class="addsk fas fa-plus-square h2" onclick="addsk('<?= $value['id']; ?>'"></i>
+                                            <i class="addsk fas fa-plus-square h2" onclick="addsk('<?= $value['id']; ?>')"></i>
                                         </td>
                                         <td><input class="submit btn btn-outline-warning" type="submit" value="編輯"></td>
                                     </form>
@@ -252,7 +252,7 @@ $go = $_GET['do'] ?? 'main';
                                             <?php
                                                 }
                                             ?>
-                                            <i class="addsk fas fa-plus-square h2" onclick="addsk('<?= $value['id']; ?>'"></i>
+                                            <i class="addsk fas fa-plus-square h2" onclick="addsk('<?= $value['id']; ?>')"></i>
                                         </td>
                                         <td><input class="submit btn btn-outline-warning" type="submit" value="編輯"></td>
                                     </form>
@@ -299,5 +299,8 @@ $go = $_GET['do'] ?? 'main';
                 location.reload()
             })
         }
+    }
+    function addsk(id){
+        $("#addsk").before("<input type='file' name='sk[]'>")
     }
 </script>
