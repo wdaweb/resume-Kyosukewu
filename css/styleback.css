@@ -120,8 +120,8 @@ td > img {
 #cover a {
   position: absolute;
   font-size: 2rem;
-  top: -10%;
-  right: -10%;
+  top: -2%;
+  right: -5%;
   cursor: pointer;
   z-index: 101;
 }

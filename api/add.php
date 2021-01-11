@@ -16,10 +16,10 @@ if (!empty($_FILES['img']['tmp_name'])) {
             break;
         case "re_pro":
             move_uploaded_file($_FILES['img']['tmp_name'], '../img/' . $_FILES['img']['name']);
-            move_uploaded_file($_FILES['bimg']['tmp_name'], '../bimg/' . $_FILES['bimg']['name']);
             break;
     }
 }
+
 
 switch ($_POST['table']) {
     case "re_exp":

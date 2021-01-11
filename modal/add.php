@@ -112,7 +112,7 @@
                 <h4>新增作品</h4>
                 <hr>
                 <div class="mt-3">分類：
-                    <select class="w-50" name="type">
+                    <select id="type" class="w-50" name="type" onchange="typeS()">
                         <option value="1"><?= $tstr['sk'][1]; ?></option>
                         <option value="2"><?= $tstr['sk'][2]; ?></option>
                         <option value="3"><?= $tstr['sk'][3]; ?></option>
@@ -121,8 +121,9 @@
                 </div>
                 <div class="mt-3">名稱：<input type="text" name="name"></div>
                 <div class="mt-3">縮圖：<input type="file" name="img"></div>
-                <div class="mt-3">*連結：<input type="text" name="link"></div>
-                <div class="mt-3">*大圖：<input type="file" name="bimg"></div>
+
+                <div id="link" class="mt-3"></div>
+
                 <div class="mt-3">作品說明：</div><textarea name="cont" rows="5"></textarea>
                 <div class="mt-3">運用技術：</div>
                 <div class="d-flex  col-12 mx-auto">
@@ -171,3 +172,12 @@
         </div>
     </form>
 </div>
+<script>
+typeS()
+function typeS(){
+    let type=$('#type').val()
+    $.get("api/type.php",{type},function(res){
+        $('#link').html(res)
+    })
+}
+</script>
