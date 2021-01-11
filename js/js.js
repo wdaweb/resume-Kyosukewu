@@ -99,7 +99,7 @@ function op(x,y,img)
 	$(x).fadeIn()
   $(y).fadeIn()
   console.log(img)
-	$("#bimg").attr("src",`bimg/${img}.png`)
+	$("#bimg").attr("src",`bimg/${img}`)
 }
 
 function cl(x)

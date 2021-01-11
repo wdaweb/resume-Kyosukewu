@@ -151,17 +151,17 @@ $go = $_GET['do'] ?? 'main';
                                             ?>
                                         </td>
                                         <td><textarea class="w-99" name="cont" rows="5"><?= $value['cont']; ?></textarea></td>
-                                        <td>
+                                        <td id="editsk">
                                             <?php
-                                            for ($i = 1; $i <= 6; $i++) {
-                                                if (!empty($value['sk' . $i])) {
+                                                $sks=unserialize($value['sk']);
+                                                foreach($sks as $sk){
                                             ?>
-                                                    <img class="icon" src="icon/<?= $value['sk' . $i]; ?>">
-                                                    <input type="file" name="sk<?= $i; ?>">
+                                            <img class="icon" src="icon/<?= $sk; ?>"><i class="addsk ms-3 fas fa-minus-square" onclick="delsk('<?= $value['id']; ?>','<?= $sk; ?>')"></i>
+                                            <input type="file" name="sk[]">
                                             <?php
                                                 }
-                                            }
                                             ?>
+                                            <i class="addsk fas fa-plus-square h2" onclick="addsk('<?= $value['id']; ?>'"></i>
                                         </td>
                                         <td><input class="submit btn btn-outline-warning" type="submit" value="編輯"></td>
                                     </form>
@@ -242,17 +242,17 @@ $go = $_GET['do'] ?? 'main';
                                             ?>
                                         </td>
                                         <td><textarea class="w-99" name="cont" rows="5"><?= $value['cont']; ?></textarea></td>
-                                        <td>
+                                        <td id="editsk">
                                             <?php
-                                            for ($i = 1; $i <= 6; $i++) {
-                                                if (!empty($value['sk' . $i])) {
+                                                $sks=unserialize($value['sk']);
+                                                foreach($sks as $sk){
                                             ?>
-                                                    <img class="icon" src="icon/<?= $value['sk' . $i]; ?>">
-                                                    <input type="file" name="sk<?= $i; ?>">
+                                            <img class="icon" src="icon/<?= $sk; ?>"><i class="addsk ms-3 fas fa-minus-square" onclick="delsk('<?= $value['id']; ?>','<?= $sk; ?>')"></i>
+                                            <input type="file" name="sk[]">
                                             <?php
                                                 }
-                                            }
                                             ?>
+                                            <i class="addsk fas fa-plus-square h2" onclick="addsk('<?= $value['id']; ?>'"></i>
                                         </td>
                                         <td><input class="submit btn btn-outline-warning" type="submit" value="編輯"></td>
                                     </form>

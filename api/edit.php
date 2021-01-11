@@ -4,9 +4,12 @@ include_once "../base.php";
 $db = new DB($_POST['table']);
 $row = $db->find($_POST['id']);
 $do = $_POST['do'];
-if (!empty($_FILES['img']['tmp_name'])) {
-    $_POST['img'] = $_FILES['img']['name'];
-    move_uploaded_file($_FILES['img']['tmp_name'], '../icon/' . $_FILES['img']['name']);
+
+if($do=='sk'){
+    if (!empty($_FILES['img']['tmp_name'])) {
+        $_POST['img'] = $_FILES['img']['name'];
+        move_uploaded_file($_FILES['img']['tmp_name'], '../icon/' . $_FILES['img']['name']);
+    }
 }
 
 switch ($_POST['table']) {
@@ -59,7 +62,7 @@ switch ($_POST['table']) {
 }
 unset($_POST['do']);
 unset($_POST['table']);
-print_r($row['sk']);
+// print_r($row['sk']);
 // print_r($row);
 $db->save($row);
 

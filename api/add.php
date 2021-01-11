@@ -5,24 +5,31 @@ $db = new DB($_POST['table']);
 $table = $_POST['do'];
 // print_r($_POST);
 
-if (!empty($_FILES['img']['tmp_name'])) {
+
+if ($table == 'pro') {
+    if (!empty($_FILES['bimg']['tmp_name'])) {
+        $_POST['bimg'] = $_FILES['bimg']['name'];
+        move_uploaded_file($_FILES['bimg']['tmp_name'], '../bimg/' . $_FILES['bimg']['name']);
+    }
+    if (!empty($_FILES['img']['tmp_name'])) {
+        $_POST['img'] = $_FILES['img']['name'];
+        move_uploaded_file($_FILES['img']['tmp_name'], '../img/' . $_FILES['img']['name']);
+    }
+    $_POST['sk'] = serialize($_POST['sks']);
+    unset($_POST['sks']);
+} elseif (!empty($_FILES['img']['tmp_name'])) {
     $_POST['img'] = $_FILES['img']['name'];
     switch ($table) {
-        case "main":
+        case "ab":
             move_uploaded_file($_FILES['img']['tmp_name'], '../titimg/' . $_FILES['img']['name']);
             break;
-        case "re_skills":
+        case "sk":
             move_uploaded_file($_FILES['img']['tmp_name'], '../icon/' . $_FILES['img']['name']);
-            break;
-        case "re_pro2":
-            move_uploaded_file($_FILES['img']['tmp_name'], '../img/' . $_FILES['img']['name']);
             break;
     }
 }
-if (!empty($_FILES['bimg']['tmp_name'])) {
-    $_POST['bimg'] = $_FILES['bimg']['name'];
-    move_uploaded_file($_FILES['bimg']['tmp_name'], '../bimg/' . $_FILES['bimg']['name']);
-}
+
+
 
 switch ($_POST['table']) {
     case "re_exp":
@@ -36,7 +43,6 @@ switch ($_POST['table']) {
         break;
 }
 
-$_POST['sk']=serialize($_POST['sks']);
 
 // print_r($_POST['sk']);
 // $c = count($_POST['sks']);
@@ -47,7 +53,6 @@ $_POST['sk']=serialize($_POST['sks']);
 
 unset($_POST['table']);
 unset($_POST['do']);
-unset($_POST['sks']);
 
 $chk = $db->count();
 
@@ -62,4 +67,4 @@ print_r($_POST);
 
 $db->save($_POST);
 
-to('../backend.php?do='.$table);
+to('../backend.php?do=' . $table);
