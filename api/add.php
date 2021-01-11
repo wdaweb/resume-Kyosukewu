@@ -14,7 +14,7 @@ if (!empty($_FILES['img']['tmp_name'])) {
         case "re_skills":
             move_uploaded_file($_FILES['img']['tmp_name'], '../icon/' . $_FILES['img']['name']);
             break;
-        case "re_pro":
+        case "re_pro2":
             move_uploaded_file($_FILES['img']['tmp_name'], '../img/' . $_FILES['img']['name']);
             break;
     }
@@ -31,25 +31,19 @@ switch ($_POST['table']) {
     case "re_skills":
         $_POST['rank'] = $Sk->q("select max(rank) from re_skills")[0][0] + 1;
         break;
-    case "re_pro":
-        $_POST['rank'] = $Sk->q("select max(rank) from re_pro")[0][0] + 1;
+    case "re_pro2":
+        $_POST['rank'] = $Sk->q("select max(rank) from re_pro2")[0][0] + 1;
         break;
 }
 
-// print_r($_POST['sks']);
-$c = count($_POST['sks']);
+$_POST['sk']=serialize($_POST['sks']);
 
-for ($i = 0; $i <= $c-1; $i++) {
-    $_POST['sk' . ($i+1)] = $_POST['sks'][$i];
-}
+// print_r($_POST['sk']);
+// $c = count($_POST['sks']);
 
-
-// foreach($_POST['sks'] as $key=>$sk){
-// for($i=1;$i<=$c;$i++){
-//     $_POST['sk'.$i]=$sk;
+// for ($i = 0; $i <= $c-1; $i++) {
+//     $_POST['sk' . ($i+1)] = $_POST['sks'][$i];
 // }
-// }
-
 
 unset($_POST['table']);
 unset($_POST['do']);
@@ -64,7 +58,7 @@ if (empty($chk)) {
 }
 
 
-// print_r($_POST);
+print_r($_POST);
 
 $db->save($_POST);
 

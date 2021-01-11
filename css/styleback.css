@@ -100,7 +100,10 @@ textarea {
   height: 100%;
 }
 td > img {
-  height: 150px;
+  width: 150px;
+}
+.simg{
+  width: 50%;
 }
 #cover {
   display: none;
@@ -167,4 +170,10 @@ td > img {
 .icon{
   width: 30px;
   height: 30px;
+}
+.addsk{
+  cursor: pointer;
+}
+.addsk:hover{
+  color: #666;
 }

@@ -107,7 +107,7 @@
                 <input type="hidden" name="do" value="sk">
             <?php
                 break;
-            case "re_pro":
+            case "re_pro2":
             ?>
                 <h4>新增作品</h4>
                 <hr>
@@ -161,7 +161,7 @@
                 ?>
                 </div>
                 </div>
-                <input type="hidden" name="table" value="re_pro">
+                <input type="hidden" name="table" value="re_pro2">
                 <input type="hidden" name="do" value="pro">
         <?php
         }
