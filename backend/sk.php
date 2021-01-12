@@ -16,89 +16,97 @@ $go = $_GET['do'] ?? 'main';
             <div class="tab-content h-100 py-5" id="nav-tabContent">
                 <div class="tab-pane fade show active" id="wd" role="tabpanel" aria-labelledby="nav-home-tab">
                     <div class="show">
-                        <table class="w-100">
-                            <tr class="border-bottom">
-                                <td style="width: 10%;">分類</td>
-                                <td style="width: 20%;">名稱</td>
-                                <td style="width: 30%;">圖片</td>
-                                <td style="width: 10%;">排序</td>
-                                <td style="width: 10%;">編輯</td>
-                                <td style="width: 10%;">顯示</td>
-                                <td style="width: 10%;">刪除</td>
-                            </tr>
-                            <tbody id="navbarw">
-                            </tbody>
-                            <script>
-                                $.get("api/w_list.php", function(list) {
-                                    $("#navbarw").html(list)
-                                })
-                            </script>
-                        </table>
+                        <div class="d-flex col-12 text-center mb-3 border-bottom">
+                            <div class="d-flex col-9">
+                                <div class="col-3">分類</div>
+                                <div class="col-3">名稱</div>
+                                <div class="col-3">圖片</div>
+                                <div class="col-3">編輯</div>
+                            </div>
+                            <div class="d-flex col-3">
+                                <div class="col-4">排序</div>
+                                <div class="col-4">顯示</div>
+                                <div class="col-4">刪除</div>
+                            </div>
+                        </div>
+                        <div id="navbarw" class="d-flex flex-wrap">
+                        </div>
+                        <script>
+                            $.get("api/w_list.php", function(list) {
+                                $("#navbarw").html(list)
+                            })
+                        </script>
                     </div>
                 </div>
                 <div class="tab-pane fade show" id="gd" role="tabpanel" aria-labelledby="nav-home-tab">
                     <div class="show">
-                        <table class="w-100">
-                            <tr class="border-bottom">
-                                <td style="width: 10%;">分類</td>
-                                <td style="width: 20%;">名稱</td>
-                                <td style="width: 30%;">圖片</td>
-                                <td style="width: 10%;">排序</td>
-                                <td style="width: 10%;">編輯</td>
-                                <td style="width: 10%;">顯示</td>
-                                <td style="width: 10%;">刪除</td>
-                            </tr>
-                            <tbody id="navbarg">
-                            </tbody>
-                            <script>
-                                $.get("api/g_list.php", function(list) {
-                                    $("#navbarg").html(list)
-                                })
-                            </script>
-                        </table>
+                        <div class="d-flex col-12 text-center mb-3 border-bottom">
+                        <div class="d-flex col-9">
+                                <div class="col-3">分類</div>
+                                <div class="col-3">名稱</div>
+                                <div class="col-3">圖片</div>
+                                <div class="col-3">編輯</div>
+                            </div>
+                            <div class="d-flex col-3">
+                                <div class="col-4">排序</div>
+                                <div class="col-4">顯示</div>
+                                <div class="col-4">刪除</div>
+                            </div>
+                        </div>
+                        <div id="navbarg" class="d-flex flex-wrap">
+                        </div>
+                        <script>
+                            $.get("api/g_list.php", function(list) {
+                                $("#navbarg").html(list)
+                            })
+                        </script>
                     </div>
                 </div>
                 <div class="tab-pane fade show" id="threed" role="tabpanel" aria-labelledby="nav-home-tab">
                     <div class="show">
-                        <table class="w-100">
-                            <tr class="border-bottom">
-                                <td style="width: 10%;">分類</td>
-                                <td style="width: 20%;">名稱</td>
-                                <td style="width: 30%;">圖片</td>
-                                <td style="width: 10%;">排序</td>
-                                <td style="width: 10%;">編輯</td>
-                                <td style="width: 10%;">顯示</td>
-                                <td style="width: 10%;">刪除</td>
-                            </tr>
-                            <tbody id="navbard">
-                            </tbody>
-                        </table>
+                        <div class="d-flex col-12 text-center mb-3 border-bottom">
+                        <div class="d-flex col-9">
+                                <div class="col-3">分類</div>
+                                <div class="col-3">名稱</div>
+                                <div class="col-3">圖片</div>
+                                <div class="col-3">編輯</div>
+                            </div>
+                            <div class="d-flex col-3">
+                                <div class="col-4">排序</div>
+                                <div class="col-4">顯示</div>
+                                <div class="col-4">刪除</div>
+                            </div>
+                        </div>
+                        <div id="navbard" class="d-flex flex-wrap">
+                        </div>
                         <script>
-                                $.get("api/d_list.php", function(list) {
-                                    $("#navbard").html(list)
-                                })
-                            </script>
+                            $.get("api/d_list.php", function(list) {
+                                $("#navbard").html(list)
+                            })
+                        </script>
                     </div>
                 </div>
                 <div class="tab-pane fade show" id="text" role="tabpanel" aria-labelledby="nav-home-tab">
                     <div class="show">
-                        <table class="w-100">
-                            <tr class="border-bottom">
-                                <td style="width: 10%;">分類</td>
-                                <td style="width: 20%;">名稱</td>
-                                <td style="width: 30%;">圖片</td>
-                                <td style="width: 10%;">排序</td>
-                                <td style="width: 10%;">編輯</td>
-                                <td style="width: 10%;">顯示</td>
-                                <td style="width: 10%;">刪除</td>
-                            </tr>
-                            <tbody id="navbart"></tbody>
-                        </table>
+                        <div class="d-flex col-12 text-center mb-3 border-bottom">
+                        <div class="d-flex col-9">
+                                <div class="col-3">分類</div>
+                                <div class="col-3">名稱</div>
+                                <div class="col-3">圖片</div>
+                                <div class="col-3">編輯</div>
+                            </div>
+                            <div class="d-flex col-3">
+                                <div class="col-4">排序</div>
+                                <div class="col-4">顯示</div>
+                                <div class="col-4">刪除</div>
+                            </div>
+                        </div>
+                        <div id="navbart" class="d-flex flex-wrap"></div>
                         <script>
-                                $.get("api/t_list.php", function(list) {
-                                    $("#navbart").html(list)
-                                })
-                            </script>
+                            $.get("api/t_list.php", function(list) {
+                                $("#navbart").html(list)
+                            })
+                        </script>
                     </div>
                 </div>
             </div>

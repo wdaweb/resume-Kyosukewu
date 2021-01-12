@@ -91,26 +91,26 @@ $go = $_GET['do'] ?? 'main';
     </div>
     <div class="main sub text-center col-6">
         <div class="h3"><span class='addbtn float-start btn btn-warning' onclick="op('#cover','#content','modal/add.php?do=<?= $do; ?>&t=re_job')">新增內容</span><?= $tstr[$do][5]; ?></div>
-        <div class="showimg">
-            <table class="w-100">
-                <thead>
-                    <tr class="border-bottom">
-                        <td style="width: 20%;">項目</td>
-                        <td style="width: 20%;">內容</td>
-                        <td style="width: 10%;">編輯</td>
-                        <td style="width: 10%;">排序</td>
-                        <td style="width: 10%;">顯示</td>
-                        <td style="width: 10%;">刪除</td>
-                    </tr>
-                </thead>
-                <tbody id="navbarre_job">
-                    <script>
-                        $.get("api/re_job_list.php", function(list) {
-                            $("#navbarre_job").html(list)
-                        })
-                    </script>
-                </tbody>
-            </table>
+        <div class="showimg d-flex flex-wrap">
+            <div class="d-flex col-12 text-center mb-3 border-bottom">
+                <div class="d-flex col-9">
+                    <div class="col-4">項目</div>
+                    <div class="col-4">內容</div>
+                    <div class="col-4">編輯</div>
+                </div>
+                <div class="d-flex col-3">
+                    <div class="col-4">排序</div>
+                    <div class="col-4">顯示</div>
+                    <div class="col-4">刪除</div>
+                </div>
+            </div>
+            <div id="navbarre_job" class="d-flex flex-wrap">
+            </div>
+                <script>
+                    $.get("api/re_job_list.php", function(list) {
+                        $("#navbarre_job").html(list)
+                    })
+                </script>
         </div>
     </div>
     <div class="main sub text-center col-6">

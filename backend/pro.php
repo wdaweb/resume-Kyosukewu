@@ -15,18 +15,16 @@ $go = $_GET['do'] ?? 'main';
             <div class="tab-content h-100 py-5" id="nav-tabContent">
                 <div class="tab-pane fade show active" id="wd" role="tabpanel" aria-labelledby="nav-home-tab">
                     <div class="show">
-                        <table class="w-100">
-                            <tr class="border-bottom">
-                                <td style="width: 10%;">分類</td>
-                                <td style="width: 10%;">作品</td>
-                                <td style="width: 15%;">縮圖</td>
-                                <td style="width: 20%;">連結/大圖</td>
-                                <td style="width: 25%;">說明</td>
-                                <td style="width: 10%;">技術</td>
-                                <td style="width: 10%;">編輯</td>
-                            </tr>
-                            <tbody id="navbarpw"></tbody>
-                        </table>
+                        <div class="d-flex col-12 text-center mb-3 border-bottom">
+                            <div class="col-1">分類</div>
+                            <div class="col-2">作品</div>
+                            <div class="col-2">縮圖</div>
+                            <div class="col-2">連結/大圖</div>
+                            <div class="col-2">說明</div>
+                            <div class="col-2">技術</div>
+                            <div class="col-1">編輯</div>
+                        </div>
+                        <div id="navbarpw" class="d-flex flex-wrap"></div>
                         <script>
                             $.get("api/pw_list.php", function(list) {
                                 $("#navbarpw").html(list)
@@ -36,18 +34,16 @@ $go = $_GET['do'] ?? 'main';
                 </div>
                 <div class="tab-pane fade show" id="gd" role="tabpanel" aria-labelledby="nav-home-tab">
                     <div class="show">
-                        <table class="w-100">
-                            <tr class="border-bottom">
-                                <td style="width: 10%;">分類</td>
-                                <td style="width: 10%;">作品</td>
-                                <td style="width: 15%;">縮圖</td>
-                                <td style="width: 20%;">連結/大圖</td>
-                                <td style="width: 20%;">說明</td>
-                                <td style="width: 20%;">技術</td>
-                                <td style="width: 10%;">編輯</td>
-                            </tr>
-                            <tbody id="navbarpg"></tbody>
-                        </table>
+                        <div class="d-flex col-12 text-center mb-3 border-bottom">
+                            <div class="col-1">分類</div>
+                            <div class="col-2">作品</div>
+                            <div class="col-2">縮圖</div>
+                            <div class="col-2">連結/大圖</div>
+                            <div class="col-2">說明</div>
+                            <div class="col-2">技術</div>
+                            <div class="col-1">編輯</div>
+                        </div>
+                        <div id="navbarpg" class="d-flex flex-wrap"></div>
                         <script>
                             $.get("api/pg_list.php", function(list) {
                                 $("#navbarpg").html(list)
@@ -57,18 +53,16 @@ $go = $_GET['do'] ?? 'main';
                 </div>
                 <div class="tab-pane fade show" id="threed" role="tabpanel" aria-labelledby="nav-home-tab">
                     <div class="show">
-                        <table class="w-100">
-                            <tr class="border-bottom">
-                                <td style="width: 10%;">分類</td>
-                                <td style="width: 10%;">作品</td>
-                                <td style="width: 15%;">縮圖</td>
-                                <td style="width: 20%;">連結/大圖</td>
-                                <td style="width: 20%;">說明</td>
-                                <td style="width: 20%;">技術</td>
-                                <td style="width: 10%;">編輯</td>
-                            </tr>
-                            <tbody id="navbarpd"></tbody>
-                        </table>
+                        <div class="d-flex col-12 text-center mb-3 border-bottom">
+                            <div class="col-1">分類</div>
+                            <div class="col-2">作品</div>
+                            <div class="col-2">縮圖</div>
+                            <div class="col-2">連結/大圖</div>
+                            <div class="col-2">說明</div>
+                            <div class="col-2">技術</div>
+                            <div class="col-1">編輯</div>
+                        </div>
+                        <div id="navbarpd" class="d-flex flex-wrap"></div>
                         <script>
                             $.get("api/pd_list.php", function(list) {
                                 $("#navbarpd").html(list)

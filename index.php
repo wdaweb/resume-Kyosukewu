@@ -16,7 +16,7 @@ include_once "base.php";
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <script src="js/jquery.preload.min.js"></script>
-    <!-- <script src="https://kit.fontawesome.com/a1381bb91e.js" crossorigin="anonymous"></script> -->
+    <script src="https://kit.fontawesome.com/a1381bb91e.js" crossorigin="anonymous"></script>
     <title>Kyosuke's Resume</title>
 </head>
 
