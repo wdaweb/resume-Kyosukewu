@@ -87,6 +87,30 @@ include_once "base.php";
             })
         }
     }
+    function api2(action, table, id,item) {
+        if (action == 'del') {
+            let msg = "確定要刪除嗎?"
+            if (confirm(msg) == true) {
+                $.post('api/del.php', {
+                    table,
+                    id
+                }, function() {
+                    $.get(`api/${item}_list.php`, function(list) {
+                $(`#navbar${item}`).html(list)
+            })
+                })
+            }
+        } else {
+            $.post(`api/${action}.php`, {
+                table,
+                id
+            }, function() {
+                $.get(`api/${item}_list.php`, function(list) {
+                $(`#navbar${item}`).html(list)
+            })
+            })
+        }
+    }
 
     function op(x, y, url) {
         $(x).fadeIn()

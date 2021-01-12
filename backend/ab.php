@@ -136,11 +136,11 @@ $go = $_GET['do'] ?? 'main';
                     <td style="width: 10%;">顯示</td>
                     <td style="width: 10%;">刪除</td>
                 </tr>
-                <tbody id="navbar"></tbody>
+                <tbody id="navbarre_job"></tbody>
             </table>
             <script>
     $.get("api/re_job_list.php", function(list) {
-        $("#navbar").html(list)
+        $("#navbarre_job").html(list)
     })
 </script>
         </div>

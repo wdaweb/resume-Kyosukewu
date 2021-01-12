@@ -26,8 +26,8 @@ foreach ($job as $key => $value) {
             </td>
             <td><input class="submit btn btn-outline-warning" type="submit" value="編輯"></td>
         </form>
-        <td><input type="checkbox" name="show" onclick="api('display2','re_job',<?= $value['id']; ?>)" <?= ($value['sh'] == 1) ? "checked" : ""; ?>><?= ($value['sh'] == 1) ? "顯示" : "隱藏"; ?></td>
-        <td><button class="btn btn-outline-danger" onclick="api('del','re_job',<?= $value['id']; ?>)">刪除</button></td>
+        <td><input type="checkbox" name="show" onclick="api2('display2','re_job',<?= $value['id']; ?>,'re_job')" <?= ($value['sh'] == 1) ? "checked" : ""; ?>><?= ($value['sh'] == 1) ? "顯示" : "隱藏"; ?></td>
+        <td><button class="btn btn-outline-danger" onclick="api2('del','re_job',<?= $value['id']; ?>,'re_job')">刪除</button></td>
     </tr>
 <?php
 }

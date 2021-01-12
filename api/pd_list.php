@@ -69,8 +69,8 @@ foreach ($pro as $key => $value) {
             }
             ?>
         </td>
-        <td><input type="checkbox" name="show" onclick="api('display2','re_pro',<?= $value['id']; ?>)" <?= ($value['sh'] == 1) ? "checked" : ""; ?>><?= ($value['sh'] == 1) ? "顯示" : "隱藏"; ?></td>
-        <td><button class="btn btn-outline-danger" onclick="api('del','re_pro',<?= $value['id']; ?>)">刪除</button></td>
+        <td><input type="checkbox" name="show" onclick="api2('display2','re_pro',<?= $value['id']; ?>,'pd')" <?= ($value['sh'] == 1) ? "checked" : ""; ?>><?= ($value['sh'] == 1) ? "顯示" : "隱藏"; ?></td>
+        <td><button class="btn btn-outline-danger" onclick="api2('del','re_pro',<?= $value['id']; ?>,'pd')">刪除</button></td>
     </tr>
 <?php
 }
