@@ -40,14 +40,6 @@ for ($i = 0; $i <= $c-1; $i++) {
     $_POST['sk' . ($i+1)] = $_POST['sks'][$i];
 }
 
-
-// foreach($_POST['sks'] as $key=>$sk){
-// for($i=1;$i<=$c;$i++){
-//     $_POST['sk'.$i]=$sk;
-// }
-// }
-
-
 unset($_POST['table']);
 unset($_POST['do']);
 unset($_POST['sks']);
