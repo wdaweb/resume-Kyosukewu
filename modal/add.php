@@ -107,7 +107,7 @@
                 <input type="hidden" name="do" value="sk">
             <?php
                 break;
-            case "re_pro2":
+            case "re_pro":
             ?>
                 <h4>新增作品</h4>
                 <hr>
@@ -116,7 +116,6 @@
                         <option value="1"><?= $tstr['sk'][1]; ?></option>
                         <option value="2"><?= $tstr['sk'][2]; ?></option>
                         <option value="3"><?= $tstr['sk'][3]; ?></option>
-                        <option value="4"><?= $tstr['sk'][4]; ?></option>
                     </select>
                 </div>
                 <div class="mt-3">名稱：<input type="text" name="name"></div>
@@ -161,7 +160,7 @@
                 ?>
                 </div>
                 </div>
-                <input type="hidden" name="table" value="re_pro2">
+                <input type="hidden" name="table" value="re_pro">
                 <input type="hidden" name="do" value="pro">
         <?php
         }

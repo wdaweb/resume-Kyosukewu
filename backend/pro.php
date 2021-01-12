@@ -16,12 +16,11 @@ $go = $_GET['do'] ?? 'main';
                 <div class="tab-pane fade show active" id="wd" role="tabpanel" aria-labelledby="nav-home-tab">
                     <div class="show">
                         <div class="d-flex col-12 text-center mb-3 border-bottom">
-                            <div class="col-1">分類</div>
+                            <div class="col-2">分類</div>
                             <div class="col-2">作品</div>
                             <div class="col-2">縮圖</div>
                             <div class="col-2">連結/大圖</div>
-                            <div class="col-2">說明</div>
-                            <div class="col-2">技術</div>
+                            <div class="col-3">說明</div>
                             <div class="col-1">編輯</div>
                         </div>
                         <div id="navbarpw" class="d-flex flex-wrap"></div>
@@ -35,12 +34,11 @@ $go = $_GET['do'] ?? 'main';
                 <div class="tab-pane fade show" id="gd" role="tabpanel" aria-labelledby="nav-home-tab">
                     <div class="show">
                         <div class="d-flex col-12 text-center mb-3 border-bottom">
-                            <div class="col-1">分類</div>
+                            <div class="col-2">分類</div>
                             <div class="col-2">作品</div>
                             <div class="col-2">縮圖</div>
                             <div class="col-2">連結/大圖</div>
-                            <div class="col-2">說明</div>
-                            <div class="col-2">技術</div>
+                            <div class="col-3">說明</div>
                             <div class="col-1">編輯</div>
                         </div>
                         <div id="navbarpg" class="d-flex flex-wrap"></div>
@@ -54,12 +52,11 @@ $go = $_GET['do'] ?? 'main';
                 <div class="tab-pane fade show" id="threed" role="tabpanel" aria-labelledby="nav-home-tab">
                     <div class="show">
                         <div class="d-flex col-12 text-center mb-3 border-bottom">
-                            <div class="col-1">分類</div>
+                            <div class="col-2">分類</div>
                             <div class="col-2">作品</div>
                             <div class="col-2">縮圖</div>
                             <div class="col-2">連結/大圖</div>
-                            <div class="col-2">說明</div>
-                            <div class="col-2">技術</div>
+                            <div class="col-3">說明</div>
                             <div class="col-1">編輯</div>
                         </div>
                         <div id="navbarpd" class="d-flex flex-wrap"></div>
@@ -88,7 +85,15 @@ $go = $_GET['do'] ?? 'main';
         }
     }
 
-    function addsk(id) {
-        $("#addsk").before("<input type='file' name='sk[]'>")
+    // function addsk(id) {
+    //     $("#addsk").before("<input type='file' name='sk[]'>")
+    // }
+
+    function editsk(x, y, url) {
+        $(x).fadeIn()
+        if (y)
+            $(y).fadeIn()
+        if (y && url)
+            $(y).load(url)
     }
 </script>

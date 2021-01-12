@@ -3,7 +3,7 @@ include_once "../base.php";
 
 $db = new DB($_POST['table']);
 $table = $_POST['do'];
-// print_r($_POST);
+print_r($_POST);
 
 
 if ($table == 'pro') {
@@ -20,6 +20,7 @@ if ($table == 'pro') {
 } elseif (!empty($_FILES['img']['tmp_name'])) {
     $_POST['img'] = $_FILES['img']['name'];
     switch ($table) {
+        case "main":
         case "ab":
             move_uploaded_file($_FILES['img']['tmp_name'], '../titimg/' . $_FILES['img']['name']);
             break;
@@ -63,7 +64,7 @@ if (empty($chk)) {
 }
 
 
-print_r($_POST);
+// print_r($_POST);
 
 $db->save($_POST);
 

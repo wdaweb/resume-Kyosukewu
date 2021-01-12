@@ -14,7 +14,4 @@ for ($i = 0; $i < $c; $i++) {
 }
 $prosk['sk'] = serialize($prosk['sk']);
 
-// echo $prosk['sk'];
-
-
 $Pro->save($prosk);

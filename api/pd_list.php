@@ -3,9 +3,9 @@ include_once "../base.php";
 $pro = $Pro->all(['type' => 3], ' order by rank ');
 foreach ($pro as $key => $value) {
 ?>
-    <div class="col-12 border-top pt-2">
-        <form class="d-flex col-12 align-items-center" action="api/edit.php" method="post">
-            <div class="col-1"><select class="w-99" name="type">
+    <div class="proitem col-12 border-top pt-2">
+        <form class="d-flex col-12 align-items-center" action="api/edit.php" method="post" enctype="multipart/form-data">
+            <div class="col-2"><select class="w-99" name="type">
                     <option value="1" <?= ($value['type'] == "1") ? "selected" : ""; ?>><?= $tstr['pro'][1]; ?></option>
                     <option value="2" <?= ($value['type'] == "2") ? "selected" : ""; ?>><?= $tstr['pro'][2]; ?></option>
                     <option value="3" <?= ($value['type'] == "3") ? "selected" : ""; ?>><?= $tstr['pro'][3]; ?></option>
@@ -33,29 +33,30 @@ foreach ($pro as $key => $value) {
                 }
                 ?>
             </div>
-            <div class="col-2"><textarea class="w-99" name="cont" rows="5"><?= $value['cont']; ?></textarea></div>
-            <div class="col-2" id="editsk">
-                <?php
-                $sks = unserialize($value['sk']);
-                foreach ($sks as $sk) {
-                ?>
-                    <img class="icon" src="icon/<?= $sk; ?>"><i class="addsk ms-3 fas fa-minus-square" onclick="delsk('<?= $value['id']; ?>','<?= $sk; ?>')"></i>
-                    <input type="file" name="sk[]">
-                <?php
-                }
-                ?>
-                <i id="addsk" class="addsk fas fa-plus-square h2" onclick="addsk('<?= $value['id']; ?>')"></i>
-            </div>
+            <div class="col-3"><textarea class="w-99" name="cont" rows="5"><?= $value['cont']; ?></textarea></div>
             <div class="col-1"><input class="submit btn btn-outline-warning" type="submit" value="編輯"></div>
         </form>
         <div class="col-12 mb-5">
-            <div class="d-flex col-6 border-bottom">
-                <div class="col-4">排序</div>
-                <div class="col-4">顯示</div>
-                <div class="col-4">刪除</div>
+            <div class="d-flex col-12 border-bottom">
+                <div class="col-9">技術</div>
+                <div class="col-1">排序</div>
+                <div class="col-1">顯示</div>
+                <div class="col-1">刪除</div>
             </div>
-            <div class="d-flex col-6">
-                <div class="col-4">
+            <div class="d-flex align-items-center col-12">
+                <div class="col-9" id="editsk">
+                    <?php
+                    $sks = unserialize($value['sk']);
+                    foreach ($sks as $sk) {
+                    ?>
+                        <img class="icon me-1" src="icon/<?= $sk; ?>"><i class="addsk me-3 fas fa-minus-square" onclick="delsk('<?= $value['id']; ?>','<?= $sk; ?>')"></i>
+                    <?php
+                    }
+                    ?>
+                    <i id="editsk" class="addsk fas fa-edit h2" onclick="editsk('#cover','#content','modal/editSk.php','<?= $value['id']; ?>')"></i>
+                    <i id="addsk" class="addsk fas fa-plus-square h2" onclick="addsk('<?= $value['id']; ?>')"></i>
+                </div>
+                <div class="col-1">
                     <?php
                     if ($key != 0) {
                     ?>
@@ -69,8 +70,8 @@ foreach ($pro as $key => $value) {
                     }
                     ?>
                 </div>
-                <div class="col-4"><input type="checkbox" name="show" onclick="api2('display2','re_pro',<?= $value['id']; ?>,'pw')" <?= ($value['sh'] == 1) ? "checked" : ""; ?>><?= ($value['sh'] == 1) ? "顯示" : "隱藏"; ?></div>
-                <div class="col-4"><button class="btn btn-outline-danger" onclick="api2('del','re_pro',<?= $value['id']; ?>,'pw')">刪除</button></div>
+                <div class="col-1"><input type="checkbox" name="show" onclick="api2('display2','re_pro',<?= $value['id']; ?>,'pd')" <?= ($value['sh'] == 1) ? "checked" : ""; ?>><?= ($value['sh'] == 1) ? "顯示" : "隱藏"; ?></div>
+                <div class="col-1"><button class="btn btn-outline-danger" onclick="api2('del','re_pro',<?= $value['id']; ?>,'pd')">刪除</button></div>
             </div>
         </div>
     </div>
