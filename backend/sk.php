@@ -26,50 +26,13 @@ $go = $_GET['do'] ?? 'main';
                                 <td style="width: 10%;">顯示</td>
                                 <td style="width: 10%;">刪除</td>
                             </tr>
-                            <?php
-                            $sk = $Sk->all(['type' => 1], ' order by rank ');
-                            foreach ($sk as $key => $value) {
-                            ?>
-                                <tr>
-                                    <form action="api/edit.php" method="post" enctype="multipart/form-data">
-                                        <input type="hidden" name="do" value="sk">
-                                        <input type="hidden" name="table" value="re_skills">
-                                        <input type="hidden" name="id" value="<?= $value['id']; ?>">
-                                        <td><select name="type">
-                                                <option value="1" <?= ($value['type'] == "1") ? "selected" : ""; ?>><?= $tstr[$do][1]; ?></option>
-                                                <option value="2" <?= ($value['type'] == "2") ? "selected" : ""; ?>><?= $tstr[$do][2]; ?></option>
-                                                <option value="3" <?= ($value['type'] == "3") ? "selected" : ""; ?>><?= $tstr[$do][3]; ?></option>
-                                                <option value="4" <?= ($value['type'] == "4") ? "selected" : ""; ?>><?= $tstr[$do][4]; ?></option>
-                                            </select>
-                                        </td>
-                                        <td><input type="text" name="cont" value="<?= $value['cont']; ?>"></td>
-                                        <td>
-                                            <img class="icon" src="icon/<?= $value['img']; ?>">
-                                            <!-- <input type="text" name="img" value="<?= $value['img']; ?>"> -->
-                                            <input type="file" name="img">
-                                        </td>
-                                        <td>
-                                            <?php
-                                            if ($key != 0) {
-                                            ?>
-                                                <button class="btn btn-outline-secondary" onclick="sw(<?= $value['id']; ?>,<?= $sk[$key - 1]['id']; ?>,'re_skills')">往上</button>
-                                            <?php
-                                            }
-                                            if ($key != count($sk) - 1) {
-                                            ?>
-                                                <button class="btn btn-outline-secondary" onclick="sw(<?= $value['id']; ?>,<?= $sk[$key + 1]['id']; ?>,'re_skills')">往下</button>
-                                            <?php
-                                            }
-                                            ?>
-                                        </td>
-                                        <td><input class="submit btn btn-outline-warning" type="submit" value="編輯"></td>
-                                    </form>
-                                    <td><input type="checkbox" name="show" onclick="api('display2','re_skills',<?= $value['id']; ?>)" <?= ($value['sh'] == 1) ? "checked" : ""; ?>><?= ($value['sh'] == 1) ? "顯示" : "隱藏"; ?></td>
-                                    <td><button class="btn btn-outline-danger" onclick="api('del','re_skills',<?= $value['id']; ?>)">刪除</button></td>
-                                </tr>
-                            <?php
-                            }
-                            ?>
+                            <tbody id="navbarw">
+                            </tbody>
+                            <script>
+                                $.get("api/w_list.php", function(list) {
+                                    $("#navbarw").html(list)
+                                })
+                            </script>
                         </table>
                     </div>
                 </div>
@@ -85,50 +48,13 @@ $go = $_GET['do'] ?? 'main';
                                 <td style="width: 10%;">顯示</td>
                                 <td style="width: 10%;">刪除</td>
                             </tr>
-                            <?php
-                            $sk = $Sk->all(['type' => 2], ' order by rank ');
-                            foreach ($sk as $key => $value) {
-                            ?>
-                                <tr>
-                                    <form action="api/edit.php" method="post">
-                                        <input type="hidden" name="do" value="sk">
-                                        <input type="hidden" name="table" value="re_skills">
-                                        <input type="hidden" name="id" value="<?= $value['id']; ?>">
-                                        <td><select name="type">
-                                                <option value="1" <?= ($value['type'] == "1") ? "selected" : ""; ?>><?= $tstr[$do][1]; ?></option>
-                                                <option value="2" <?= ($value['type'] == "2") ? "selected" : ""; ?>><?= $tstr[$do][2]; ?></option>
-                                                <option value="3" <?= ($value['type'] == "3") ? "selected" : ""; ?>><?= $tstr[$do][3]; ?></option>
-                                                <option value="4" <?= ($value['type'] == "4") ? "selected" : ""; ?>><?= $tstr[$do][4]; ?></option>
-                                            </select>
-                                        </td>
-                                        <td><input type="text" name="cont" value="<?= $value['cont']; ?>"></td>
-                                        <td>
-                                            <img class="icon" src="icon/<?= $value['img']; ?>">
-                                            <!-- <input type="text" name="img" value="<?= $value['img']; ?>"> -->
-                                            <input type="file" name="img" value="<?= $value['img']; ?>">
-                                        </td>
-                                        <td>
-                                            <?php
-                                            if ($key != 0) {
-                                            ?>
-                                                <button class="btn btn-outline-secondary" onclick="sw(<?= $value['id']; ?>,<?= $sk[$key - 1]['id']; ?>,'re_skills')">往上</button>
-                                            <?php
-                                            }
-                                            if ($key != count($sk) - 1) {
-                                            ?>
-                                                <button class="btn btn-outline-secondary" onclick="sw(<?= $value['id']; ?>,<?= $sk[$key + 1]['id']; ?>,'re_skills')">往下</button>
-                                            <?php
-                                            }
-                                            ?>
-                                        </td>
-                                        <td><input class="submit btn btn-outline-warning" type="submit" value="編輯"></td>
-                                    </form>
-                                    <td><input type="checkbox" name="show" onclick="api('display2','re_skills',<?= $value['id']; ?>)" <?= ($value['sh'] == 1) ? "checked" : ""; ?>><?= ($value['sh'] == 1) ? "顯示" : "隱藏"; ?></td>
-                                    <td><button class="btn btn-outline-danger" onclick="api('del','re_skills',<?= $value['id']; ?>)">刪除</button></td>
-                                </tr>
-                            <?php
-                            }
-                            ?>
+                            <tbody id="navbarg">
+                            </tbody>
+                            <script>
+                                $.get("api/g_list.php", function(list) {
+                                    $("#navbarg").html(list)
+                                })
+                            </script>
                         </table>
                     </div>
                 </div>
@@ -144,51 +70,14 @@ $go = $_GET['do'] ?? 'main';
                                 <td style="width: 10%;">顯示</td>
                                 <td style="width: 10%;">刪除</td>
                             </tr>
-                            <?php
-                            $sk = $Sk->all(['type' => 3], ' order by rank ');
-                            foreach ($sk as $key => $value) {
-                            ?>
-                                <tr>
-                                    <form action="api/edit.php" method="post">
-                                        <input type="hidden" name="do" value="sk">
-                                        <input type="hidden" name="table" value="re_skills">
-                                        <input type="hidden" name="id" value="<?= $value['id']; ?>">
-                                        <td><select name="type">
-                                                <option value="1" <?= ($value['type'] == "1") ? "selected" : ""; ?>><?= $tstr[$do][1]; ?></option>
-                                                <option value="2" <?= ($value['type'] == "2") ? "selected" : ""; ?>><?= $tstr[$do][2]; ?></option>
-                                                <option value="3" <?= ($value['type'] == "3") ? "selected" : ""; ?>><?= $tstr[$do][3]; ?></option>
-                                                <option value="4" <?= ($value['type'] == "4") ? "selected" : ""; ?>><?= $tstr[$do][4]; ?></option>
-                                            </select>
-                                        </td>
-                                        <td><input type="text" name="cont" value="<?= $value['cont']; ?>"></td>
-                                        <td>
-                                            <img class="icon" src="icon/<?= $value['img']; ?>">
-                                            <!-- <input type="text" name="img" value="<?= $value['img']; ?>"> -->
-                                            <input type="file" name="img" value="<?= $value['img']; ?>">
-                                        </td>
-                                        <td>
-                                            <?php
-                                            if ($key != 0) {
-                                            ?>
-                                                <button class="btn btn-outline-secondary" onclick="sw(<?= $value['id']; ?>,<?= $sk[$key - 1]['id']; ?>,'re_skills')">往上</button>
-                                            <?php
-                                            }
-                                            if ($key != count($sk) - 1) {
-                                            ?>
-                                                <button class="btn btn-outline-secondary" onclick="sw(<?= $value['id']; ?>,<?= $sk[$key + 1]['id']; ?>,'re_skills')">往下</button>
-                                            <?php
-                                            }
-                                            ?>
-                                        </td>
-                                        <td><input class="submit btn btn-outline-warning" type="submit" value="編輯"></td>
-                                    </form>
-                                    <td><input type="checkbox" name="show" onclick="api('display2','re_skills',<?= $value['id']; ?>)" <?= ($value['sh'] == 1) ? "checked" : ""; ?>><?= ($value['sh'] == 1) ? "顯示" : "隱藏"; ?></td>
-                                    <td><button class="btn btn-outline-danger" onclick="api('del','re_skills',<?= $value['id']; ?>)">刪除</button></td>
-                                </tr>
-                            <?php
-                            }
-                            ?>
+                            <tbody id="navbard">
+                            </tbody>
                         </table>
+                        <script>
+                                $.get("api/d_list.php", function(list) {
+                                    $("#navbard").html(list)
+                                })
+                            </script>
                     </div>
                 </div>
                 <div class="tab-pane fade show" id="text" role="tabpanel" aria-labelledby="nav-home-tab">
@@ -203,51 +92,13 @@ $go = $_GET['do'] ?? 'main';
                                 <td style="width: 10%;">顯示</td>
                                 <td style="width: 10%;">刪除</td>
                             </tr>
-                            <?php
-                            $sk = $Sk->all(['type' => 4], ' order by rank ');
-                            foreach ($sk as $key => $value) {
-                            ?>
-                                <tr>
-                                    <form action="api/edit.php" method="post">
-                                        <input type="hidden" name="do" value="sk">
-                                        <input type="hidden" name="table" value="re_skills">
-                                        <input type="hidden" name="id" value="<?= $value['id']; ?>">
-                                        <td><select name="type">
-                                                <option value="1" <?= ($value['type'] == "1") ? "selected" : ""; ?>><?= $tstr[$do][1]; ?></option>
-                                                <option value="2" <?= ($value['type'] == "2") ? "selected" : ""; ?>><?= $tstr[$do][2]; ?></option>
-                                                <option value="3" <?= ($value['type'] == "3") ? "selected" : ""; ?>><?= $tstr[$do][3]; ?></option>
-                                                <option value="4" <?= ($value['type'] == "4") ? "selected" : ""; ?>><?= $tstr[$do][4]; ?></option>
-                                            </select>
-                                        </td>
-                                        <td><input type="text" name="cont" value="<?= $value['cont']; ?>"></td>
-                                        <td>
-                                            <img class="icon" src="icon/<?= $value['img']; ?>">
-                                            <!-- <input type="text" name="img" value="<?= $value['img']; ?>"> -->
-                                            <input type="file" name="img" value="<?= $value['img']; ?>">
-                                        </td>
-                                        <td>
-                                            <?php
-                                            if ($key != 0) {
-                                            ?>
-                                                <button class="btn btn-outline-secondary" onclick="sw(<?= $value['id']; ?>,<?= $sk[$key - 1]['id']; ?>,'re_skills')">往上</button>
-                                            <?php
-                                            }
-                                            if ($key != count($sk) - 1) {
-                                            ?>
-                                                <button class="btn btn-outline-secondary" onclick="sw(<?= $value['id']; ?>,<?= $sk[$key + 1]['id']; ?>,'re_skills')">往下</button>
-                                            <?php
-                                            }
-                                            ?>
-                                        </td>
-                                        <td><input class="submit btn btn-outline-warning" type="submit" value="編輯"></td>
-                                    </form>
-                                    <td><input type="checkbox" name="show" onclick="api('display2','re_skills',<?= $value['id']; ?>)" <?= ($value['sh'] == 1) ? "checked" : ""; ?>><?= ($value['sh'] == 1) ? "顯示" : "隱藏"; ?></td>
-                                    <td><button class="btn btn-outline-danger" onclick="api('del','re_skills',<?= $value['id']; ?>)">刪除</button></td>
-                                </tr>
-                            <?php
-                            }
-                            ?>
+                            <tbody id="navbart"></tbody>
                         </table>
+                        <script>
+                                $.get("api/t_list.php", function(list) {
+                                    $("#navbart").html(list)
+                                })
+                            </script>
                     </div>
                 </div>
             </div>

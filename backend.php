@@ -112,9 +112,20 @@ include_once "base.php";
             idx,
             idy
         }, function() {
-            location.reload()
-            // console.log(idx, idy,table)
+            $.get(`api/${table}_list.php`, function(list) {
+                $("#navbar").html(list)
+            })
         })
     }
-
+    function sw2(idx, idy,table,item) {
+        $.post('api/sw.php', {
+            table,
+            idx,
+            idy
+        }, function() {
+            $.get(`api/${item}_list.php`, function(list) {
+                $(`#navbar${item}`).html(list)
+            })
+        })
+    }
 </script>
