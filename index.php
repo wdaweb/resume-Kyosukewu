@@ -61,8 +61,24 @@ include_once "base.php";
                             <li class="nav-item px-3  px-lg-0">
                                 <a class="nav-link" href="#sk"><i class="fas fa-code-branch me-2"></i>Skills</a>
                             </li>
-                            <li class="nav-item px-3  px-lg-0">
+                            <!-- <li class="nav-item px-3  px-lg-0">
                                 <a class="nav-link" href="#pro"><i class="fas fa-book mr-2 me-2"></i>Portfolio</a>
+                            </li> -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-book mr-2 me-2"></i>Portfolio
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" onclick="go('w')">網頁設計類</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" onclick="go('g')">視覺設計類</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" onclick="go('d')">3D設計類</a></li>
+                                </ul>
                             </li>
                             <li class="nav-item px-3 px-lg-0">
                                 <a class="nav-link" href="#foot"><i class="fas fa-phone-volume me-2"></i>Contact me</a>
@@ -194,7 +210,7 @@ include_once "base.php";
             <h3 class="tit3 w-100 pb-3 border-bottom animate__animated"><i class="fas fa-school mt-5 me-2"></i>學習/工作經歷 / Experience</h3>
             <ul class="timeline">
                 <?php
-                $exp = $Exp->all(['sh'=>1]," order by rank DESC");
+                $exp = $Exp->all(['sh' => 1], " order by rank DESC");
                 foreach ($exp as $key => $value) {
                 ?>
                     <li class="li animate__animated">
@@ -227,7 +243,7 @@ include_once "base.php";
                             <div class="d-flex">
                                 <ol id="wm1">
                                     <?php
-                                    $sk = $Sk->all(['sh' => 1,'type' => 1], ' order by rank limit 0,5');
+                                    $sk = $Sk->all(['sh' => 1, 'type' => 1], ' order by rank limit 0,5');
                                     foreach ($sk as $key => $value) {
                                     ?>
                                         <li class="w<?= $key + 1; ?>" data-pic="<?= $value['img']; ?>"><?= $value['cont']; ?></li>
@@ -237,7 +253,7 @@ include_once "base.php";
                                 </ol>
                                 <ol id="wm2">
                                     <?php
-                                    $sk = $Sk->all(['sh' => 1,'type' => 1], ' order by rank limit 5,5');
+                                    $sk = $Sk->all(['sh' => 1, 'type' => 1], ' order by rank limit 5,5');
                                     foreach ($sk as $key => $value) {
                                     ?>
                                         <li class="w<?= $key + 5; ?>" data-pic="<?= $value['img']; ?>"><?= $value['cont']; ?></li>
@@ -257,7 +273,7 @@ include_once "base.php";
                         <div class="d-flex">
                             <ol>
                                 <?php
-                                $sk = $Sk->all(['sh' => 1,'type' => 2], ' order by rank');
+                                $sk = $Sk->all(['sh' => 1, 'type' => 2], ' order by rank');
                                 foreach ($sk as $key => $value) {
                                 ?>
                                     <li class="g<?= $key + 1; ?>" data-pic="<?= $value['img']; ?>"><?= $value['cont']; ?></li>
@@ -279,7 +295,7 @@ include_once "base.php";
                         <div class="d-flex">
                             <ol>
                                 <?php
-                                $sk = $Sk->all(['sh' => 1,'type' => 3], ' order by rank');
+                                $sk = $Sk->all(['sh' => 1, 'type' => 3], ' order by rank');
                                 foreach ($sk as $key => $value) {
                                 ?>
                                     <li class="d<?= $key + 1; ?>" data-pic="<?= $value['img']; ?>"><?= $value['cont']; ?></li>
@@ -301,7 +317,7 @@ include_once "base.php";
                         <div class="d-flex">
                             <ol>
                                 <?php
-                                $sk = $Sk->all(['sh' => 1,'type' => 4], ' order by rank');
+                                $sk = $Sk->all(['sh' => 1, 'type' => 4], ' order by rank');
                                 foreach ($sk as $key => $value) {
                                 ?>
                                     <li class="t<?= $key + 1; ?>" data-pic="<?= $value['img']; ?>"><?= $value['cont']; ?></li>
@@ -331,19 +347,19 @@ include_once "base.php";
             <h3 class="tit7 animate__animated"><i class="fas fa-book me-2"></i>作品集 / Portfolio</h3>
             <nav>
                 <div class="nav nav-tabs justify-content-evenly">
-                    <a class="nav-link active" data-bs-toggle="tab" href="#wd">網頁設計類</a>
-                    <a class="nav-link" data-bs-toggle="tab" href="#gd">視覺設計類</a>
-                    <a class="nav-link" data-bs-toggle="tab" href="#threed">3D設計類</a>
+                    <a class="w nav-link active" data-bs-toggle="tab" href="#wd">網頁設計類</a>
+                    <a class="g nav-link" data-bs-toggle="tab" href="#gd">視覺設計類</a>
+                    <a class="d nav-link" data-bs-toggle="tab" href="#threed">3D設計類</a>
                 </div>
             </nav>
             <div class="tab-content py-5" id="nav-tabContent">
-                <div class="tab-pane fade show active" id="wd" role="tabpanel" aria-labelledby="nav-home-tab">
+                <div class="w2 tab-pane fade show active" id="wd" role="tabpanel" aria-labelledby="nav-home-tab">
                     <p class="col-12 mb-5 text-center text-secondary">
                         收錄各類網頁技術製作的作品，點選圖片連結可至成品網頁瀏覽。
                     </p>
                     <div class="row g-3">
                         <?php
-                        $pro = $Pro->all(['sh' => 1,'type' => 1], ' order by rank ');
+                        $pro = $Pro->all(['sh' => 1, 'type' => 1], ' order by rank ');
                         foreach ($pro as $key => $value) {
                         ?>
                             <div class="proe col-12 col-md-6 col-lg-4 col-xl-3 animate__animated">
@@ -380,13 +396,13 @@ include_once "base.php";
                         ?>
                     </div>
                 </div>
-                <div class="tab-pane fade" id="gd" role="tabpanel" aria-labelledby="nav-profile-tab">
+                <div class="g2 tab-pane fade" id="gd" role="tabpanel" aria-labelledby="nav-profile-tab">
                     <p class="col-12 mb-5 text-center text-secondary">
                         收錄平面設計、商業海報、CG電繪...等，視覺相關作品。
                     </p>
                     <div class="row g-3">
                         <?php
-                        $pro = $Pro->all(['sh' => 1,'type' => 2], ' order by rank ');
+                        $pro = $Pro->all(['sh' => 1, 'type' => 2], ' order by rank ');
                         foreach ($pro as $key => $value) {
                         ?>
                             <div class="proe col-12 col-md-6 col-lg-4 col-xl-3 animate__animated">
@@ -395,7 +411,7 @@ include_once "base.php";
                                         <div class="mb-2 text-center pb-2 w-100 border-bottom"><strong><?= $value['name']; ?></strong>
                                         </div>
                                         <div class="text">
-                                        <?= nl2br($value['cont']); ?>
+                                            <?= nl2br($value['cont']); ?>
                                         </div>
                                         <a onclick="op('#cover','#content','<?= $value['bimg']; ?>')">
                                             <div class="btn btn-success mt-2"><i class="fas fa-link me-2"></i>點看全圖
@@ -424,13 +440,13 @@ include_once "base.php";
                         ?>
                     </div>
                 </div>
-                <div class="tab-pane fade" id="threed" role="tabpanel" aria-labelledby="nav-contact-tab">
+                <div class="d2 tab-pane fade" id="threed" role="tabpanel" aria-labelledby="nav-contact-tab">
                     <p class="col-12 mb-5 text-center text-secondary">
                         收錄3D建模、擬真渲染、3D列印機打印之作品。
                     </p>
                     <div class="row g-3">
-                    <?php
-                        $pro = $Pro->all(['sh' => 1,'type' => 3], ' order by rank ');
+                        <?php
+                        $pro = $Pro->all(['sh' => 1, 'type' => 3], ' order by rank ');
                         foreach ($pro as $key => $value) {
                         ?>
                             <div class="proe col-12 col-md-6 col-lg-4 col-xl-3 animate__animated">
@@ -439,7 +455,7 @@ include_once "base.php";
                                         <div class="mb-2 text-center pb-2 w-100 border-bottom"><strong><?= $value['name']; ?></strong>
                                         </div>
                                         <div class="text">
-                                        <?= nl2br($value['cont']); ?>
+                                            <?= nl2br($value['cont']); ?>
                                         </div>
                                         <a onclick="op('#cover','#content','<?= $value['bimg']; ?>')">
                                             <div class="btn btn-success mt-2"><i class="fas fa-link me-2"></i>點看全圖
