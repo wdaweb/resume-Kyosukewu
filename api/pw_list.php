@@ -5,9 +5,6 @@ foreach ($pro as $key => $value) {
 ?>
     <tr>
         <form action="api/edit.php" method="post">
-            <input type="hidden" name="do" value="pro">
-            <input type="hidden" name="table" value="re_pro">
-            <input type="hidden" name="id" value="<?= $value['id']; ?>">
             <td><select class="w-99" name="type">
                     <option value="1" <?= ($value['type'] == "1") ? "selected" : ""; ?>><?= $tstr['pro'][1]; ?></option>
                     <option value="2" <?= ($value['type'] == "2") ? "selected" : ""; ?>><?= $tstr['pro'][2]; ?></option>
@@ -18,6 +15,9 @@ foreach ($pro as $key => $value) {
             <td>
                 <img class="col-12" src="img/<?= $value['img']; ?>">
                 <input class="col-12" type="file" name="img" value="<?= $value['img']; ?>">
+                <input type="hidden" name="do" value="pro">
+                <input type="hidden" name="table" value="re_pro">
+                <input type="hidden" name="id" value="<?= $value['id']; ?>">
             </td>
             <td>
                 <?php
