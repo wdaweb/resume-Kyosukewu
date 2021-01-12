@@ -42,7 +42,7 @@ include_once "base.php";
             <a href="#stick"><i class="ar fas fa-chevron-down text-light"></i></a>
         </div>
     </div>
-    <header id="stick" class="sticky-wrapper">
+    <header id="stick" class="">
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-dark">
                 <div class="container-fluid">

@@ -69,8 +69,10 @@ function gotop() {
     height = $("#banner").height();
   if (nowat <= height) {
     $("#scrolltop").removeClass("shown");
+    $('#stick').removeClass("fixed-top")
   } else {
     $("#scrolltop").addClass("shown");
+    $('#stick').addClass("fixed-top")
   }
 }
 
