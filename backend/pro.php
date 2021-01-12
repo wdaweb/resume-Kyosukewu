@@ -25,83 +25,13 @@ $go = $_GET['do'] ?? 'main';
                                 <td style="width: 10%;">技術</td>
                                 <td style="width: 10%;">編輯</td>
                             </tr>
-                            <?php
-                            $pro = $Pro->all(['type' => 1], ' order by rank ');
-                            foreach ($pro as $key => $value) {
-                            ?>
-                                <tr>
-                                    <form action="api/edit.php" method="post">
-                                        <input type="hidden" name="do" value="pro">
-                                        <input type="hidden" name="table" value="re_pro">
-                                        <input type="hidden" name="id" value="<?= $value['id']; ?>">
-                                        <td><select class="w-99" name="type">
-                                                <option value="1" <?= ($value['type'] == "1") ? "selected" : ""; ?>><?= $tstr[$do][1]; ?></option>
-                                                <option value="2" <?= ($value['type'] == "2") ? "selected" : ""; ?>><?= $tstr[$do][2]; ?></option>
-                                                <option value="3" <?= ($value['type'] == "3") ? "selected" : ""; ?>><?= $tstr[$do][3]; ?></option>
-                                            </select>
-                                        </td>
-                                        <td><input class="w-99" type="text" name="name" value="<?= $value['name']; ?>"></td>
-                                        <td>
-                                            <img class="simg col-12" src="img/<?= $value['img']; ?>">
-                                            <input class="col-12" type="file" name="img" value="<?= $value['img']; ?>">
-                                        </td>
-                                        <td>
-                                            <?php
-                                            if ($value['link'] == null) {
-                                            ?>
-                                                <input class="w-99" type="text" name="bimg" value="<?= $value['bimg']; ?>">
-                                                <input class="w-99" type="file" name="bimg">
-                                            <?php
-                                            } else {
-                                            ?>
-                                                <input class="w-99" type="text" name="link" value="<?= $value['link']; ?>">
-                                            <?php
-                                            }
-                                            ?>
-                                        </td>
-                                        <td><textarea class="w-99" name="cont" rows="5"><?= $value['cont']; ?></textarea></td>
-                                        <td id="editsk">
-                                            <?php
-                                                $sks=unserialize($value['sk']);
-                                                foreach($sks as $sk){
-                                            ?>
-                                            <img class="icon" src="icon/<?= $sk; ?>"><i class="addsk ms-3 fas fa-minus-square" onclick="delsk('<?= $value['id']; ?>','<?= $sk; ?>')"></i>
-                                            <input type="file" name="sk[]">
-                                            <?php
-                                                }
-                                            ?>
-                                            <i id="addsk" class="addsk fas fa-plus-square h2" onclick="addsk('<?= $value['id']; ?>')"></i>
-                                        </td>
-                                        <td><input class="submit btn btn-outline-warning" type="submit" value="編輯"></td>
-                                    </form>
-                                </tr>
-                                <tr class="w-100 border-bottom">
-                                    <td>排序</td>
-                                    <td>顯示</td>
-                                    <td>刪除</td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <?php
-                                        if ($key != 0) {
-                                        ?>
-                                            <button class="btn btn-outline-secondary" onclick="sw(<?= $value['id']; ?>,<?= $pro[$key - 1]['id']; ?>,'re_pro')">往上</button>
-                                        <?php
-                                        }
-                                        if ($key != count($pro) - 1) {
-                                        ?>
-                                            <button class="btn btn-outline-secondary" onclick="sw(<?= $value['id']; ?>,<?= $pro[$key + 1]['id']; ?>,'re_pro')">往下</button>
-                                        <?php
-                                        }
-                                        ?>
-                                    </td>
-                                    <td><input type="checkbox" name="show" onclick="api('display2','re_pro',<?= $value['id']; ?>)" <?= ($value['sh'] == 1) ? "checked" : ""; ?>><?= ($value['sh'] == 1) ? "顯示" : "隱藏"; ?></td>
-                                    <td><button class="btn btn-outline-danger" onclick="api('del','re_pro',<?= $value['id']; ?>)">刪除</button></td>
-                                </tr>
-                            <?php
-                            }
-                            ?>
+                            <tbody id="navbarpw"></tbody>
                         </table>
+                        <script>
+                            $.get("api/pw_list.php", function(list) {
+                                $("#navbarpw").html(list)
+                            })
+                        </script>
                     </div>
                 </div>
                 <div class="tab-pane fade show" id="gd" role="tabpanel" aria-labelledby="nav-home-tab">
@@ -116,83 +46,13 @@ $go = $_GET['do'] ?? 'main';
                                 <td style="width: 20%;">技術</td>
                                 <td style="width: 10%;">編輯</td>
                             </tr>
-                            <?php
-                            $pro = $Pro->all(['type' => 2], ' order by rank ');
-                            foreach ($pro as $key => $value) {
-                            ?>
-                                <tr>
-                                    <form action="api/edit.php" method="post">
-                                        <input type="hidden" name="do" value="pro">
-                                        <input type="hidden" name="table" value="re_pro">
-                                        <input type="hidden" name="id" value="<?= $value['id']; ?>">
-                                        <td><select class="w-99" name="type">
-                                                <option value="1" <?= ($value['type'] == "1") ? "selected" : ""; ?>><?= $tstr[$do][1]; ?></option>
-                                                <option value="2" <?= ($value['type'] == "2") ? "selected" : ""; ?>><?= $tstr[$do][2]; ?></option>
-                                                <option value="3" <?= ($value['type'] == "3") ? "selected" : ""; ?>><?= $tstr[$do][3]; ?></option>
-                                            </select>
-                                        </td>
-                                        <td><input class="w-99" type="text" name="name" value="<?= $value['name']; ?>"></td>
-                                        <td>
-                                            <img class="col-12" src="img/<?= $value['img']; ?>">
-                                            <input class="col-12" type="file" name="img" value="<?= $value['img']; ?>">
-                                        </td>
-                                        <td>
-                                            <?php
-                                            if ($value['link'] == null) {
-                                            ?>
-                                                <input class="w-99" type="text" name="bimg" value="<?= $value['bimg']; ?>">
-                                                <input class="w-99" type="file" name="bimg">
-                                            <?php
-                                            } else {
-                                            ?>
-                                                <input class="w-99" type="text" name="link" value="<?= $value['link']; ?>">
-                                            <?php
-                                            }
-                                            ?>
-                                        </td>
-                                        <td><textarea class="w-99" name="cont" rows="5"><?= $value['cont']; ?></textarea></td>
-                                        <td id="editsk">
-                                            <?php
-                                                $sks=unserialize($value['sk']);
-                                                foreach($sks as $sk){
-                                            ?>
-                                            <img class="icon" src="icon/<?= $sk; ?>"><i class="addsk ms-3 fas fa-minus-square" onclick="delsk('<?= $value['id']; ?>','<?= $sk; ?>')"></i>
-                                            <input type="file" name="sk[]">
-                                            <?php
-                                                }
-                                            ?>
-                                            <i class="addsk fas fa-plus-square h2" onclick="addsk('<?= $value['id']; ?>')"></i>
-                                        </td>
-                                        <td><input class="submit btn btn-outline-warning" type="submit" value="編輯"></td>
-                                    </form>
-                                </tr>
-                                <tr class="w-100 border-bottom">
-                                    <td>排序</td>
-                                    <td>顯示</td>
-                                    <td>刪除</td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <?php
-                                        if ($key != 0) {
-                                        ?>
-                                            <button class="btn btn-outline-secondary" onclick="sw(<?= $value['id']; ?>,<?= $pro[$key - 1]['id']; ?>,'re_pro')">往上</button>
-                                        <?php
-                                        }
-                                        if ($key != count($pro) - 1) {
-                                        ?>
-                                            <button class="btn btn-outline-secondary" onclick="sw(<?= $value['id']; ?>,<?= $pro[$key + 1]['id']; ?>,'re_pro')">往下</button>
-                                        <?php
-                                        }
-                                        ?>
-                                    </td>
-                                    <td><input type="checkbox" name="show" onclick="api('display2','re_pro',<?= $value['id']; ?>)" <?= ($value['sh'] == 1) ? "checked" : ""; ?>><?= ($value['sh'] == 1) ? "顯示" : "隱藏"; ?></td>
-                                    <td><button class="btn btn-outline-danger" onclick="api('del','re_pro',<?= $value['id']; ?>)">刪除</button></td>
-                                </tr>
-                            <?php
-                            }
-                            ?>
+                            <tbody id="navbarpg"></tbody>
                         </table>
+                        <script>
+                            $.get("api/pg_list.php", function(list) {
+                                $("#navbarpg").html(list)
+                            })
+                        </script>
                     </div>
                 </div>
                 <div class="tab-pane fade show" id="threed" role="tabpanel" aria-labelledby="nav-home-tab">
@@ -207,83 +67,13 @@ $go = $_GET['do'] ?? 'main';
                                 <td style="width: 20%;">技術</td>
                                 <td style="width: 10%;">編輯</td>
                             </tr>
-                            <?php
-                            $pro = $Pro->all(['type' => 3], ' order by rank ');
-                            foreach ($pro as $key => $value) {
-                            ?>
-                                <tr>
-                                    <form action="api/edit.php" method="post">
-                                        <input type="hidden" name="do" value="pro">
-                                        <input type="hidden" name="table" value="re_pro">
-                                        <input type="hidden" name="id" value="<?= $value['id']; ?>">
-                                        <td><select class="w-99" name="type">
-                                                <option value="1" <?= ($value['type'] == "1") ? "selected" : ""; ?>><?= $tstr[$do][1]; ?></option>
-                                                <option value="2" <?= ($value['type'] == "2") ? "selected" : ""; ?>><?= $tstr[$do][2]; ?></option>
-                                                <option value="3" <?= ($value['type'] == "3") ? "selected" : ""; ?>><?= $tstr[$do][3]; ?></option>
-                                            </select>
-                                        </td>
-                                        <td><input class="w-99" type="text" name="name" value="<?= $value['name']; ?>"></td>
-                                        <td>
-                                            <img class="col-12" src="img/<?= $value['img']; ?>">
-                                            <input class="col-12" type="file" name="img" value="<?= $value['img']; ?>">
-                                        </td>
-                                        <td>
-                                            <?php
-                                            if ($value['link'] == null) {
-                                            ?>
-                                                <input class="w-99" type="text" name="bimg" value="<?= $value['bimg']; ?>">
-                                                <input class="w-99" type="file" name="bimg">
-                                            <?php
-                                            } else {
-                                            ?>
-                                                <input class="w-99" type="text" name="link" value="<?= $value['link']; ?>">
-                                            <?php
-                                            }
-                                            ?>
-                                        </td>
-                                        <td><textarea class="w-99" name="cont" rows="5"><?= $value['cont']; ?></textarea></td>
-                                        <td id="editsk">
-                                            <?php
-                                                $sks=unserialize($value['sk']);
-                                                foreach($sks as $sk){
-                                            ?>
-                                            <img class="icon" src="icon/<?= $sk; ?>"><i class="addsk ms-3 fas fa-minus-square" onclick="delsk('<?= $value['id']; ?>','<?= $sk; ?>')"></i>
-                                            <input type="file" name="sk[]">
-                                            <?php
-                                                }
-                                            ?>
-                                            <i class="addsk fas fa-plus-square h2" onclick="addsk('<?= $value['id']; ?>')"></i>
-                                        </td>
-                                        <td><input class="submit btn btn-outline-warning" type="submit" value="編輯"></td>
-                                    </form>
-                                </tr>
-                                <tr class="w-100 border-bottom">
-                                    <td>排序</td>
-                                    <td>顯示</td>
-                                    <td>刪除</td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <?php
-                                        if ($key != 0) {
-                                        ?>
-                                            <button class="btn btn-outline-secondary" onclick="sw(<?= $value['id']; ?>,<?= $pro[$key - 1]['id']; ?>,'re_pro')">往上</button>
-                                        <?php
-                                        }
-                                        if ($key != count($pro) - 1) {
-                                        ?>
-                                            <button class="btn btn-outline-secondary" onclick="sw(<?= $value['id']; ?>,<?= $pro[$key + 1]['id']; ?>,'re_pro')">往下</button>
-                                        <?php
-                                        }
-                                        ?>
-                                    </td>
-                                    <td><input type="checkbox" name="show" onclick="api('display2','re_pro',<?= $value['id']; ?>)" <?= ($value['sh'] == 1) ? "checked" : ""; ?>><?= ($value['sh'] == 1) ? "顯示" : "隱藏"; ?></td>
-                                    <td><button class="btn btn-outline-danger" onclick="api('del','re_pro',<?= $value['id']; ?>)">刪除</button></td>
-                                </tr>
-                            <?php
-                            }
-                            ?>
+                            <tbody id="navbarpd"></tbody>
                         </table>
+                        <script>
+                            $.get("api/pd_list.php", function(list) {
+                                $("#navbarpd").html(list)
+                            })
+                        </script>
                     </div>
                 </div>
             </div>
@@ -291,16 +81,20 @@ $go = $_GET['do'] ?? 'main';
     </div>
 </div>
 <script>
-    function delsk(id,item){
-        $msg="確定要刪除此技術嗎?"
-        if(confirm($msg)){
-            $.post("api/delsk.php",{id,item},function(){
+    function delsk(id, item) {
+        $msg = "確定要刪除此技術嗎?"
+        if (confirm($msg)) {
+            $.post("api/delsk.php", {
+                id,
+                item
+            }, function() {
                 // console.log(res)
                 location.reload()
             })
         }
     }
-    function addsk(id){
+
+    function addsk(id) {
         $("#addsk").before("<input type='file' name='sk[]'>")
     }
 </script>
