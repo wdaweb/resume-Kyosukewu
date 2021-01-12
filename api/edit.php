@@ -34,7 +34,7 @@ switch ($_POST['table']) {
             $row['img'] = $_POST['img'];
         }
         break;
-    case "re_pro2":
+    case "re_pro":
         $row['type'] = $_POST['type'];
         $row['name'] = $_POST['name'];
         $row['cont'] = $_POST['cont'];

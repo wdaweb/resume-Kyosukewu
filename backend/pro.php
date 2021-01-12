@@ -4,7 +4,7 @@ $go = $_GET['do'] ?? 'main';
 <div class="mainbox row col-12 g-1">
     <div class="title h3 text-center mt-3"><?= $tstr[$do][0]; ?></div>
     <div class="main full text-center col-12">
-        <div class="h3"><span class='addbtn float-start btn btn-warning' onclick="op('#cover','#content','modal/add.php?do=<?= $do; ?>&t=re_pro2')">新增內容</span>
+        <div class="h3"><span class='addbtn float-start btn btn-warning' onclick="op('#cover','#content','modal/add.php?do=<?= $do; ?>&t=re_pro')">新增內容</span>
             <nav>
                 <div class="nav nav-tabs justify-content-evenly">
                     <a class="nav-link active" data-bs-toggle="tab" href="#wd">網頁設計類</a>
@@ -32,7 +32,7 @@ $go = $_GET['do'] ?? 'main';
                                 <tr>
                                     <form action="api/edit.php" method="post">
                                         <input type="hidden" name="do" value="pro">
-                                        <input type="hidden" name="table" value="re_pro2">
+                                        <input type="hidden" name="table" value="re_pro">
                                         <input type="hidden" name="id" value="<?= $value['id']; ?>">
                                         <td><select class="w-99" name="type">
                                                 <option value="1" <?= ($value['type'] == "1") ? "selected" : ""; ?>><?= $tstr[$do][1]; ?></option>
@@ -85,18 +85,18 @@ $go = $_GET['do'] ?? 'main';
                                         <?php
                                         if ($key != 0) {
                                         ?>
-                                            <button class="btn btn-outline-secondary" onclick="sw(<?= $value['id']; ?>,<?= $pro[$key - 1]['id']; ?>,'re_pro2')">往上</button>
+                                            <button class="btn btn-outline-secondary" onclick="sw(<?= $value['id']; ?>,<?= $pro[$key - 1]['id']; ?>,'re_pro')">往上</button>
                                         <?php
                                         }
                                         if ($key != count($pro) - 1) {
                                         ?>
-                                            <button class="btn btn-outline-secondary" onclick="sw(<?= $value['id']; ?>,<?= $pro[$key + 1]['id']; ?>,'re_pro2')">往下</button>
+                                            <button class="btn btn-outline-secondary" onclick="sw(<?= $value['id']; ?>,<?= $pro[$key + 1]['id']; ?>,'re_pro')">往下</button>
                                         <?php
                                         }
                                         ?>
                                     </td>
-                                    <td><input type="checkbox" name="show" onclick="api('display2','re_pro2',<?= $value['id']; ?>)" <?= ($value['sh'] == 1) ? "checked" : ""; ?>><?= ($value['sh'] == 1) ? "顯示" : "隱藏"; ?></td>
-                                    <td><button class="btn btn-outline-danger" onclick="api('del','re_pro2',<?= $value['id']; ?>)">刪除</button></td>
+                                    <td><input type="checkbox" name="show" onclick="api('display2','re_pro',<?= $value['id']; ?>)" <?= ($value['sh'] == 1) ? "checked" : ""; ?>><?= ($value['sh'] == 1) ? "顯示" : "隱藏"; ?></td>
+                                    <td><button class="btn btn-outline-danger" onclick="api('del','re_pro',<?= $value['id']; ?>)">刪除</button></td>
                                 </tr>
                             <?php
                             }
@@ -123,7 +123,7 @@ $go = $_GET['do'] ?? 'main';
                                 <tr>
                                     <form action="api/edit.php" method="post">
                                         <input type="hidden" name="do" value="pro">
-                                        <input type="hidden" name="table" value="re_pro2">
+                                        <input type="hidden" name="table" value="re_pro">
                                         <input type="hidden" name="id" value="<?= $value['id']; ?>">
                                         <td><select class="w-99" name="type">
                                                 <option value="1" <?= ($value['type'] == "1") ? "selected" : ""; ?>><?= $tstr[$do][1]; ?></option>
@@ -176,18 +176,18 @@ $go = $_GET['do'] ?? 'main';
                                         <?php
                                         if ($key != 0) {
                                         ?>
-                                            <button class="btn btn-outline-secondary" onclick="sw(<?= $value['id']; ?>,<?= $pro[$key - 1]['id']; ?>,'re_pro2')">往上</button>
+                                            <button class="btn btn-outline-secondary" onclick="sw(<?= $value['id']; ?>,<?= $pro[$key - 1]['id']; ?>,'re_pro')">往上</button>
                                         <?php
                                         }
                                         if ($key != count($pro) - 1) {
                                         ?>
-                                            <button class="btn btn-outline-secondary" onclick="sw(<?= $value['id']; ?>,<?= $pro[$key + 1]['id']; ?>,'re_pro2')">往下</button>
+                                            <button class="btn btn-outline-secondary" onclick="sw(<?= $value['id']; ?>,<?= $pro[$key + 1]['id']; ?>,'re_pro')">往下</button>
                                         <?php
                                         }
                                         ?>
                                     </td>
-                                    <td><input type="checkbox" name="show" onclick="api('display2','re_pro2',<?= $value['id']; ?>)" <?= ($value['sh'] == 1) ? "checked" : ""; ?>><?= ($value['sh'] == 1) ? "顯示" : "隱藏"; ?></td>
-                                    <td><button class="btn btn-outline-danger" onclick="api('del','re_pro2',<?= $value['id']; ?>)">刪除</button></td>
+                                    <td><input type="checkbox" name="show" onclick="api('display2','re_pro',<?= $value['id']; ?>)" <?= ($value['sh'] == 1) ? "checked" : ""; ?>><?= ($value['sh'] == 1) ? "顯示" : "隱藏"; ?></td>
+                                    <td><button class="btn btn-outline-danger" onclick="api('del','re_pro',<?= $value['id']; ?>)">刪除</button></td>
                                 </tr>
                             <?php
                             }
@@ -214,7 +214,7 @@ $go = $_GET['do'] ?? 'main';
                                 <tr>
                                     <form action="api/edit.php" method="post">
                                         <input type="hidden" name="do" value="pro">
-                                        <input type="hidden" name="table" value="re_pro2">
+                                        <input type="hidden" name="table" value="re_pro">
                                         <input type="hidden" name="id" value="<?= $value['id']; ?>">
                                         <td><select class="w-99" name="type">
                                                 <option value="1" <?= ($value['type'] == "1") ? "selected" : ""; ?>><?= $tstr[$do][1]; ?></option>
@@ -267,18 +267,18 @@ $go = $_GET['do'] ?? 'main';
                                         <?php
                                         if ($key != 0) {
                                         ?>
-                                            <button class="btn btn-outline-secondary" onclick="sw(<?= $value['id']; ?>,<?= $pro[$key - 1]['id']; ?>,'re_pro2')">往上</button>
+                                            <button class="btn btn-outline-secondary" onclick="sw(<?= $value['id']; ?>,<?= $pro[$key - 1]['id']; ?>,'re_pro')">往上</button>
                                         <?php
                                         }
                                         if ($key != count($pro) - 1) {
                                         ?>
-                                            <button class="btn btn-outline-secondary" onclick="sw(<?= $value['id']; ?>,<?= $pro[$key + 1]['id']; ?>,'re_pro2')">往下</button>
+                                            <button class="btn btn-outline-secondary" onclick="sw(<?= $value['id']; ?>,<?= $pro[$key + 1]['id']; ?>,'re_pro')">往下</button>
                                         <?php
                                         }
                                         ?>
                                     </td>
-                                    <td><input type="checkbox" name="show" onclick="api('display2','re_pro2',<?= $value['id']; ?>)" <?= ($value['sh'] == 1) ? "checked" : ""; ?>><?= ($value['sh'] == 1) ? "顯示" : "隱藏"; ?></td>
-                                    <td><button class="btn btn-outline-danger" onclick="api('del','re_pro2',<?= $value['id']; ?>)">刪除</button></td>
+                                    <td><input type="checkbox" name="show" onclick="api('display2','re_pro',<?= $value['id']; ?>)" <?= ($value['sh'] == 1) ? "checked" : ""; ?>><?= ($value['sh'] == 1) ? "顯示" : "隱藏"; ?></td>
+                                    <td><button class="btn btn-outline-danger" onclick="api('del','re_pro',<?= $value['id']; ?>)">刪除</button></td>
                                 </tr>
                             <?php
                             }

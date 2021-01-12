@@ -10929,50 +10929,15 @@ CREATE TABLE `re_pro` (
   `cont` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `rank` tinyint(2) NOT NULL,
   `sh` tinyint(2) NOT NULL,
-  `sk1` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `sk2` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `sk3` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `sk4` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `sk5` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `sk6` text COLLATE utf8mb4_unicode_ci DEFAULT NULL
+  `sk` text COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- 傾印資料表的資料 `re_pro`
 --
 
-INSERT INTO `re_pro` (`id`, `type`, `name`, `img`, `bimg`, `link`, `cont`, `rank`, `sh`, `sk1`, `sk2`, `sk3`, `sk4`, `sk5`, `sk6`) VALUES
-(1, 1, '線上發票紀錄/對獎系統', 'inv.jpg', '', 'http://220.128.133.15/s1090421/invoice/', '◆ 管理者、使用者、訪客三種登入模式，可查看不同權限訊息。\r\n◆ 可進行發票的CRUD、自動對獎、提示開獎/過期與否，統計獎金、中獎發票、張數等訊息。\r\n◆ 支援RWD響應式網站功能。', 1, 1, 'w1.png', 'w2.png', 'w5.png', 'w9.png', 'w8.png', 'g1.png'),
-(2, 1, '線上萬年曆', 'cal.jpg', '', 'http://220.128.133.15/s1090421/calendar/', '◆ 具備切換月/年份，並可隨時回到當日功能，可直接輸入年份日期查詢特定年份。\r\n◆ 標示出每月特殊日期/假日/當天日期，並以不同顏色醒目標示。\r\n◆ 支援RWD響應式網站功能。', 2, 1, 'w1.png', 'w2.png', 'w5.png', 'g1.png', '', ''),
-(4, 1, 'QTE小遊戲', 'QTE.jpg', NULL, 'http://220.128.133.15/s1090421/QTEgame/', '◆ 透過Sweetalert2，結合影片控制製作的小型-快速反應事件(Quick Time Events)-遊戲\r\n◆ 支援RWD響應式網站功能。', 3, 0, 'w1.png', 'w2.png', 'w3.png', 'w4.png', 'w5.png', 'g1.png'),
-(5, 2, '動漫人物仿繪', 'g1.jpg', 'gb1.png', '', '◆ 繪圖板練習，透過PS營造光影效果仿繪動漫人物', 4, 0, 'g1.png', '', '', '', '', ''),
-(6, 2, '聖誕節賀圖', 'g2.jpg', 'gb2.png', NULL, '◆ 以聖誕老人及麋鹿發想，結合動漫風格人物設計的聖誕賀圖\r\n◆ 可應用於輸出馬克杯圖案', 5, 0, 'g1.png', 'g2.png', NULL, NULL, NULL, NULL);
-
--- --------------------------------------------------------
-
---
--- 資料表結構 `re_pro2`
---
-
-CREATE TABLE `re_pro2` (
-  `id` int(11) UNSIGNED NOT NULL,
-  `type` tinyint(1) UNSIGNED NOT NULL,
-  `name` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `img` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `bimg` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `link` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `cont` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `rank` tinyint(2) NOT NULL,
-  `sh` tinyint(2) NOT NULL,
-  `sk` text COLLATE utf8mb4_unicode_ci DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- 傾印資料表的資料 `re_pro2`
---
-
-INSERT INTO `re_pro2` (`id`, `type`, `name`, `img`, `bimg`, `link`, `cont`, `rank`, `sh`, `sk`) VALUES
-(1, 1, '線上發票紀錄/對獎系統', 'inv.jpg', '', 'http://220.128.133.15/s1090421/invoice/', '◆ 管理者、使用者、訪客三種登入模式，可查看不同權限訊息。\r\n◆ 可進行發票的CRUD、自動對獎、提示開獎/過期與否，統計獎金、中獎發票、張數等訊息。\r\n◆ 支援RWD響應式網站功能。', 1, 1, 'a:5:{i:0;s:6:\"w1.png\";i:1;s:6:\"w2.png\";i:2;s:6:\"w5.png\";i:3;s:6:\"w8.png\";i:4;s:6:\"w9.png\";}'),
+INSERT INTO `re_pro` (`id`, `type`, `name`, `img`, `bimg`, `link`, `cont`, `rank`, `sh`, `sk`) VALUES
+(1, 1, '線上發票紀錄/對獎系統', 'inv.jpg', '', 'http://220.128.133.15/s1090421/invoice/', '◆ 管理者、使用者、訪客三種登入模式，可查看不同權限訊息。\r\n◆ 可進行發票的CRUD、自動對獎、提示開獎/過期與否，統計獎金、中獎發票、張數等訊息。\r\n◆ 支援RWD響應式網站功能。', 1, 1, 'a:6:{i:0;s:6:"w1.png";i:1;s:6:"w2.png";i:2;s:6:"w5.png";i:3;s:6:"w8.png";i:4;s:6:"w9.png";i:5;s:6:"g1.png";}'),
 (2, 1, '線上萬年曆', 'cal.jpg', '', 'http://220.128.133.15/s1090421/calendar/', '◆ 具備切換月/年份，並可隨時回到當日功能，可直接輸入年份日期查詢特定年份。\r\n◆ 標示出每月特殊日期/假日/當天日期，並以不同顏色醒目標示。\r\n◆ 支援RWD響應式網站功能。', 2, 1, 'a:4:{i:0;s:6:\"w1.png\";i:1;s:6:\"w2.png\";i:2;s:6:\"w5.png\";i:3;s:6:\"g1.png\";}'),
 (3, 1, 'QTE小遊戲', 'QTE.jpg', '', 'http://220.128.133.15/s1090421/QTEgame/', '◆ 透過Sweetalert2，結合影片控制製作的小型-快速反應事件(Quick Time Events)-遊戲\r\n◆ 支援RWD響應式網站功能。', 3, 1, 'a:6:{i:0;s:6:\"w1.png\";i:1;s:6:\"w2.png\";i:2;s:6:\"w3.png\";i:3;s:6:\"w4.png\";i:4;s:6:\"w5.png\";i:5;s:6:\"g1.png\";}'),
 (4, 2, '動漫人物仿繪', 'g1.jpg', 'gb1.png', '', '◆ 繪圖板練習，透過PS營造光影效果仿繪動漫人物', 4, 1, 'a:1:{i:0;s:6:\"g1.png\";}'),
@@ -11182,17 +11147,10 @@ ALTER TABLE `re_job`
 --
 ALTER TABLE `re_login`
   ADD PRIMARY KEY (`id`);
-
 --
 -- 資料表索引 `re_pro`
 --
 ALTER TABLE `re_pro`
-  ADD PRIMARY KEY (`id`);
-
---
--- 資料表索引 `re_pro2`
---
-ALTER TABLE `re_pro2`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -11300,17 +11258,10 @@ ALTER TABLE `re_job`
 --
 ALTER TABLE `re_login`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `re_pro`
 --
 ALTER TABLE `re_pro`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
---
--- 使用資料表自動遞增(AUTO_INCREMENT) `re_pro2`
---
-ALTER TABLE `re_pro2`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --

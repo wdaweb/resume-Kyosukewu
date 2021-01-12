@@ -38,8 +38,8 @@ switch ($_POST['table']) {
     case "re_skills":
         $_POST['rank'] = $Sk->q("select max(rank) from re_skills")[0][0] + 1;
         break;
-    case "re_pro2":
-        $_POST['rank'] = $Sk->q("select max(rank) from re_pro2")[0][0] + 1;
+    case "re_pro":
+        $_POST['rank'] = $Sk->q("select max(rank) from re_pro")[0][0] + 1;
         break;
 }
 
