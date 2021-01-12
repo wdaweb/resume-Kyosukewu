@@ -5,20 +5,30 @@ $db = new DB($_POST['table']);
 $table = $_POST['do'];
 // print_r($_POST);
 
-if (!empty($_FILES['img']['tmp_name'])) {
+
+if ($table == 'pro') {
+    if (!empty($_FILES['bimg']['tmp_name'])) {
+        $_POST['bimg'] = $_FILES['bimg']['name'];
+        move_uploaded_file($_FILES['bimg']['tmp_name'], '../bimg/' . $_FILES['bimg']['name']);
+    }
+    if (!empty($_FILES['img']['tmp_name'])) {
+        $_POST['img'] = $_FILES['img']['name'];
+        move_uploaded_file($_FILES['img']['tmp_name'], '../img/' . $_FILES['img']['name']);
+    }
+    $_POST['sk'] = serialize($_POST['sks']);
+    unset($_POST['sks']);
+} elseif (!empty($_FILES['img']['tmp_name'])) {
     $_POST['img'] = $_FILES['img']['name'];
     switch ($table) {
-        case "main":
+        case "ab":
             move_uploaded_file($_FILES['img']['tmp_name'], '../titimg/' . $_FILES['img']['name']);
             break;
-        case "re_skills":
+        case "sk":
             move_uploaded_file($_FILES['img']['tmp_name'], '../icon/' . $_FILES['img']['name']);
-            break;
-        case "re_pro":
-            move_uploaded_file($_FILES['img']['tmp_name'], '../img/' . $_FILES['img']['name']);
             break;
     }
 }
+
 
 
 switch ($_POST['table']) {
@@ -28,21 +38,21 @@ switch ($_POST['table']) {
     case "re_skills":
         $_POST['rank'] = $Sk->q("select max(rank) from re_skills")[0][0] + 1;
         break;
-    case "re_pro":
-        $_POST['rank'] = $Sk->q("select max(rank) from re_pro")[0][0] + 1;
+    case "re_pro2":
+        $_POST['rank'] = $Sk->q("select max(rank) from re_pro2")[0][0] + 1;
         break;
 }
 
-// print_r($_POST['sks']);
-$c = count($_POST['sks']);
 
-for ($i = 0; $i <= $c-1; $i++) {
-    $_POST['sk' . ($i+1)] = $_POST['sks'][$i];
-}
+// print_r($_POST['sk']);
+// $c = count($_POST['sks']);
+
+// for ($i = 0; $i <= $c-1; $i++) {
+//     $_POST['sk' . ($i+1)] = $_POST['sks'][$i];
+// }
 
 unset($_POST['table']);
 unset($_POST['do']);
-unset($_POST['sks']);
 
 $chk = $db->count();
 
@@ -55,6 +65,6 @@ if (empty($chk)) {
 
 print_r($_POST);
 
-// $db->save($_POST);
+$db->save($_POST);
 
-// to('../backend.php?do='.$table);
+to('../backend.php?do=' . $table);

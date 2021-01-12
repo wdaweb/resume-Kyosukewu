@@ -16,7 +16,7 @@ $Job = new DB('re_job');
 $Self = new DB('re_self');
 $Exp = new DB('re_exp');
 $Sk = new DB('re_skills');
-$Pro = new DB('re_pro');
+$Pro = new DB('re_pro2');
 
 class DB
 {

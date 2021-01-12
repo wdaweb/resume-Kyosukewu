@@ -31,7 +31,7 @@ $go = $_GET['do'] ?? 'main';
                             foreach ($sk as $key => $value) {
                             ?>
                                 <tr>
-                                    <form action="api/edit.php" method="post">
+                                    <form action="api/edit.php" method="post" enctype="multipart/form-data">
                                         <input type="hidden" name="do" value="sk">
                                         <input type="hidden" name="table" value="re_skills">
                                         <input type="hidden" name="id" value="<?= $value['id']; ?>">
@@ -46,7 +46,7 @@ $go = $_GET['do'] ?? 'main';
                                         <td>
                                             <img class="icon" src="icon/<?= $value['img']; ?>">
                                             <!-- <input type="text" name="img" value="<?= $value['img']; ?>"> -->
-                                            <input type="file" name="img" value="<?= $value['img']; ?>">
+                                            <input type="file" name="img">
                                         </td>
                                         <td>
                                             <?php

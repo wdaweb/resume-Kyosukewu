@@ -3,7 +3,7 @@ $go = $_GET['do'] ?? 'main';
 ?>
 <div class="mainbox row col-12 g-1">
 <div class="title h3 text-center mt-3"><?= $tstr[$do][0]; ?></div>
-<div class="main">
+<div class="main text-center">
     <div class="h3"><?= $tstr[$do][1]; ?></div>
     <div class="showimg">
         <table class="w-100">
@@ -17,7 +17,7 @@ $go = $_GET['do'] ?? 'main';
             foreach ($img as $key => $value) {
             ?>
                 <tr>
-                    <td><img src="titimg/<?= $value['img']; ?>"></td>
+                    <td><img class="simg" src="titimg/<?= $value['img']; ?>"></td>
                     <td><input type="checkbox" name="show" onclick="api('display','re_titimg',<?= $value['id']; ?>)" <?= ($value['sh'] == 1) ? "checked" : ""; ?>><?= ($value['sh'] == 1) ? "顯示" : "隱藏"; ?></td>
                     <td><button class="btn btn-outline-danger" onclick="api('del','re_titimg',<?= $value['id']; ?>)">刪除</button></td>
                 </tr>
@@ -47,7 +47,7 @@ $go = $_GET['do'] ?? 'main';
             foreach ($img as $key => $value) {
             ?>
                 <tr>
-                    <td><img src="titimg/<?= $value['img']; ?>"></td>
+                    <td><img class="simg" src="titimg/<?= $value['img']; ?>"></td>
                     <td><input type="checkbox" name="show" onclick="api('display','re_tittext',<?= $value['id']; ?>)" <?= ($value['sh'] == 1) ? "checked" : ""; ?>><?= ($value['sh'] == 1) ? "顯示" : "隱藏"; ?></td>
                     <td><button class="btn btn-outline-danger" onclick="api('del','re_tittext',<?= $value['id']; ?>)">刪除</button></td>
                 </tr>
