@@ -5,6 +5,8 @@ $db = new DB($_POST['table']);
 $row = $db->find($_POST['id']);
 $do = $_POST['do'];
 
+print_r($_POST);
+
 if($do=='sk'){
     if (!empty($_FILES['img']['tmp_name'])) {
         $_POST['img'] = $_FILES['img']['name'];
@@ -64,6 +66,6 @@ unset($_POST['do']);
 unset($_POST['table']);
 // print_r($row['sk']);
 // print_r($row);
-$db->save($row);
+// $db->save($row);
 
-to('../backend.php?do=' . $do);
+// to('../backend.php?do=' . $do);

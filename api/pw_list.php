@@ -16,15 +16,15 @@ foreach ($pro as $key => $value) {
             </td>
             <td><input class="w-99" type="text" name="name" value="<?= $value['name']; ?>"></td>
             <td>
-                <img class="simg col-12" src="img/<?= $value['img']; ?>">
+                <img class="col-12" src="img/<?= $value['img']; ?>">
                 <input class="col-12" type="file" name="img" value="<?= $value['img']; ?>">
             </td>
             <td>
                 <?php
                 if ($value['link'] == null) {
                 ?>
-                    <input class="w-99" type="text" name="bimg" value="<?= $value['bimg']; ?>">
-                    <input class="w-99" type="file" name="bimg">
+                    <img class="w-25" src="bimg/<?= $value['bimg']; ?>">
+                    <input class="w-50" type="file" name="bimg">
                 <?php
                 } else {
                 ?>

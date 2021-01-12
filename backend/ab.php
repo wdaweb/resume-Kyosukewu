@@ -89,60 +89,28 @@ $go = $_GET['do'] ?? 'main';
             </table>
         </div>
     </div>
-    <!-- <div class="main sub text-center col-6">
-        <div class="h3"><span class='addbtn float-start btn btn-warning' onclick="op('#cover','#content','modal/add.php?do=<?= $do; ?>&t=re_cont')">新增內容</span><?= $tstr[$do][4]; ?></div>
-        <div class="showimg">
-            <table class="w-100">
-                <tr class="border-bottom">
-                    <td style="width: 20%;">圖示</td>
-                    <td style="width: 15%;">聯絡方式</td>
-                    <td style="width: 35%;">內容</td>
-                    <td style="width: 10%;">編輯</td>
-                    <td style="width: 10%;">顯示</td>
-                    <td style="width: 10%;">刪除</td>
-                </tr>
-                <?php
-                $cont = $Cont->all();
-                foreach ($cont as $key => $value) {
-                ?>
-                    <tr>
-                        <form action="api/edit.php" method="post">
-                        <input type="hidden" name="do" value="ab">
-                            <td><i class="me-2 <?= $value['icon']; ?>"></i><input class="w-75" type="text" name="icon" value="<?= $value['icon']; ?>"></td>
-                            <td><input class="w-99" type="text" name="method" value="<?= $value['method']; ?>"></td>
-                            <td><input class="w-99" type="text" name="cont" value="<?= $value['cont']; ?>"></td>
-                            <input type="hidden" name="table" value="re_cont">
-                            <input type="hidden" name="id" value="<?= $value['id']; ?>">
-                            <td><input class="submit btn btn-outline-warning" type="submit" value="編輯"></td>
-                        </form>
-                        <td><input type="checkbox" name="show" onclick="api('display2','re_cont',<?= $value['id']; ?>)" <?= ($value['sh'] == 1) ? "checked" : ""; ?>><?= ($value['sh'] == 1) ? "顯示" : "隱藏"; ?></td>
-                        <td><button class="btn btn-outline-danger" onclick="api('del','re_cont',<?= $value['id']; ?>)">刪除</button></td>
-                    </tr>
-                <?php
-                }
-                ?>
-            </table>
-        </div>
-    </div> -->
     <div class="main sub text-center col-6">
         <div class="h3"><span class='addbtn float-start btn btn-warning' onclick="op('#cover','#content','modal/add.php?do=<?= $do; ?>&t=re_job')">新增內容</span><?= $tstr[$do][5]; ?></div>
         <div class="showimg">
             <table class="w-100">
-                <tr class="border-bottom">
-                    <td style="width: 20%;">項目</td>
-                    <td style="width: 20%;">內容</td>
-                    <td style="width: 10%;">編輯</td>
-                    <td style="width: 10%;">排序</td>
-                    <td style="width: 10%;">顯示</td>
-                    <td style="width: 10%;">刪除</td>
-                </tr>
-                <tbody id="navbarre_job"></tbody>
+                <thead>
+                    <tr class="border-bottom">
+                        <td style="width: 20%;">項目</td>
+                        <td style="width: 20%;">內容</td>
+                        <td style="width: 10%;">編輯</td>
+                        <td style="width: 10%;">排序</td>
+                        <td style="width: 10%;">顯示</td>
+                        <td style="width: 10%;">刪除</td>
+                    </tr>
+                </thead>
+                <tbody id="navbarre_job">
+                    <script>
+                        $.get("api/re_job_list.php", function(list) {
+                            $("#navbarre_job").html(list)
+                        })
+                    </script>
+                </tbody>
             </table>
-            <script>
-    $.get("api/re_job_list.php", function(list) {
-        $("#navbarre_job").html(list)
-    })
-</script>
         </div>
     </div>
     <div class="main sub text-center col-6">

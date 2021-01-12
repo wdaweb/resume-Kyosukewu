@@ -19,7 +19,7 @@ foreach ($sk as $key => $value) {
             <td>
                 <img class="icon" src="icon/<?= $value['img']; ?>">
                 <!-- <input type="text" name="img" value="<?= $value['img']; ?>"> -->
-                <input type="file" name="img" value="<?= $value['img']; ?>">
+                <input class="w-50" type="file" name="img" value="<?= $value['img']; ?>">
             </td>
             <td>
                 <?php

@@ -23,8 +23,8 @@ foreach ($pro as $key => $value) {
                 <?php
                 if ($value['link'] == null) {
                 ?>
-                    <input class="w-99" type="text" name="bimg" value="<?= $value['bimg']; ?>">
-                    <input class="w-99" type="file" name="bimg">
+                    <img class="w-25" src="bimg/<?= $value['bimg']; ?>">
+                    <input class="w-50" type="file" name="bimg">
                 <?php
                 } else {
                 ?>
