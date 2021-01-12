@@ -14,12 +14,12 @@ foreach ($job as $key => $value) {
                 <?php
                 if ($key != 0) {
                 ?>
-                    <button class="btn btn-outline-secondary" onclick="sw(<?= $value['id']; ?>,<?= $job[$key - 1]['id']; ?>,'re_job')">往上</button>
+                    <button class="btn btn-outline-secondary" onclick="sw2(<?= $value['id']; ?>,<?= $job[$key - 1]['id']; ?>,'re_job','re_job')">往上</button>
                 <?php
                 }
                 if ($key != count($job) - 1) {
                 ?>
-                    <button class="btn btn-outline-secondary" onclick="sw(<?= $value['id']; ?>,<?= $job[$key + 1]['id']; ?>,'re_job')">往下</button>
+                    <button class="btn btn-outline-secondary" onclick="sw2(<?= $value['id']; ?>,<?= $job[$key + 1]['id']; ?>,'re_job','re_job')">往下</button>
                 <?php
                 }
                 ?>
