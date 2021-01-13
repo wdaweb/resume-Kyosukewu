@@ -2,8 +2,8 @@
 -- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
--- 主機： 127.0.0.1:3306
--- 產生時間： 2021-01-11 16:33:20
+-- 主機： 127.0.0.1
+-- 產生時間： 2021-01-13 03:36:20
 -- 伺服器版本： 10.4.14-MariaDB
 -- PHP 版本： 7.4.10
 
@@ -10775,7 +10775,7 @@ CREATE TABLE `re_abouttext` (
 --
 
 INSERT INTO `re_abouttext` (`id`, `text`, `sh`) VALUES
-(1, 'Hi,我叫吳振源\r\n工業設計系畢業\r\n曾任3D建模師、美術編輯、社群軟體編輯、服務人員\r\n正為轉職網頁工程師於職訓局學習中', 1);
+(1, '國立聯合大學-工業設計學系', 1);
 
 -- --------------------------------------------------------
 
@@ -10937,7 +10937,7 @@ CREATE TABLE `re_pro` (
 --
 
 INSERT INTO `re_pro` (`id`, `type`, `name`, `img`, `bimg`, `link`, `cont`, `rank`, `sh`, `sk`) VALUES
-(1, 1, '線上發票紀錄/對獎系統', 'inv.jpg', '', 'http://220.128.133.15/s1090421/invoice/', '◆ 管理者、使用者、訪客三種登入模式，可查看不同權限訊息。\r\n◆ 可進行發票的CRUD、自動對獎、提示開獎/過期與否，統計獎金、中獎發票、張數等訊息。\r\n◆ 支援RWD響應式網站功能。', 1, 1, 'a:6:{i:0;s:6:"w1.png";i:1;s:6:"w2.png";i:2;s:6:"w5.png";i:3;s:6:"w8.png";i:4;s:6:"w9.png";i:5;s:6:"g1.png";}'),
+(1, 1, '線上發票紀錄/對獎系統', 'inv.jpg', '', 'http://220.128.133.15/s1090421/invoice/', '◆ 管理者、使用者、訪客三種登入模式，可查看不同權限訊息。\r\n◆ 可進行發票的CRUD、自動對獎、提示開獎/過期與否，統計獎金、中獎發票、張數等訊息。\r\n◆ 支援RWD響應式網站功能。', 1, 1, 'a:6:{i:0;s:6:\"w1.png\";i:1;s:6:\"w2.png\";i:2;s:6:\"w5.png\";i:3;s:6:\"w8.png\";i:4;s:6:\"w9.png\";i:5;s:6:\"g1.png\";}'),
 (2, 1, '線上萬年曆', 'cal.jpg', '', 'http://220.128.133.15/s1090421/calendar/', '◆ 具備切換月/年份，並可隨時回到當日功能，可直接輸入年份日期查詢特定年份。\r\n◆ 標示出每月特殊日期/假日/當天日期，並以不同顏色醒目標示。\r\n◆ 支援RWD響應式網站功能。', 2, 1, 'a:4:{i:0;s:6:\"w1.png\";i:1;s:6:\"w2.png\";i:2;s:6:\"w5.png\";i:3;s:6:\"g1.png\";}'),
 (3, 1, 'QTE小遊戲', 'QTE.jpg', '', 'http://220.128.133.15/s1090421/QTEgame/', '◆ 透過Sweetalert2，結合影片控制製作的小型-快速反應事件(Quick Time Events)-遊戲\r\n◆ 支援RWD響應式網站功能。', 3, 1, 'a:6:{i:0;s:6:\"w1.png\";i:1;s:6:\"w2.png\";i:2;s:6:\"w3.png\";i:3;s:6:\"w4.png\";i:4;s:6:\"w5.png\";i:5;s:6:\"g1.png\";}'),
 (4, 2, '動漫人物仿繪', 'g1.jpg', 'gb1.png', '', '◆ 繪圖板練習，透過PS營造光影效果仿繪動漫人物', 4, 1, 'a:1:{i:0;s:6:\"g1.png\";}'),
@@ -10954,13 +10954,13 @@ INSERT INTO `re_pro` (`id`, `type`, `name`, `img`, `bimg`, `link`, `cont`, `rank
 (15, 2, '2021年曆設計', 'g12.jpg', 'gb12.png', '', '◆ 以2021年代表生肖-牛為發想基礎，結合牛隻部位解說圖的概念，設計出充滿趣味又可口的年曆', 15, 1, 'a:1:{i:0;s:6:\"g1.png\";}'),
 (16, 2, '旅遊DM設計', 'g13.jpg', 'gb14.png', '', '◆ 以日本賞櫻旅遊為主題，介紹日本四個著名賞櫻景點的相關資訊', 16, 1, 'a:1:{i:0;s:6:\"g1.png\";}'),
 (17, 2, '30日動物挑戰', 'g14.jpg', 'gb13.png', '', '◆ 以黃金比例的圓形，勾勒出各式各樣動物的30日挑戰!', 17, 1, 'a:1:{i:0;s:6:\"g2.png\";}'),
-(20, 3, '創意馬克杯蓋', 'd1.jpg', 'db1.png', NULL, '◆ 透過部分替換件實現馬克杯蓋/小公仔雙重功能\r\n◆ 透過分件設計實現砲管可動\r\n◆ 3D列印輸出成品', 18, 1, 'a:2:{i:0;s:6:\"d1.png\";i:1;s:6:\"dd.png\";}'),
+(20, 3, '創意馬克杯蓋', 'd1.jpg', 'db1.png', '', '◆ 透過部分替換件實現馬克杯蓋/小公仔雙重功能\r\n◆ 透過分件設計實現砲管可動\r\n◆ 3D列印輸出成品', 18, 1, 'a:2:{i:0;s:6:\"d1.png\";i:1;s:6:\"dd.png\";}'),
 (21, 3, '可動模型骨架', 'd2.jpg', 'db2.png', NULL, '◆ 透過3mm孔洞可結合市售眾多模型遊玩\r\n◆ 透過分件設計實現全關節可動\r\n◆ 3D列印輸出成品', 19, 1, 'a:2:{i:0;s:6:\"d1.png\";i:1;s:6:\"dd.png\";}'),
 (22, 3, '升降機擬真示意圖', 'd3.jpg', 'db3.png', NULL, '◆ 3D建模組裝\r\n◆ C4D渲染+材質模擬真實場景', 20, 1, 'a:2:{i:0;s:6:\"d1.png\";i:1;s:6:\"d5.png\";}'),
 (23, 3, '造型手機架', 'd4.jpg', 'db7.png', NULL, '◆ 透過簡易造型挖空實現手機架功能\r\n◆ 與遊戲公司合作推出之小贈品\r\n◆ 3D列印輸出成品', 21, 1, 'a:2:{i:0;s:6:\"d1.png\";i:1;s:6:\"dd.png\";}'),
 (24, 3, '茶茶丸公仔', 'd5.jpg', 'gb7.png', NULL, '◆ 茶葉為主題設計之形象公仔\r\n◆ 結合市售關節零件實現關節可動\r\n◆ 3D列印輸出成品', 22, 1, 'a:2:{i:0;s:6:\"d1.png\";i:1;s:6:\"dd.png\";}'),
 (25, 3, '彎腰郵筒造型擺飾', 'd6.jpg', 'db6.png', NULL, '◆ 2015年蘇迪勒颱風席捲全台爆紅的郵筒形象\r\n◆ 結合時事話題設計的小擺件\r\n◆ 3D列印輸出成品', 23, 1, 'a:2:{i:0;s:6:\"d1.png\";i:1;s:6:\"dd.png\";}'),
-(26, 3, '多功能茶壺名片座', 'd7.jpg', 'db7.png', NULL, '◆ 符合企業形象之茶壺造型擺飾\r\n◆ 透過簡易拆卸可變成造型名片座\r\n◆ 3D列印輸出成品', 24, 1, 'a:2:{i:0;s:6:\"d1.png\";i:1;s:6:\"dd.png\";}');
+(26, 3, '多功能茶壺名片座', 'd7.jpg', 'db7.png', '', '◆ 符合企業形象之茶壺造型擺飾\r\n◆ 透過簡易拆卸可變成造型名片座\r\n◆ 3D列印輸出成品', 24, 1, 'a:2:{i:0;s:6:\"d1.png\";i:1;s:6:\"dd.png\";}');
 
 -- --------------------------------------------------------
 
@@ -11147,6 +11147,7 @@ ALTER TABLE `re_job`
 --
 ALTER TABLE `re_login`
   ADD PRIMARY KEY (`id`);
+
 --
 -- 資料表索引 `re_pro`
 --
@@ -11215,7 +11216,7 @@ ALTER TABLE `invoice_reward_record`
 -- 使用資料表自動遞增(AUTO_INCREMENT) `re_about`
 --
 ALTER TABLE `re_about`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `re_abouttext`
@@ -11251,18 +11252,19 @@ ALTER TABLE `re_exp`
 -- 使用資料表自動遞增(AUTO_INCREMENT) `re_job`
 --
 ALTER TABLE `re_job`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `re_login`
 --
 ALTER TABLE `re_login`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `re_pro`
 --
 ALTER TABLE `re_pro`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `re_self`
