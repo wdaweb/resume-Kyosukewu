@@ -53,8 +53,7 @@ foreach ($pro as $key => $value) {
                     <?php
                     }
                     ?>
-                    <i id="editsk" class="addsk fas fa-edit h2" onclick="editsk('#cover','#content','modal/editSk.php','<?= $value['id']; ?>')"></i>
-                    <i id="addsk" class="addsk fas fa-plus-square h2" onclick="addsk('<?= $value['id']; ?>')"></i>
+                    <i id="editsk" class="addsk fas fa-edit h2" onclick="editsk('#cover','#content','modal/editSk.php?id=<?= $value['id']; ?>')"></i>
                 </div>
                 <div class="col-1">
                     <?php

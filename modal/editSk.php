@@ -16,7 +16,7 @@ $psk['sk'] = unserialize($psk['sk']);
                 $ss[]=$s['img'];
                 $same=array_intersect($psk['sk'],$ss);
                 ?>
-                <input type="checkbox" name="sks[]" value="<?= $s['img']; ?>" class="ms-2" <?=(in_array('w1.png',$ss))?"checked":"";?>><?= $s['cont']; ?><br>
+                <input type="checkbox" name="sks[]" value="<?= $s['img']; ?>" class="ms-2"><?= $s['cont']; ?><br>
                 <?php
             }
             ?>
@@ -46,6 +46,7 @@ $psk['sk'] = unserialize($psk['sk']);
     </div>
     <div class="text-center">
         <input type="hidden" name="id" value="<?= $_GET['id']; ?>">
+        <input type="hidden" name="do" value="pro">
         <input class="btn btn-warning" type="submit" value="更新">
     </div>
 </form>
