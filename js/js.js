@@ -1,30 +1,18 @@
-// $(".mainbg").addClass("wow animate__fadeIn");
-//banner
-$(".bg0").addClass("wow animate__bounceInDown");
-$(".bg1").addClass("wow animate__bounceInDown");
-$(".bg2").addClass("wow animate__backInRight");
-$(".bg3").addClass("wow animate__fadeInLeft");
-$(".banner-txt").addClass("wow animate__fadeIn");
-//about
-$(".tit").addClass("wow animate__slideInLeft");
-$(".self").addClass("wow animate__rotateIn");
-//exp
-$(".tit3").addClass("wow animate__slideInLeft");
-$(".li").addClass("wow animate__rubberBand");
-//skill
-$(".tit5").addClass("wow animate__slideInLeft");
-$("#sk1").addClass("wow animate__backInRight");
-$("#sk2").addClass("wow animate__backInRight");
-$("#sk3").addClass("wow animate__backInRight");
-$("#sk4").addClass("wow animate__backInRight");
-//pro
-$(".tit7").addClass("wow animate__slideInLeft");
-$(".proe").addClass("wow animate__bounceIn");
-//cont
-$(".tit9").addClass("wow animate__slideInLeft");
-$(".contme").addClass("wow animate__zoomIn");
+wow = new WOW(
+  {
+  boxClass:     'wow',      // default
+  animateClass: 'animated', // default
+  offset:       30,          // default
+  mobile:       true,       // default
+  live:         true        // default
+}
+)
+wow.init();
 
-new WOW().init();
+$('#lbtn').on("click",function(){
+  $(this).removeClass("wow animate__animated animate__heartBeat")
+})
+
 
 function go(where) {
   switch (where) {

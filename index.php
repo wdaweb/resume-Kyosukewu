@@ -26,10 +26,10 @@ include_once "base.php";
         $img = $Img->find(['sh' => 1]);
         ?>
         <div class="mainbg"><img src="titimg/<?= $img['img']; ?>"></div>
-        <div class="bg0 animate__animated" data-wow-delay="0.3s"></div>
-        <div class="bg1 animate__animated"></div>
-        <div class="bg2 animate__animated"></div>
-        <div class="bg3 animate__animated" data-wow-delay="0.5s"></div>
+        <div class="bg0 animate__animated wow animate__bounceInDown" data-wow-delay="0.3s"></div>
+        <div class="bg1 animate__animated wow animate__bounceInDown"></div>
+        <div class="bg2 animate__animated wow animate__backInRight"></div>
+        <div class="bg3 animate__animated wow animate__fadeInLeft" data-wow-delay="0.5s"></div>
         <div class="contant">
             <div class="banner-txt">
                 <?php
@@ -118,7 +118,7 @@ include_once "base.php";
                                 <div class="aboutjob">
                                     <table class="col-12 col-lg-8 col-xl-6 mx-auto">
                                         <?php
-                                        $job = $Job->all(" order by rank");
+                                        $job = $Job->all(['sh' => 1]," order by rank");
                                         foreach ($job as $key => $value) {
                                         ?>
                                             <tr>
@@ -152,7 +152,7 @@ include_once "base.php";
                         </div>
                     </div>
                 </div>
-                <label for="side-menu-switch">
+                <label id="lbtn" for="side-menu-switch" class="wow animate__animated animate__heartBeat" data-wow-iteration="infinite" >
                     <div class="arr">
                         <i id="fa" class="fa fa-angle-right"></i>
                     </div>
@@ -161,11 +161,11 @@ include_once "base.php";
         </div>
         <article class="container mt-5">
             <div class="about">
-                <h3 class="tit w-100 pb-3 border-bottom animate__animated"><i class="far fa-address-card me-2"></i>關於我 /
+                <h3 class="tit w-100 pb-3 border-bottom animate__animated wow animate__slideInLeft"><i class="far fa-address-card me-2"></i>關於我 /
                     About me
                 </h3>
                 <div class="row mt-5">
-                    <div class="self col-12 col-md-6 text-center animate__animated">
+                    <div class="self col-12 col-md-6 text-center animate__animated wow animate__rotateIn">
                         <?php
                         $ab = $Ab->find(['sh' => 1]);
                         ?>
@@ -207,13 +207,13 @@ include_once "base.php";
     </section>
     <section class="container">
         <div class="experience mb-5" id="exp">
-            <h3 class="tit3 w-100 pb-3 border-bottom animate__animated"><i class="fas fa-school mt-5 me-2"></i>學習/工作經歷 / Experience</h3>
+            <h3 class="tit3 w-100 pb-3 border-bottom animate__animated wow animate__slideInLeft"><i class="fas fa-school mt-5 me-2"></i>學習/工作經歷 / Experience</h3>
             <ul class="timeline">
                 <?php
                 $exp = $Exp->all(['sh' => 1], " order by rank DESC");
                 foreach ($exp as $key => $value) {
                 ?>
-                    <li class="li animate__animated">
+                    <li class="li animate__animated wow animate__rubberBand">
                         <a>
                             <h4><small><?= $value['year']; ?>：</small><?= $value['jtitle']; ?></h4>
                             <hr>
@@ -229,9 +229,9 @@ include_once "base.php";
     </section>
     <section class="skills" id="sk">
         <article class="container">
-            <h3 class="tit5 w-100 pb-3 border-bottom animate__animated"><i class="fas fa-code-branch me-2"></i>工作技能 / Skills</h3>
+            <h3 class="tit5 w-100 pb-3 border-bottom animate__animated wow animate__slideInLeft"><i class="fas fa-code-branch me-2"></i>工作技能 / Skills</h3>
             <div class="row justify-content-between">
-                <div id="sk1" class="item animate__animated">
+                <div id="sk1" class="item animate__animated wow animate__backInRight">
                     <div class="icon"><i class="ani fas fa-solar-panel"></i></div>
                     <div class="txt">
                         <h5>網頁相關技術</h5>
@@ -265,7 +265,7 @@ include_once "base.php";
                         </div>
                     </div>
                 </div>
-                <div id="sk2" class="item animate__animated" data-wow-delay="0.2s">
+                <div id="sk2" class="item animate__animated wow animate__backInRight" data-wow-delay="0.2s">
                     <div class="icon"><i class="ani far fa-images"></i></div>
                     <div class="txt">
                         <h5>視覺/影像處理</h5>
@@ -287,7 +287,7 @@ include_once "base.php";
                         </div>
                     </div>
                 </div>
-                <div id="sk3" class="item animate__animated" data-wow-delay="0.3s">
+                <div id="sk3" class="item animate__animated wow animate__backInRight" data-wow-delay="0.3s">
                     <div class="icon"><i class="ani fas fa-cubes"></i></div>
                     <div class="txt">
                         <h5>3D軟體應用</h5>
@@ -309,7 +309,7 @@ include_once "base.php";
                         </div>
                     </div>
                 </div>
-                <div id="sk4" class="item animate__animated" data-wow-delay="0.4s">
+                <div id="sk4" class="item animate__animated wow animate__backInRight" data-wow-delay="0.4s">
                     <div class="icon"><i class="ani far fa-keyboard"></i></div>
                     <div class="txt">
                         <h5>文書軟體應用</h5>
@@ -344,7 +344,7 @@ include_once "base.php";
         </div>
         <!-- --------------------- -->
         <article class="container">
-            <h3 class="tit7 animate__animated"><i class="fas fa-book me-2"></i>作品集 / Portfolio</h3>
+            <h3 class="tit7 animate__animated wow animate__slideInLeft"><i class="fas fa-book me-2"></i>作品集 / Portfolio</h3>
             <nav>
                 <div class="nav nav-tabs justify-content-evenly">
                     <a class="w nav-link active" data-bs-toggle="tab" href="#wd">網頁設計類</a>
@@ -362,7 +362,7 @@ include_once "base.php";
                         $pro = $Pro->all(['sh' => 1, 'type' => 1], ' order by rank ');
                         foreach ($pro as $key => $value) {
                         ?>
-                            <div class="proe col-12 col-md-6 col-lg-4 col-xl-3 animate__animated">
+                            <div class="proe col-12 col-md-6 col-lg-4 col-xl-3 animate__animated wow animate__bounceIn">
                                 <div class="card">
                                     <div class="over">
                                         <div class="mb-2 text-center pb-2 w-100 border-bottom"><strong><?= $value['name']; ?></strong>
@@ -405,7 +405,7 @@ include_once "base.php";
                         $pro = $Pro->all(['sh' => 1, 'type' => 2], ' order by rank ');
                         foreach ($pro as $key => $value) {
                         ?>
-                            <div class="proe col-12 col-md-6 col-lg-4 col-xl-3 animate__animated">
+                            <div class="proe col-12 col-md-6 col-lg-4 col-xl-3 animate__animated wow animate__bounceIn">
                                 <div class="card">
                                     <div class="over">
                                         <div class="mb-2 text-center pb-2 w-100 border-bottom"><strong><?= $value['name']; ?></strong>
@@ -449,7 +449,7 @@ include_once "base.php";
                         $pro = $Pro->all(['sh' => 1, 'type' => 3], ' order by rank ');
                         foreach ($pro as $key => $value) {
                         ?>
-                            <div class="proe col-12 col-md-6 col-lg-4 col-xl-3 animate__animated">
+                            <div class="proe col-12 col-md-6 col-lg-4 col-xl-3 animate__animated wow animate__bounceIn">
                                 <div class="card">
                                     <div class="over">
                                         <div class="mb-2 text-center pb-2 w-100 border-bottom"><strong><?= $value['name']; ?></strong>
@@ -490,8 +490,8 @@ include_once "base.php";
 
     <section id="foot" class="footer py-3">
         <article class="container text-center">
-            <h3 class="tit9 text-light mb-4 animate__animated"><i class="fas fa-phone-volume me-2 "></i>聯絡我 / Contact me</h3>
-            <div class="contme text-light animate__animated">
+            <h3 class="tit9 text-light mb-4 animate__animated wow animate__slideInLeft"><i class="fas fa-phone-volume me-2 "></i>聯絡我 / Contact me</h3>
+            <div class="contme text-light animate__animated wow animate__zoomIn">
                 <?php
                 $contt = $Conttext->all(['sh' => 1]);
                 foreach ($contt as $key => $value) {

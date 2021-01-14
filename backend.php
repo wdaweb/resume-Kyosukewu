@@ -1,6 +1,20 @@
 <?php
 include_once "base.php";
+
+$acc=$Log->all();
+
+foreach($acc as $ac){
+    $a[]=$ac['acc'];
+}
+// print_r($a[1]);
+$num=count($a);
+// echo $num ;
+    if($_SESSION['login']!=$a[0]){
+        unset($_SESSION['login']);
+        to('index.php');
+    }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
