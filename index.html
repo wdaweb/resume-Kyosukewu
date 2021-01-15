@@ -22,10 +22,10 @@
 
 <body>
     <div class="banner" id="banner">
-        <div class="bg0 animate__animated" data-wow-delay="0.3s"></div>
-        <div class="bg1 animate__animated"></div>
-        <div class="bg2 animate__animated"></div>
-        <div class="bg3 animate__animated" data-wow-delay="0.5s"></div>
+        <div class="bg0 animate__animated wow animate__bounceInDown" data-wow-delay="0.3s"></div>
+        <div class="bg1 animate__animated wow animate__bounceInDown"></div>
+        <div class="bg2 animate__animated wow animate__backInRight"></div>
+        <div class="bg3 animate__animated wow animate__fadeInLeft" data-wow-delay="0.5s"></div>
         <div class="contant">
             <div class="banner-txt" data-wow-delay="0.1s">
                 <object id="mysvg" type="image/svg+xml" data="img/title_animated.svg"></object>
@@ -155,7 +155,7 @@
                         </div>
                     </div>
                 </div>
-                <label for="side-menu-switch">
+                <label id="lbtn" for="side-menu-switch" class="wow animate__animated animate__heartBeat" data-wow-iteration="infinite" >
                     <div class="arr">
                         <i id="fa" class="fa fa-angle-right"></i>
                     </div>
@@ -164,11 +164,11 @@
         </div>
         <article class="container mt-5">
             <div class="about">
-                <h3 class="tit w-100 pb-3 border-bottom animate__animated"><i class="far fa-address-card me-2"></i>關於我 /
+                <h3 class="tit w-100 pb-3 border-bottom animate__animated wow animate__slideInLeft"><i class="far fa-address-card me-2"></i>關於我 /
                     About me
                 </h3>
                 <div class="row mt-5">
-                    <div class="self col-12 col-md-6 text-center animate__animated">
+                    <div class="self col-12 col-md-6 text-center animate__animated wow animate__rotateIn">
                         <img src="img/me.jpg" alt="">
                     </div>
                     <div class="me col-12 col-md-6 mt-5 mt-md-0">
@@ -197,11 +197,11 @@
     </section>
     <section class="container">
         <div class="experience mb-5" id="exp">
-            <h3 class="tit3 w-100 pb-3 border-bottom animate__animated"><i class="fas fa-school mt-5 me-2"></i>學習/工作經歷 /
+            <h3 class="tit3 w-100 pb-3 border-bottom animate__animated wow animate__slideInLeft"><i class="fas fa-school mt-5 me-2"></i>學習/工作經歷 /
                 <span class="tit4 animate__animated" data-wow-delay="0.5s">Experience</span>
             </h3>
             <ul class="timeline">
-                <li class="li1 animate__animated">
+                <li class="li1 animate__animated wow animate__rubberBand">
                     <a href="https://wdaweb.github.io/" target="_blink">
                         <h4><small>2020 - now：</small>新銳網頁技術工程師培訓</h4>
                         <hr>
@@ -211,7 +211,7 @@
                         </p>
                     </a>
                 </li>
-                <li class="li2 animate__animated" data-wow-dely="0.5s">
+                <li class="li2 animate__animated wow animate__rubberBand" data-wow-dely="0.5s">
                     <a>
                         <h4><small>2018 - 2020：</small>餐飲事業負責人</h4>
                         <hr>
@@ -221,7 +221,7 @@
                         </p>
                     </a>
                 </li>
-                <li class="li3 animate__animated" data-wow-dely="1.5s">
+                <li class="li3 animate__animated wow animate__rubberBand" data-wow-dely="1.5s">
                     <a>
                         <h4><small>2014 - 2018：</small>茶葉門市儲備店長/社群平台管理</h4>
                         <hr>
@@ -232,7 +232,7 @@
                         </p>
                     </a>
                 </li>
-                <li class="li4 animate__animated" data-wow-dely="2.5s">
+                <li class="li4 animate__animated wow animate__rubberBand" data-wow-dely="2.5s">
                     <a>
                         <h4><small>2011 - 2013：</small>美術編輯/切線設計</h4>
                         <hr>
@@ -242,7 +242,7 @@
                         </p>
                     </a>
                 </li>
-                <li class="li5 animate__animated" data-wow-dely="3.5s">
+                <li class="li5 animate__animated wow animate__rubberBand" data-wow-dely="3.5s">
                     <a>
                         <h4><small>2010 - 2011：</small>3D建模/美術編輯設計</h4>
                         <hr>
@@ -257,11 +257,11 @@
     </section>
     <section class="skills" id="sk">
         <article class="container">
-            <h3 class="tit5 w-100 pb-3 border-bottom animate__animated"><i class="fas fa-code-branch me-2"></i>工作技能 /
+            <h3 class="tit5 w-100 pb-3 border-bottom animate__animated wow animate__slideInLeft"><i class="fas fa-code-branch me-2"></i>工作技能 /
                 <span class="tit6 animate__animated" data-wow-delay="0.5s"> Skills</span>
             </h3>
             <div class="row justify-content-between">
-                <div id="sk1" class="item animate__animated">
+                <div id="sk1" class="item animate__animated wow animate__backInRight">
                     <div class="icon"><i class="ani fas fa-solar-panel"></i></div>
                     <div class="txt">
                         <h5>網頁相關技術</h5>
@@ -289,7 +289,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="sk2" class="item animate__animated" data-wow-delay="0.2s">
+                <div id="sk2" class="item animate__animated wow animate__backInRight" data-wow-delay="0.2s">
                     <div class="icon"><i class="ani far fa-images"></i></div>
                     <div class="txt">
                         <h5>視覺/影像處理</h5>
@@ -308,7 +308,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="sk3" class="item animate__animated" data-wow-delay="0.3s">
+                <div id="sk3" class="item animate__animated wow animate__backInRight" data-wow-delay="0.3s">
                     <div class="icon"><i class="ani fas fa-cubes"></i></div>
                     <div class="txt">
                         <h5>3D軟體應用</h5>
@@ -327,7 +327,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="sk4" class="item animate__animated" data-wow-delay="0.4s">
+                <div id="sk4" class="item animate__animated wow animate__backInRight" data-wow-delay="0.4s">
                     <div class="icon"><i class="ani far fa-keyboard"></i></div>
                     <div class="txt">
                         <h5>文書軟體應用</h5>
@@ -359,7 +359,7 @@
         </div>
         <!-- --------------------- -->
         <article class="container">
-            <h3 class="tit7 animate__animated"><i class="fas fa-book me-2"></i>作品集 / <span
+            <h3 class="tit7 animate__animated ow animate__slideInLeft"><i class="fas fa-book me-2"></i>作品集 / <span
                     class="tit8 animate__animated" data-wow-delay="0.5s"> Portfolio</span></h3>
             <nav>
                 <div class="nav nav-tabs justify-content-evenly">
@@ -374,7 +374,7 @@
                         收錄各類網頁技術製作的作品，點選圖片連結可至成品網頁瀏覽。
                     </p>
                     <div class="row g-3">
-                        <div class="proe col-12 col-md-6 col-lg-4 col-xl-3 animate__animated">
+                        <div class="proe col-12 col-md-6 col-lg-4 col-xl-3 animate__animated wow animate__bounceIn">
                             <div class="card">
                                 <div class="over">
                                     <div class="mb-2 text-center pb-2 w-100 border-bottom"><strong>線上發票紀錄/對獎系統</strong>
@@ -403,7 +403,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="proe col-12 col-md-6 col-lg-4 col-xl-3 animate__animated">
+                        <div class="proe col-12 col-md-6 col-lg-4 col-xl-3 animate__animated wow animate__bounceIn">
                             <div class="card">
                                 <div class="over">
                                     <div class="mb-2 text-center pb-2 w-100 border-bottom"><strong>線上萬年曆</strong></div>
@@ -430,7 +430,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="proe col-12 col-md-6 col-lg-4 col-xl-3 animate__animated">
+                        <div class="proe col-12 col-md-6 col-lg-4 col-xl-3 animate__animated wow animate__bounceIn">
                             <div class="card">
                                 <div class="over">
                                     <div class="mb-2 text-center pb-2 w-100 border-bottom"><strong>QTE小遊戲</strong></div>
@@ -465,7 +465,7 @@
                         收錄平面設計、商業海報、CG電繪...等，視覺相關作品。
                     </p>
                     <div class="row g-3">
-                        <div class="proe col-12 col-md-6 col-lg-4 col-xl-3 animate__animated">
+                        <div class="proe col-12 col-md-6 col-lg-4 col-xl-3 animate__animated wow animate__bounceIn">
                             <div class="card">
                                 <div class="over">
                                     <div class="mb-2 text-center pb-2 w-100 border-bottom"><strong>動漫人物仿繪</strong>
@@ -488,7 +488,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="proe col-12 col-md-6 col-lg-4 col-xl-3 animate__animated">
+                        <div class="proe col-12 col-md-6 col-lg-4 col-xl-3 animate__animated wow animate__bounceIn">
                             <div class="card">
                                 <div class="over">
                                     <div class="mb-2 text-center pb-2 w-100 border-bottom"><strong>聖誕節賀圖</strong>
@@ -513,7 +513,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="proe col-12 col-md-6 col-lg-4 col-xl-3 animate__animated">
+                        <div class="proe col-12 col-md-6 col-lg-4 col-xl-3 animate__animated wow animate__bounceIn">
                             <div class="card">
                                 <div class="over">
                                     <div class="mb-2 text-center pb-2 w-100 border-bottom"><strong>放空小孩-真人動漫化</strong>
@@ -536,7 +536,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="proe col-12 col-md-6 col-lg-4 col-xl-3 animate__animated">
+                        <div class="proe col-12 col-md-6 col-lg-4 col-xl-3 animate__animated wow animate__bounceIn">
                             <div class="card">
                                 <div class="over">
                                     <div class="mb-2 text-center pb-2 w-100 border-bottom"><strong>桌布設計01</strong>
@@ -559,7 +559,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="proe col-12 col-md-6 col-lg-4 col-xl-3 animate__animated">
+                        <div class="proe col-12 col-md-6 col-lg-4 col-xl-3 animate__animated wow animate__bounceIn">
                             <div class="card">
                                 <div class="over">
                                     <div class="mb-2 text-center pb-2 w-100 border-bottom"><strong>月夜下的貓頭鷹</strong>
@@ -582,7 +582,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="proe col-12 col-md-6 col-lg-4 col-xl-3 animate__animated">
+                        <div class="proe col-12 col-md-6 col-lg-4 col-xl-3 animate__animated wow animate__bounceIn">
                             <div class="card">
                                 <div class="over">
                                     <div class="mb-2 text-center pb-2 w-100 border-bottom">
@@ -606,7 +606,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="proe col-12 col-md-6 col-lg-4 col-xl-3 animate__animated">
+                        <div class="proe col-12 col-md-6 col-lg-4 col-xl-3 animate__animated wow animate__bounceIn">
                             <div class="card">
                                 <div class="over">
                                     <div class="mb-2 text-center pb-2 w-100 border-bottom"><strong>雙葉茶茶丸-角色設計</strong>
@@ -630,7 +630,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="proe col-12 col-md-6 col-lg-4 col-xl-3 animate__animated">
+                        <div class="proe col-12 col-md-6 col-lg-4 col-xl-3 animate__animated wow animate__bounceIn">
                             <div class="card">
                                 <div class="over">
                                     <div class="mb-2 text-center pb-2 w-100 border-bottom"><strong>ZEUS-LOGO設計</strong>
@@ -655,7 +655,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="proe col-12 col-md-6 col-lg-4 col-xl-3 animate__animated">
+                        <div class="proe col-12 col-md-6 col-lg-4 col-xl-3 animate__animated wow animate__bounceIn">
                             <div class="card">
                                 <div class="over">
                                     <div class="mb-2 text-center pb-2 w-100 border-bottom"><strong>活動短漫+角色設計</strong>
@@ -680,7 +680,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="proe col-12 col-md-6 col-lg-4 col-xl-3 animate__animated">
+                        <div class="proe col-12 col-md-6 col-lg-4 col-xl-3 animate__animated wow animate__bounceIn">
                             <div class="card">
                                 <div class="over">
                                     <div class="mb-2 text-center w-100 border-bottom"><strong>招牌+菜單設計</strong>
@@ -706,7 +706,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="proe col-12 col-md-6 col-lg-4 col-xl-3 animate__animated">
+                        <div class="proe col-12 col-md-6 col-lg-4 col-xl-3 animate__animated wow animate__bounceIn">
                             <div class="card">
                                 <div class="over">
                                     <div class="mb-2 text-center pb-2 w-100 border-bottom"><strong>網拍產品介紹設計</strong>
@@ -731,7 +731,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="proe col-12 col-md-6 col-lg-4 col-xl-3 animate__animated">
+                        <div class="proe col-12 col-md-6 col-lg-4 col-xl-3 animate__animated wow animate__bounceIn">
                             <div class="card">
                                 <div class="over">
                                     <div class="mb-2 text-center pb-2 w-100 border-bottom"><strong>2021年曆設計</strong>
@@ -754,7 +754,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="proe col-12 col-md-6 col-lg-4 col-xl-3 animate__animated">
+                        <div class="proe col-12 col-md-6 col-lg-4 col-xl-3 animate__animated wow animate__bounceIn">
                             <div class="card">
                                 <div class="over">
                                     <div class="mb-2 text-center pb-2 w-100 border-bottom"><strong>旅遊DM設計</strong>
@@ -777,7 +777,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="proe col-12 col-md-6 col-lg-4 col-xl-3 animate__animated">
+                        <div class="proe col-12 col-md-6 col-lg-4 col-xl-3 animate__animated wow animate__bounceIn">
                             <div class="card">
                                 <div class="over">
                                     <div class="mb-2 text-center pb-2 w-100 border-bottom"><strong>30日動物挑戰</strong>
@@ -807,7 +807,7 @@
                         收錄3D建模、擬真渲染、3D列印機打印之作品。
                     </p>
                     <div class="row g-3">
-                        <div class="proe col-12 col-md-6 col-lg-4 col-xl-3 animate__animated">
+                        <div class="proe col-12 col-md-6 col-lg-4 col-xl-3 animate__animated wow animate__bounceIn">
                             <div class="card">
                                 <div class="over">
                                     <div class="mb-2 text-center pb-2 w-100 border-bottom"><strong>創意馬克杯蓋</strong></div>
@@ -831,7 +831,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="proe col-12 col-md-6 col-lg-4 col-xl-3 animate__animated">
+                        <div class="proe col-12 col-md-6 col-lg-4 col-xl-3 animate__animated wow animate__bounceIn">
                             <div class="card">
                                 <div class="over">
                                     <div class="mb-2 text-center pb-2 w-100 border-bottom"><strong>可動模型骨架</strong></div>
@@ -856,7 +856,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="proe col-12 col-md-6 col-lg-4 col-xl-3 animate__animated">
+                        <div class="proe col-12 col-md-6 col-lg-4 col-xl-3 animate__animated wow animate__bounceIn">
                             <div class="card">
                                 <div class="over">
                                     <div class="mb-2 text-center pb-2 w-100 border-bottom"><strong>升降機擬真示意圖</strong>
@@ -881,7 +881,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="proe col-12 col-md-6 col-lg-4 col-xl-3 animate__animated">
+                        <div class="proe col-12 col-md-6 col-lg-4 col-xl-3 animate__animated wow animate__bounceIn">
                             <div class="card">
                                 <div class="over">
                                     <div class="mb-2 text-center pb-2 w-100 border-bottom"><strong>造型手機架</strong></div>
@@ -906,7 +906,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="proe col-12 col-md-6 col-lg-4 col-xl-3 animate__animated">
+                        <div class="proe col-12 col-md-6 col-lg-4 col-xl-3 animate__animated wow animate__bounceIn">
                             <div class="card">
                                 <div class="over">
                                     <div class="mb-2 text-center pb-2 w-100 border-bottom"><strong>茶茶丸公仔</strong></div>
@@ -931,7 +931,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="proe col-12 col-md-6 col-lg-4 col-xl-3 animate__animated">
+                        <div class="proe col-12 col-md-6 col-lg-4 col-xl-3 animate__animated wow animate__bounceIn">
                             <div class="card">
                                 <div class="over">
                                     <div class="mb-2 text-center pb-2 w-100 border-bottom"><strong>彎腰郵筒造型擺飾</strong>
@@ -957,7 +957,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="proe col-12 col-md-6 col-lg-4 col-xl-3 animate__animated">
+                        <div class="proe col-12 col-md-6 col-lg-4 col-xl-3 animate__animated wow animate__bounceIn">
                             <div class="card">
                                 <div class="over">
                                     <div class="mb-2 text-center pb-2 w-100 border-bottom"><strong>多功能茶壺名片座</strong>
@@ -991,9 +991,9 @@
 
     <section id="foot" class="footer py-3">
         <article class="container text-center">
-            <h3 class="tit9 text-light mb-4 animate__animated"><i class="fas fa-phone-volume me-2 "></i>聯絡我 / <span
+            <h3 class="tit9 text-light mb-4 animate__animated wow animate__slideInLeft"><i class="fas fa-phone-volume me-2 "></i>聯絡我 / <span
                     class="tit10 animate__animated" data-wow-delay="0.5s"> Contact me</span></h3>
-            <div class="text-light">
+            <div class="text-light animate__animated wow animate__zoomIn">
                 <p>感謝您撥冗閱讀這份履歷，如果您對我的能力有興趣的話，歡迎透過以下方式聯繫我，謝謝。</p>
                 <p><a class="text-light" href="tel:+886-933917387">電話：0933-917-387</a> ||
                     <a class="text-light" href="mainto:srx0w0010@hotmail.com">信箱：srx0w0010@hotmail.com</a>
