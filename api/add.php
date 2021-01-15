@@ -3,7 +3,7 @@ include_once "../base.php";
 
 $db = new DB($_POST['table']);
 $table = $_POST['do'];
-print_r($_POST);
+// print_r($_POST);
 
 
 if ($table == 'pro') {
@@ -15,7 +15,11 @@ if ($table == 'pro') {
         $_POST['img'] = $_FILES['img']['name'];
         move_uploaded_file($_FILES['img']['tmp_name'], '../img/' . $_FILES['img']['name']);
     }
+    // $c=count($_POST['sks']);
+
+    // echo $c;
     $_POST['sk'] = serialize($_POST['sks']);
+    // $_POST['skid'] = serialize($_POST['sksid']);
     unset($_POST['sks']);
 } elseif (!empty($_FILES['img']['tmp_name'])) {
     $_POST['img'] = $_FILES['img']['name'];

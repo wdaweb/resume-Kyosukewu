@@ -133,6 +133,7 @@
                 foreach($sk as $s){
                 ?>
                 <input type="checkbox" name="sks[]" value="<?=$s['img'];?>" class="ms-2"><?=$s['cont'];?><br>
+                <!-- <input type="hidden" name="sksid[]" value="<?=$s['id'];?>"> -->
                 <?php
                 }
                 ?>
@@ -144,6 +145,7 @@
                 foreach($sk as $s){
                 ?>
                 <input type="checkbox" name="sks[]" value="<?=$s['img'];?>" class="ms-2"><?=$s['cont'];?><br>
+                <!-- <input type="hidden" name="sksid[]" value="<?=$s['id'];?>"> -->
                 <?php
                 }
                 ?>
@@ -155,6 +157,7 @@
                 foreach($sk as $s){
                 ?>
                 <input type="checkbox" name="sks[]" value="<?=$s['img'];?>" class="ms-2"><?=$s['cont'];?><br>
+                <!-- <input type="hidden" name="sksid[]" value="<?=$s['id'];?>"> -->
                 <?php
                 }
                 ?>
