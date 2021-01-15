@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主機： 127.0.0.1
--- 產生時間： 2021-01-13 03:36:20
+-- 產生時間： 2021-01-15 09:25:33
 -- 伺服器版本： 10.4.14-MariaDB
 -- PHP 版本： 7.4.10
 
@@ -10960,7 +10960,9 @@ INSERT INTO `re_pro` (`id`, `type`, `name`, `img`, `bimg`, `link`, `cont`, `rank
 (23, 3, '造型手機架', 'd4.jpg', 'db7.png', NULL, '◆ 透過簡易造型挖空實現手機架功能\r\n◆ 與遊戲公司合作推出之小贈品\r\n◆ 3D列印輸出成品', 21, 1, 'a:2:{i:0;s:6:\"d1.png\";i:1;s:6:\"dd.png\";}'),
 (24, 3, '茶茶丸公仔', 'd5.jpg', 'gb7.png', NULL, '◆ 茶葉為主題設計之形象公仔\r\n◆ 結合市售關節零件實現關節可動\r\n◆ 3D列印輸出成品', 22, 1, 'a:2:{i:0;s:6:\"d1.png\";i:1;s:6:\"dd.png\";}'),
 (25, 3, '彎腰郵筒造型擺飾', 'd6.jpg', 'db6.png', NULL, '◆ 2015年蘇迪勒颱風席捲全台爆紅的郵筒形象\r\n◆ 結合時事話題設計的小擺件\r\n◆ 3D列印輸出成品', 23, 1, 'a:2:{i:0;s:6:\"d1.png\";i:1;s:6:\"dd.png\";}'),
-(26, 3, '多功能茶壺名片座', 'd7.jpg', 'db7.png', '', '◆ 符合企業形象之茶壺造型擺飾\r\n◆ 透過簡易拆卸可變成造型名片座\r\n◆ 3D列印輸出成品', 24, 1, 'a:2:{i:0;s:6:\"d1.png\";i:1;s:6:\"dd.png\";}');
+(26, 3, '多功能茶壺名片座', 'd7.jpg', 'db7.png', '', '◆ 符合企業形象之茶壺造型擺飾\r\n◆ 透過簡易拆卸可變成造型名片座\r\n◆ 3D列印輸出成品', 24, 1, 'a:2:{i:0;s:6:\"d1.png\";i:1;s:6:\"dd.png\";}'),
+(32, 1, '動起來!! Clip-Path', 'w4.jpg', '', 'http://220.128.133.15/s1090421/animation', '◆ 使用CSS的animation技術，製作小品動畫。\r\n◆ Clip-Path指令應用。', 25, 1, 'a:2:{i:0;s:6:\"w1.png\";i:1;s:6:\"w2.png\";}'),
+(33, 1, '打擊殭屍-浣熊市之戰', 'w5.jpg', '', 'http://220.128.133.15/s1090421/HIT', '◆ 透過滑鼠/鍵盤監聽事件製作互動型小遊戲。', 26, 1, 'a:5:{i:0;s:6:\"w1.png\";i:1;s:6:\"w2.png\";i:2;s:6:\"w3.png\";i:3;s:6:\"w4.png\";i:4;s:6:\"g1.png\";}');
 
 -- --------------------------------------------------------
 
@@ -11065,6 +11067,26 @@ CREATE TABLE `re_tittext` (
 
 INSERT INTO `re_tittext` (`id`, `img`, `sh`) VALUES
 (2, 'title_animated.svg', 1);
+
+-- --------------------------------------------------------
+
+--
+-- 資料表結構 `se_login`
+--
+
+CREATE TABLE `se_login` (
+  `id` int(11) UNSIGNED NOT NULL,
+  `acc` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `pw` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `createTime` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- 傾印資料表的資料 `se_login`
+--
+
+INSERT INTO `se_login` (`id`, `acc`, `pw`, `createTime`) VALUES
+(1, 'admin', '1234', '2021-01-13 04:21:31');
 
 --
 -- 已傾印資料表的索引
@@ -11179,6 +11201,12 @@ ALTER TABLE `re_tittext`
   ADD PRIMARY KEY (`id`);
 
 --
+-- 資料表索引 `se_login`
+--
+ALTER TABLE `se_login`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- 在傾印的資料表使用自動遞增(AUTO_INCREMENT)
 --
 
@@ -11264,7 +11292,7 @@ ALTER TABLE `re_login`
 -- 使用資料表自動遞增(AUTO_INCREMENT) `re_pro`
 --
 ALTER TABLE `re_pro`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `re_self`
@@ -11289,6 +11317,12 @@ ALTER TABLE `re_titimg`
 --
 ALTER TABLE `re_tittext`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- 使用資料表自動遞增(AUTO_INCREMENT) `se_login`
+--
+ALTER TABLE `se_login`
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
