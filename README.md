@@ -4,6 +4,7 @@
   * URL:https://www.cakeresume.com/yuanyuan-wu
 ### 專屬線上空間
   * URL:http://220.128.133.15/s1090421/kyos_Portfolio
+  * 測試用帳號密碼 admin / 2010
 
 ---
 ## 功能要求
