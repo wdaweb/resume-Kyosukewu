@@ -1,5 +1,5 @@
 <?php
-    include_once "../base.php";
+include_once "../base.php";
 ?>
 
 <div class="addbody text-center">
@@ -126,46 +126,62 @@
                 <div class="mt-3">作品說明：</div><textarea name="cont" rows="5"></textarea>
                 <div class="mt-3">運用技術：</div>
                 <div class="d-flex  col-12 mx-auto">
-                <div class="text-start ms-3 col-4">
-                <?php
-                $sk=$Sk->all(['type'=>1]," order by rank");
-                echo $tstr['sk'][1]."<hr>";
-                foreach($sk as $s){
-                ?>
-                <input type="checkbox" name="sks[]" value="<?=$s['img'];?>" class="ms-2"><?=$s['cont'];?><br>
-                <!-- <input type="hidden" name="sksid[]" value="<?=$s['id'];?>"> -->
-                <?php
-                }
-                ?>
-                </div>
-                <div class="text-start ms-3 col-4">
-                <?php
-                $sk=$Sk->all(['type'=>2]," order by rank");
-                echo $tstr['sk'][2]."<hr>";
-                foreach($sk as $s){
-                ?>
-                <input type="checkbox" name="sks[]" value="<?=$s['img'];?>" class="ms-2"><?=$s['cont'];?><br>
-                <!-- <input type="hidden" name="sksid[]" value="<?=$s['id'];?>"> -->
-                <?php
-                }
-                ?>
-                </div>
-                <div class="text-start ms-3 col-4">
-                <?php
-                $sk=$Sk->all(['type'=>3]," order by rank");
-                echo $tstr['sk'][3]."<hr>";
-                foreach($sk as $s){
-                ?>
-                <input type="checkbox" name="sks[]" value="<?=$s['img'];?>" class="ms-2"><?=$s['cont'];?><br>
-                <!-- <input type="hidden" name="sksid[]" value="<?=$s['id'];?>"> -->
-                <?php
-                }
-                ?>
-                </div>
+                    <div class="text-start ms-3 col-4">
+                        <?php
+                        $sk = $Sk->all(['type' => 1], " order by rank");
+                        echo $tstr['sk'][1] . "<hr>";
+                        foreach ($sk as $s) {
+                        ?>
+                            <input type="checkbox" name="sks[]" value="<?= $s['img']; ?>" class="ms-2"><?= $s['cont']; ?><br>
+                            <!-- <input type="hidden" name="sksid[]" value="<?= $s['id']; ?>"> -->
+                        <?php
+                        }
+                        ?>
+                    </div>
+                    <div class="text-start ms-3 col-4">
+                        <?php
+                        $sk = $Sk->all(['type' => 2], " order by rank");
+                        echo $tstr['sk'][2] . "<hr>";
+                        foreach ($sk as $s) {
+                        ?>
+                            <input type="checkbox" name="sks[]" value="<?= $s['img']; ?>" class="ms-2"><?= $s['cont']; ?><br>
+                            <!-- <input type="hidden" name="sksid[]" value="<?= $s['id']; ?>"> -->
+                        <?php
+                        }
+                        ?>
+                    </div>
+                    <div class="text-start ms-3 col-4">
+                        <?php
+                        $sk = $Sk->all(['type' => 3], " order by rank");
+                        echo $tstr['sk'][3] . "<hr>";
+                        foreach ($sk as $s) {
+                        ?>
+                            <input type="checkbox" name="sks[]" value="<?= $s['img']; ?>" class="ms-2"><?= $s['cont']; ?><br>
+                            <!-- <input type="hidden" name="sksid[]" value="<?= $s['id']; ?>"> -->
+                        <?php
+                        }
+                        ?>
+                    </div>
                 </div>
                 <input type="hidden" name="table" value="re_pro">
                 <input type="hidden" name="do" value="pro">
+            <?php
+                break;
+            case "re_img":
+            ?>
+                <h4>新增圖片</h4>
+                <hr>
+                <div class="mt-3">分類：
+                    <select class="w-50" id="typeP" name="type" onchange="typeP()">
+                        <option value="1"><?= $imgtype[1]; ?></option>
+                        <option value="2"><?= $imgtype[2]; ?></option>
+                        <option value="3"><?= $imgtype[3]; ?></option>
+                        <option value="4"><?= $imgtype[4]; ?></option>
+                    </select>
+                </div>
+                <div id="lihkP"></div>
         <?php
+                break;
         }
         ?>
         <input type="hidden" name="sh">
@@ -175,11 +191,25 @@
     </form>
 </div>
 <script>
-typeS()
-function typeS(){
-    let type=$('#type').val()
-    $.get("api/type.php",{type},function(res){
-        $('#link').html(res)
+    typeS()
+
+    function typeS() {
+        let type = $('#type').val()
+        $.get("api/type.php", {
+            type
+        }, function(res) {
+            $('#link').html(res)
+        })
+    }
+
+    typeP()
+
+function typeP() {
+    let type = $('#typeP').val()
+    $.get("api/typeP.php", {
+        type
+    }, function(res) {
+        $('#linkP').html(res)
     })
 }
 </script>
