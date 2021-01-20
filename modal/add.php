@@ -165,21 +165,6 @@ include_once "../base.php";
                 </div>
                 <input type="hidden" name="table" value="re_pro">
                 <input type="hidden" name="do" value="pro">
-            <?php
-                break;
-            case "re_img":
-            ?>
-                <h4>新增圖片</h4>
-                <hr>
-                <div class="mt-3">分類：
-                    <select class="w-50" id="typeP" name="type" onchange="typeP()">
-                        <option value="1"><?= $imgtype[1]; ?></option>
-                        <option value="2"><?= $imgtype[2]; ?></option>
-                        <option value="3"><?= $imgtype[3]; ?></option>
-                        <option value="4"><?= $imgtype[4]; ?></option>
-                    </select>
-                </div>
-                <div id="lihkP"></div>
         <?php
                 break;
         }
@@ -201,15 +186,4 @@ include_once "../base.php";
             $('#link').html(res)
         })
     }
-
-    typeP()
-
-function typeP() {
-    let type = $('#typeP').val()
-    $.get("api/typeP.php", {
-        type
-    }, function(res) {
-        $('#linkP').html(res)
-    })
-}
 </script>

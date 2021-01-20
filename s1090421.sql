@@ -2,8 +2,13 @@
 -- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
+-- 主機： 127.0.0.1:3306
+-- 產生時間： 2021-01-20 11:50:42
+-- 伺服器版本： 10.4.14-MariaDB
+-- PHP 版本： 7.4.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -10756,36 +10761,21 @@ INSERT INTO `re_about` (`id`, `img`, `sh`) VALUES
 -- --------------------------------------------------------
 
 --
-<<<<<<< HEAD
--- 資料表結構 `re_abtext`
---
-
-CREATE TABLE `re_abtext` (
-=======
 -- 資料表結構 `re_abouttext`
 --
 
 CREATE TABLE `re_abouttext` (
->>>>>>> back
   `id` int(11) UNSIGNED NOT NULL,
   `text` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `sh` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
-<<<<<<< HEAD
--- 傾印資料表的資料 `re_abtext`
---
-
-INSERT INTO `re_abtext` (`id`, `text`, `sh`) VALUES
-(1, 'Hi,我叫吳振源\r\n工業設計系畢業\r\n曾任3D建模師、美術編輯、社群軟體編輯、服務人員\r\n正為轉職網頁工程師於職訓局學習中', 1);
-=======
 -- 傾印資料表的資料 `re_abouttext`
 --
 
 INSERT INTO `re_abouttext` (`id`, `text`, `sh`) VALUES
-(1, '國立聯合大學-工業設計學系', 1);
->>>>>>> back
+(1, 'Hi,我叫吳振源，34歲\r\n工業設計系畢業\r\n曾任3D建模師、美術編輯、社群軟體編輯、服務人員\r\n正為轉職網頁工程師於職訓局學習中', 1);
 
 -- --------------------------------------------------------
 
@@ -10797,10 +10787,7 @@ CREATE TABLE `re_cont` (
   `id` int(11) UNSIGNED NOT NULL,
   `icon` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `method` text COLLATE utf8mb4_unicode_ci NOT NULL,
-<<<<<<< HEAD
-=======
   `link` text COLLATE utf8mb4_unicode_ci NOT NULL,
->>>>>>> back
   `cont` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `sh` tinyint(1) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -10809,12 +10796,6 @@ CREATE TABLE `re_cont` (
 -- 傾印資料表的資料 `re_cont`
 --
 
-<<<<<<< HEAD
-INSERT INTO `re_cont` (`id`, `icon`, `method`, `cont`, `sh`) VALUES
-(1, 'fab fa-github', 'GitHub', 'https://github.com/Kyosukewu', 1),
-(2, 'far fa-envelope', 'E-mail', 'mainto:srx0w0010@hotmail.com', 1),
-(3, 'fas fa-phone-volume', 'Mobile phone', 'tel:+886-933917387', 1);
-=======
 INSERT INTO `re_cont` (`id`, `icon`, `method`, `link`, `cont`, `sh`) VALUES
 (1, 'fab fa-github', 'GitHub', 'https://github.com/Kyosukewu', 'https://github.com/Kyosukewu', 1),
 (2, 'far fa-envelope', 'E-mail', 'mainto:srx0w0010@hotmail.com', 'srx0w0010@hotmail.com', 1),
@@ -10838,7 +10819,6 @@ CREATE TABLE `re_conttext` (
 
 INSERT INTO `re_conttext` (`id`, `text`, `sh`) VALUES
 (1, '感謝您撥冗閱讀這份履歷，如果您對我的能力有興趣的話，歡迎透過以下方式聯繫我，謝謝。', 1);
->>>>>>> back
 
 -- --------------------------------------------------------
 
@@ -10858,12 +10838,8 @@ CREATE TABLE `re_edu` (
 --
 
 INSERT INTO `re_edu` (`id`, `text`, `finish`, `sh`) VALUES
-<<<<<<< HEAD
-(2, '國立聯合大學-工業設計學系', 1, 1);
-=======
 (2, '國立聯合大學-工業設計學系', 1, 1),
 (4, '台北市立復興高中', 1, 0);
->>>>>>> back
 
 -- --------------------------------------------------------
 
@@ -10873,36 +10849,23 @@ INSERT INTO `re_edu` (`id`, `text`, `finish`, `sh`) VALUES
 
 CREATE TABLE `re_exp` (
   `id` int(10) UNSIGNED NOT NULL,
-<<<<<<< HEAD
-  `icon` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `method` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `cont` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `sh` tinyint(1) NOT NULL
-=======
   `year` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `jtitle` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `cont` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `sh` tinyint(1) NOT NULL,
   `rank` tinyint(2) UNSIGNED NOT NULL
->>>>>>> back
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- 傾印資料表的資料 `re_exp`
 --
 
-<<<<<<< HEAD
-INSERT INTO `re_exp` (`id`, `icon`, `method`, `cont`, `sh`) VALUES
-(1, '2020 - now', '新銳網頁技術工程師培訓', '於泰山職訓中心，進行總時數900小時，為期6個月的網頁技術培訓，目標成為未來網頁設計領域的優秀人才。\r\n\r\n主要培訓內容：\r\n前/後端網頁技術應用、資料庫串接、版本控制 ... ...等等。', 1),
-(2, '2018 - 2020', '餐飲事業負責人', '2018年，進行老店新創計畫，接手30年台灣傳統小吃店的經營，並以新方法嘗試突破傳統小吃店經營成本不斷提升、商品單價很難提高之問題。\r\n\r\n主要貢獻/習得經驗：\r\n透過品牌經營，店面包裝，翻新老店整體形象，翻轉整體印象，並於經營期間，學習到許多成本/進補貨/商品開發/販賣流程等實作經驗。', 1);
-=======
 INSERT INTO `re_exp` (`id`, `year`, `jtitle`, `cont`, `sh`, `rank`) VALUES
 (1, '2020 - now', '新銳網頁技術工程師培訓', '於泰山職訓中心，進行總時數900小時，為期6個月的網頁技術培訓，目標成為未來網頁設計領域的優秀人才。\r\n\r\n主要培訓內容：\r\n\r\n前/後端網頁技術應用、資料庫串接、版本控制 ... ...等等。', 1, 5),
-(2, '2018 - 2020', '餐飲事業負責人', '2018年，進行老店新創計畫，接手30年台灣傳統小吃店的經營，並以新方法嘗試突破傳統小吃店經營成本不斷提升、商品單價很難提高之問題。\r\n\r\n主要貢獻/習得經驗：\r\n\r\n透過品牌經營，店面包裝，翻新老店整體形象，翻轉整體印象，並於經營期間，學習到許多成本/進補貨/商品開發/販賣流程等實作經驗。', 1, 4),
-(3, '2014 - 2018', '茶葉門市儲備店長/社群平台管理', '於服務期間，負責現場商品銷售、庫存管理等店內事務，並負責社群平台的發文、回應、線上活動企劃。\r\n\r\n主要貢獻/習得經驗：\r\n\r\n台灣早期以茶飲為主要飲料，近年漸漸改變風氣，在老客人逐漸凋零、年輕人崇尚咖啡、新式飲品的狀態下，透過不定期舉辦各式活動，主動發掘，並宣傳茶飲文化。\r\n從過程中習得許多溝通技巧、活動效率最佳化方法等等。', 1, 3),
+(2, '2018 - 2020', '餐飲事業負責人', '2018年，進行老店新創計畫，接手30年台灣傳統小吃店的經營，並以新方法嘗試突破傳統小吃店經營成本不斷提升、商品單價很難提高之問題。\r\n\r\n主要貢獻/習得經驗：\r\n\r\n透過品牌經營，店面包裝，翻新老店整體形象，翻轉整體印象，並於經營期間，學習到許多成本/進補貨/商品開發/販賣流程等實作經驗。', 1, 3),
+(3, '2014 - 2018', '茶葉門市儲備店長/社群平台管理', '於服務期間，負責現場商品銷售、庫存管理等店內事務，並負責社群平台的發文、回應、線上活動企劃。\r\n\r\n主要貢獻/習得經驗：\r\n\r\n台灣早期以茶飲為主要飲料，近年漸漸改變風氣，在老客人逐漸凋零、年輕人崇尚咖啡、新式飲品的狀態下，透過不定期舉辦各式活動，主動發掘，並宣傳茶飲文化。\r\n從過程中習得許多溝通技巧、活動效率最佳化方法等等。', 1, 4),
 (4, '2011 - 2013', '美術編輯/切線設計', '服務公司業務內容為創新手機包膜服務，服務期間主要負責手機包膜展開設計，並協助客製化圖案的美術編輯、圖樣設計，並負責管理社群平台\r\n\r\n主要貢獻/習得經驗：\r\n\r\n透過自身所學及經驗，將原本尚有缺陷的包膜切線圖重新建構為更貼近台灣人喜好的樣式，並將方法流程化，使各加盟店均能簡單上手，已應變新手機發售後的新切線追加前置步驟，加速新產品的開發速度。', 1, 2),
 (5, '2010 - 2011', '3D建模/美術編輯設計', '於傳產公司負責公司歷年產品的3D化、檔案化作業，並協助設計相關商品型錄。\r\n\r\n主要貢獻/習得經驗：\r\n\r\n實務商品設計經驗累積。', 1, 1);
->>>>>>> back
 
 -- --------------------------------------------------------
 
@@ -10914,33 +10877,20 @@ CREATE TABLE `re_job` (
   `id` int(10) UNSIGNED NOT NULL,
   `text` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `cont` text COLLATE utf8mb4_unicode_ci NOT NULL,
-<<<<<<< HEAD
-  `sh` tinyint(1) NOT NULL
-=======
   `sh` tinyint(1) NOT NULL,
   `rank` tinyint(2) UNSIGNED NOT NULL
->>>>>>> back
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- 傾印資料表的資料 `re_job`
 --
 
-<<<<<<< HEAD
-INSERT INTO `re_job` (`id`, `text`, `cont`, `sh`) VALUES
-(1, '期望職務', '前端/後端網頁設計人員', 1),
-(2, '可上班時間', '2021年3月初', 1),
-(3, '期望工作地點', '雙北地區', 1),
-(4, '期望工作性質', '全職/周休二日/正常班', 1),
-(5, '期望薪資', '39,000', 1);
-=======
 INSERT INTO `re_job` (`id`, `text`, `cont`, `sh`, `rank`) VALUES
 (1, '期望職務', '前端/後端網頁設計人員', 1, 1),
 (2, '可上班時間', '2021年3月初', 1, 2),
 (3, '期望工作地點', '雙北地區', 1, 3),
 (4, '期望工作性質', '全職/周休二日/正常班', 1, 4),
 (5, '期望薪資', '39,000', 1, 5);
->>>>>>> back
 
 -- --------------------------------------------------------
 
@@ -10966,8 +10916,6 @@ INSERT INTO `re_login` (`id`, `acc`, `pw`, `create_time`) VALUES
 -- --------------------------------------------------------
 
 --
-<<<<<<< HEAD
-=======
 -- 資料表結構 `re_pro`
 --
 
@@ -11006,20 +10954,17 @@ INSERT INTO `re_pro` (`id`, `type`, `name`, `img`, `bimg`, `link`, `cont`, `rank
 (15, 2, '2021年曆設計', 'g12.jpg', 'gb12.png', '', '◆ 以2021年代表生肖-牛為發想基礎，結合牛隻部位解說圖的概念，設計出充滿趣味又可口的年曆', 15, 1, 'a:1:{i:0;s:6:\"g1.png\";}'),
 (16, 2, '旅遊DM設計', 'g13.jpg', 'gb14.png', '', '◆ 以日本賞櫻旅遊為主題，介紹日本四個著名賞櫻景點的相關資訊', 16, 1, 'a:1:{i:0;s:6:\"g1.png\";}'),
 (17, 2, '30日動物挑戰', 'g14.jpg', 'gb13.png', '', '◆ 以黃金比例的圓形，勾勒出各式各樣動物的30日挑戰!', 17, 1, 'a:1:{i:0;s:6:\"g2.png\";}'),
-(20, 3, '創意馬克杯蓋', 'd1.jpg', 'db1.png', '', '◆ 透過部分替換件實現馬克杯蓋/小公仔雙重功能\r\n◆ 透過分件設計實現砲管可動\r\n◆ 3D列印輸出成品', 18, 1, 'a:2:{i:0;s:6:\"d1.png\";i:1;s:6:\"dd.png\";}'),
+(20, 3, '創意馬克杯蓋', 'd1.jpg', 'db1.png', NULL, '◆ 透過部分替換件實現馬克杯蓋/小公仔雙重功能\r\n◆ 透過分件設計實現砲管可動\r\n◆ 3D列印輸出成品', 18, 1, 'a:2:{i:0;s:6:\"d1.png\";i:1;s:6:\"dd.png\";}'),
 (21, 3, '可動模型骨架', 'd2.jpg', 'db2.png', NULL, '◆ 透過3mm孔洞可結合市售眾多模型遊玩\r\n◆ 透過分件設計實現全關節可動\r\n◆ 3D列印輸出成品', 19, 1, 'a:2:{i:0;s:6:\"d1.png\";i:1;s:6:\"dd.png\";}'),
 (22, 3, '升降機擬真示意圖', 'd3.jpg', 'db3.png', NULL, '◆ 3D建模組裝\r\n◆ C4D渲染+材質模擬真實場景', 20, 1, 'a:2:{i:0;s:6:\"d1.png\";i:1;s:6:\"d5.png\";}'),
 (23, 3, '造型手機架', 'd4.jpg', 'db7.png', NULL, '◆ 透過簡易造型挖空實現手機架功能\r\n◆ 與遊戲公司合作推出之小贈品\r\n◆ 3D列印輸出成品', 21, 1, 'a:2:{i:0;s:6:\"d1.png\";i:1;s:6:\"dd.png\";}'),
 (24, 3, '茶茶丸公仔', 'd5.jpg', 'gb7.png', NULL, '◆ 茶葉為主題設計之形象公仔\r\n◆ 結合市售關節零件實現關節可動\r\n◆ 3D列印輸出成品', 22, 1, 'a:2:{i:0;s:6:\"d1.png\";i:1;s:6:\"dd.png\";}'),
 (25, 3, '彎腰郵筒造型擺飾', 'd6.jpg', 'db6.png', NULL, '◆ 2015年蘇迪勒颱風席捲全台爆紅的郵筒形象\r\n◆ 結合時事話題設計的小擺件\r\n◆ 3D列印輸出成品', 23, 1, 'a:2:{i:0;s:6:\"d1.png\";i:1;s:6:\"dd.png\";}'),
-(26, 3, '多功能茶壺名片座', 'd7.jpg', 'db7.png', '', '◆ 符合企業形象之茶壺造型擺飾\r\n◆ 透過簡易拆卸可變成造型名片座\r\n◆ 3D列印輸出成品', 24, 1, 'a:2:{i:0;s:6:\"d1.png\";i:1;s:6:\"dd.png\";}'),
-(32, 1, '動起來!! Clip-Path', 'w4.jpg', '', 'http://220.128.133.15/s1090421/animation', '◆ 使用CSS的animation技術，製作小品動畫。\r\n◆ Clip-Path指令應用。', 25, 1, 'a:2:{i:0;s:6:\"w1.png\";i:1;s:6:\"w2.png\";}'),
-(33, 1, '打擊殭屍-浣熊市之戰', 'w5.jpg', '', 'http://220.128.133.15/s1090421/HIT', '◆ 透過滑鼠/鍵盤監聽事件製作互動型小遊戲。', 26, 1, 'a:5:{i:0;s:6:\"w1.png\";i:1;s:6:\"w2.png\";i:2;s:6:\"w3.png\";i:3;s:6:\"w4.png\";i:4;s:6:\"g1.png\";}');
+(26, 3, '多功能茶壺名片座', 'd7.jpg', 'db7.png', '', '◆ 符合企業形象之茶壺造型擺飾\r\n◆ 透過簡易拆卸可變成造型名片座\r\n◆ 3D列印輸出成品', 24, 1, 'a:2:{i:0;s:6:\"d1.png\";i:1;s:6:\"dd.png\";}');
 
 -- --------------------------------------------------------
 
 --
->>>>>>> back
 -- 資料表結構 `re_self`
 --
 
@@ -11044,13 +10989,6 @@ INSERT INTO `re_self` (`id`, `text`, `sh`) VALUES
 
 CREATE TABLE `re_skills` (
   `id` int(11) UNSIGNED NOT NULL,
-<<<<<<< HEAD
-  `text` int(11) NOT NULL,
-  `cont` int(11) NOT NULL,
-  `sh` tinyint(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
-=======
   `type` tinyint(1) NOT NULL,
   `cont` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `img` text COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -11087,10 +11025,9 @@ INSERT INTO `re_skills` (`id`, `type`, `cont`, `img`, `sh`, `rank`) VALUES
 (25, 4, 'Word', 't2.png', 1, 24),
 (26, 4, 'Excel', 't3.png', 1, 25),
 (27, 4, 'Powerpoint', 't4.png', 1, 26),
-(28, 4, 'Outlook', 't5.png', 0, 27),
+(28, 4, 'Outlook', 't5.png', 1, 27),
 (29, 3, '3D print', 'dd.png', 0, 28);
 
->>>>>>> back
 -- --------------------------------------------------------
 
 --
@@ -11129,29 +11066,6 @@ CREATE TABLE `re_tittext` (
 INSERT INTO `re_tittext` (`id`, `img`, `sh`) VALUES
 (2, 'title_animated.svg', 1);
 
-<<<<<<< HEAD
-=======
--- --------------------------------------------------------
-
---
--- 資料表結構 `se_login`
---
-
-CREATE TABLE `se_login` (
-  `id` int(11) UNSIGNED NOT NULL,
-  `acc` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `pw` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `createTime` timestamp NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- 傾印資料表的資料 `se_login`
---
-
-INSERT INTO `se_login` (`id`, `acc`, `pw`, `createTime`) VALUES
-(1, 'admin', '1234', '2021-01-13 04:21:31');
-
->>>>>>> back
 --
 -- 已傾印資料表的索引
 --
@@ -11193,15 +11107,9 @@ ALTER TABLE `re_about`
   ADD PRIMARY KEY (`id`);
 
 --
-<<<<<<< HEAD
--- 資料表索引 `re_abtext`
---
-ALTER TABLE `re_abtext`
-=======
 -- 資料表索引 `re_abouttext`
 --
 ALTER TABLE `re_abouttext`
->>>>>>> back
   ADD PRIMARY KEY (`id`);
 
 --
@@ -11211,15 +11119,12 @@ ALTER TABLE `re_cont`
   ADD PRIMARY KEY (`id`);
 
 --
-<<<<<<< HEAD
-=======
 -- 資料表索引 `re_conttext`
 --
 ALTER TABLE `re_conttext`
   ADD PRIMARY KEY (`id`);
 
 --
->>>>>>> back
 -- 資料表索引 `re_edu`
 --
 ALTER TABLE `re_edu`
@@ -11244,15 +11149,12 @@ ALTER TABLE `re_login`
   ADD PRIMARY KEY (`id`);
 
 --
-<<<<<<< HEAD
-=======
 -- 資料表索引 `re_pro`
 --
 ALTER TABLE `re_pro`
   ADD PRIMARY KEY (`id`);
 
 --
->>>>>>> back
 -- 資料表索引 `re_self`
 --
 ALTER TABLE `re_self`
@@ -11277,15 +11179,6 @@ ALTER TABLE `re_tittext`
   ADD PRIMARY KEY (`id`);
 
 --
-<<<<<<< HEAD
-=======
--- 資料表索引 `se_login`
---
-ALTER TABLE `se_login`
-  ADD PRIMARY KEY (`id`);
-
---
->>>>>>> back
 -- 在傾印的資料表使用自動遞增(AUTO_INCREMENT)
 --
 
@@ -11323,69 +11216,43 @@ ALTER TABLE `invoice_reward_record`
 -- 使用資料表自動遞增(AUTO_INCREMENT) `re_about`
 --
 ALTER TABLE `re_about`
-<<<<<<< HEAD
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- 使用資料表自動遞增(AUTO_INCREMENT) `re_abtext`
---
-ALTER TABLE `re_abtext`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-=======
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `re_abouttext`
 --
 ALTER TABLE `re_abouttext`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
->>>>>>> back
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `re_cont`
 --
 ALTER TABLE `re_cont`
-<<<<<<< HEAD
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-=======
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `re_conttext`
 --
 ALTER TABLE `re_conttext`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
->>>>>>> back
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `re_edu`
 --
 ALTER TABLE `re_edu`
-<<<<<<< HEAD
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-=======
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
->>>>>>> back
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `re_exp`
 --
 ALTER TABLE `re_exp`
-<<<<<<< HEAD
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-=======
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
->>>>>>> back
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `re_job`
 --
 ALTER TABLE `re_job`
-<<<<<<< HEAD
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-=======
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
->>>>>>> back
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `re_login`
@@ -11394,59 +11261,34 @@ ALTER TABLE `re_login`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
-<<<<<<< HEAD
--- 使用資料表自動遞增(AUTO_INCREMENT) `re_self`
---
-ALTER TABLE `re_self`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-=======
 -- 使用資料表自動遞增(AUTO_INCREMENT) `re_pro`
 --
 ALTER TABLE `re_pro`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `re_self`
 --
 ALTER TABLE `re_self`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
->>>>>>> back
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `re_skills`
 --
 ALTER TABLE `re_skills`
-<<<<<<< HEAD
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
-=======
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
->>>>>>> back
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `re_titimg`
 --
 ALTER TABLE `re_titimg`
-<<<<<<< HEAD
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
-=======
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
->>>>>>> back
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `re_tittext`
 --
 ALTER TABLE `re_tittext`
-<<<<<<< HEAD
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-=======
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
-
---
--- 使用資料表自動遞增(AUTO_INCREMENT) `se_login`
---
-ALTER TABLE `se_login`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
->>>>>>> back
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
